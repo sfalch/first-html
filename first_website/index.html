@@ -3,39 +3,56 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>gay closet</title>
+    <title>girlie-pop</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1 class="header1">hello gay-mers</h1>
+    <h1 class="header1">hello, girlies!</h1>
 
     <a href="https://ca.pinterest.com/" target="_blank">
-      <button class="pinterest-button">pinterest</button>
+      <button class="pink-button">pinterest</button>
     </a>
 
     <!--Random number generator-->
     <p class="header2">number from 1 to 100:</p>
-    <button class="pinterest-button" onclick="random_print()">generate</button>
+    <div class="centering">
+      <button class="dice-btn" onclick="random_print()">spin!</button>
+    </div>
     <p id="random-print" class="magenta-text"></p>
+
+    <!--line divider-->
+    <hr class="solid valentine-pink" />
 
     <!--Dice roll-->
     <p class="header2">dice roll</p>
-    <button class="dice-btn" onclick="dice_roll_all()">Roll all</button>
+    <div class="centering">
+      <button class="dice-btn" onclick="dice_roll(1)">Dice 1</button>
+      <div class="divider"></div>
+      <button class="dice-btn" onclick="dice_roll(2)">Dice 2</button>
+      <div class="divider"></div>
+      <button class="dice-btn" onclick="dice_roll(3)">Dice 3</button>
+      <div class="divider"></div>
+      <button class="dice-btn" onclick="dice_roll(4)">Dice 4</button>
+      <div class="divider"></div>
+      <button class="dice-btn" onclick="dice_roll(5)">Dice 5</button>
+      <div class="divider"></div>
+      <button class="dice-btn" onclick="dice_roll(6)">Dice 6</button>
+    </div>
+    <br />
+    <br />
+    <div class="flex-container">
+      <div id="dice1" class="magenta-text">+</div>
+      <div id="dice2" class="magenta-text">+</div>
+      <div id="dice3" class="magenta-text">+</div>
+      <div id="dice4" class="magenta-text">+</div>
+      <div id="dice5" class="magenta-text">+</div>
+      <div id="dice6" class="magenta-text">+</div>
+    </div>
 
-    <button class="dice-btn" onclick="dice_roll(1)">Dice 1</button>
-    <button class="dice-btn" onclick="dice_roll(2)">Dice 2</button>
-    <button class="dice-btn" onclick="dice_roll(3)">Dice 3</button>
-    <button class="dice-btn" onclick="dice_roll(4)">Dice 4</button>
-    <button class="dice-btn" onclick="dice_roll(5)">Dice 5</button>
-    <button class="dice-btn" onclick="dice_roll(6)">Dice 6</button>
-    <p id="dice1" class="dice"></p>
-    <p id="dice2" class="dice"></p>
-    <p id="dice3" class="dice"></p>
-    <p id="dice4" class="dice"></p>
-    <p id="dice5" class="dice"></p>
-    <p id="dice6" class="dice"></p>
-
+    <!--line divider-->
     <hr class="solid valentine-pink" />
+
+    <!--valentine animation-->
     <h1 class="valentine-h1">Will you be my Valentine?</h1>
     <img
       src="img/charlie-brown-happy-valentines-cute-greetings-animated-gif-2.gif"
@@ -43,7 +60,7 @@
     />
     <br />
 
-    <div id="centering">
+    <div class="centering">
       <button class="yes-btn" id="yes-btn">Yes</button>
       <div class="divider"></div>
       <button class="no-btn" id="no-btn">no</button>
