@@ -1,0 +1,94 @@
+.header1 {
+  color: darkmagenta;
+  font-family: fantasy;
+  font-size: 64px;
+}
+
+.header2 {
+  color: darkmagenta;
+  font-family: fantasy;
+  font-size: 40px;
+}
+
+.magenta-text {
+  color: darkmagenta;
+  font-family: fantasy;
+  font-size: 14px;
+}
+
+.pinterest-button {
+  color: darkmagenta;
+  background-color: hotpink;
+  font-family: fantasy;
+  font-size: 20px;
+  border-color: hotpink;
+  border-radius: 30%;
+}
+.pinterest-button:hover {
+  color: white;
+  background-color: darkmagenta;
+  font-family: fantasy;
+  opacity: 75%;
+}
+
+.dice-btn {
+  color: darkmagenta;
+  background-color: hotpink;
+  font-family: fantasy;
+  font-size: 16px;
+  border-color: hotpink;
+  border-radius: 30%;
+  display: inline-flex;
+}
+
+.valentine-h1 {
+  color: rgb(179, 0, 125);
+  font-family: fantasy;
+  font-size: 64px;
+  text-align: center;
+}
+
+.valentine-pink {
+  color: rgb(179, 0, 125);
+}
+
+.gif {
+  size: 300;
+  display: block;
+  margin: auto;
+  width: 50%;
+}
+
+.yes-btn {
+  color: black;
+  background-color: rgb(0, 156, 13);
+  font-family: fantasy;
+  font-size: 40px;
+  padding: 10px 40px;
+  border-color: rgb(5, 160, 0);
+  border-radius: 2px;
+}
+
+.no-btn {
+  color: white;
+  background-color: rgb(185, 14, 1);
+  font-family: fantasy;
+  font-size: 40px;
+  padding: 10px 40px;
+  border-color: rgb(190, 10, 10);
+  border-radius: 2px;
+}
+
+#centering {
+  text-align: center;
+}
+
+.divider {
+  width: 40px;
+  height: auto;
+  display: inline-block;
+}
+
+body {
+  background-color: pink;
+}
