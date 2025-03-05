@@ -7,4 +7,6 @@ Things to include:
 - rock-paper-scissor
 - snake
 - yahtzee
-- farkle 
+- farkle
+- hex game
+- minesweeper
