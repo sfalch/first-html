@@ -92,3 +92,13 @@ function noBtn() {
     return alert("Question successfully declined ://");
   }
 }
+
+function yesBtn() {
+  let myDiv1 = document.querySelector(".yes-btn");
+  let currWidth_yes = myDiv1.getBoundingClientRect().width;
+  if (currWidth_yes >= 400) {
+    return alert("too late!");
+  } else {
+    alert("yay<3");
+  }
+}
