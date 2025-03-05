@@ -45,6 +45,16 @@
   border-radius: 4px;
   display: inline-flex;
 }
+.reset-btn {
+  color: black;
+  background-color: hotpink;
+  font-family: fantasy;
+  font-size: 20px;
+  padding: 5px;
+  border-color: hotpink;
+  border-radius: 4px;
+  display: inline-flex;
+}
 
 .flex-container {
   display: flex;

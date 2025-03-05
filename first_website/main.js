@@ -13,6 +13,36 @@ function dice_roll(x) {
   dices.innerHTML = a;
 }
 
+function reset_dice() {
+  const dice1 = document.getElementById(`dice1`);
+  const dice2 = document.getElementById(`dice2`);
+  const dice3 = document.getElementById(`dice3`);
+  const dice4 = document.getElementById(`dice4`);
+  const dice5 = document.getElementById(`dice5`);
+  const dice6 = document.getElementById(`dice6`);
+
+  dice1.innerHTML = "+";
+  dice2.innerHTML = "+";
+  dice3.innerHTML = "+";
+  dice4.innerHTML = "+";
+  dice5.innerHTML = "+";
+  dice6.innerHTML = "+";
+}
+
+function headstails() {
+  let a = Math.floor(Math.random() * 2);
+  let array = ["heads", "tails"];
+  const coin = document.getElementById("headOrTail");
+
+  coin.innerHTML = array[a];
+}
+
+function reset_coin() {
+  const coin = document.getElementById("headOrTail");
+
+  coin.innerHTML = "_____";
+}
+
 function noBtn() {
   //yes button changes
   let myDiv1 = document.querySelector(".yes-btn");
@@ -61,19 +91,4 @@ function noBtn() {
   if (currWidth_yes >= 400) {
     return alert("Question successfully declined ://");
   }
-
-  //change text in no button
-  /*
-  const text = document.getElementById("no-btn");
-  const array = ["Are you sure?", "please?", "reconsider.. :((", "stop:(("];
-
-  a = Math.floor(Math.random() * 4);
-  if (currWidth_no <= 10) {
-    myDiv2.style.width = 0 + "px";
-    myDiv2.style.height = 0 + "px";
-    text.innerHTML = " ";
-  } else {
-    text.innerHTML = array[a];
-  }
-    */
 }
