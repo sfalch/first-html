@@ -26,11 +26,20 @@ function noBtn() {
 
   let currWidth_no = myDiv2.getBoundingClientRect().width;
   let currHeight_no = myDiv2.getBoundingClientRect().height;
+  console.log(currWidth_no);
 
   myDiv2.style.width = currWidth_no - 10 + "px";
   myDiv2.style.height = currHeight_no - 10 + "px";
 
+  const text = document.getElementById("no-btn");
+
+  if (currWidth_no <= 110) {
+    document.getElementById("no-btn").style.fontSize = "100px";
+    text.innerHTML = " ";
+  }
+
   //change text in no button
+  /*
   const text = document.getElementById("no-btn");
   const array = ["Are you sure?", "please?", "reconsider.. :((", "stop:(("];
 
@@ -42,4 +51,5 @@ function noBtn() {
   } else {
     text.innerHTML = array[a];
   }
+    */
 }
