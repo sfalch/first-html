@@ -1,3 +1,4 @@
+// Random number generator
 function random_print() {
   let a = Math.floor(Math.random() * 101);
 
@@ -6,6 +7,7 @@ function random_print() {
   randomText.innerHTML = "your random number is: " + a;
 }
 
+// Dice roll
 function dice_roll(x) {
   let a = Math.floor(Math.random() * 6) + 1;
   const dices = document.getElementById(`dice${x}`);
@@ -13,6 +15,7 @@ function dice_roll(x) {
   dices.innerHTML = a;
 }
 
+// Reset dice
 function reset_dice() {
   const dice1 = document.getElementById(`dice1`);
   const dice2 = document.getElementById(`dice2`);
@@ -29,6 +32,7 @@ function reset_dice() {
   dice6.innerHTML = "+";
 }
 
+// Heads or tails
 function headstails() {
   let a = Math.floor(Math.random() * 2);
   let array = ["heads", "tails"];
@@ -37,18 +41,21 @@ function headstails() {
   coin.innerHTML = array[a];
 }
 
+// Reset heads or tails
 function reset_coin() {
   const coin = document.getElementById("headOrTail");
 
   coin.innerHTML = "_____";
 }
 
+// Valentine no button
 function noBtn() {
   //yes button changes
   let myDiv1 = document.querySelector(".yes-btn");
   const yes_text = document.getElementById("yes-btn");
   let currWidth_yes = myDiv1.getBoundingClientRect().width;
   let currHeight_yes = myDiv1.getBoundingClientRect().height;
+  // Stop increasing size
   if (currWidth_yes >= 400) {
     yes_text.innerHTML = "Ok :(";
   } else {
@@ -56,6 +63,7 @@ function noBtn() {
     myDiv1.style.height = currHeight_yes + 10 + "px";
   }
 
+  // check sizes
   console.log("yes:" + currWidth_yes);
 
   //no button changes
@@ -70,6 +78,7 @@ function noBtn() {
 
   const text = document.getElementById("no-btn");
 
+  // confirmation messages
   if (currWidth_no <= 110) {
     document.getElementById("no-btn").style.fontSize = "100px";
     text.innerHTML = "";
@@ -85,6 +94,7 @@ function noBtn() {
 
   a = Math.floor(Math.random() * 5);
 
+  // condition to accept "no" and stop size change
   if (currWidth_yes >= 200 && currWidth_yes < 400) {
     return alert(array[a]);
   }
@@ -93,6 +103,7 @@ function noBtn() {
   }
 }
 
+// Valentine yes button alert update
 function yesBtn() {
   let myDiv1 = document.querySelector(".yes-btn");
   let currWidth_yes = myDiv1.getBoundingClientRect().width;
