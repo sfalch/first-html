@@ -1,8 +1,12 @@
+Learning basic HTML and JavaScript. :))
+
+
 Things to include:
-- heads or tails
 - timer
 - tic tac toe
 - rock-paper-scissor
 - snake
 - yahtzee
-- farkle 
+- farkle
+- hex game
+- minesweeper
