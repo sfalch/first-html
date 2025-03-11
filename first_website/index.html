@@ -66,6 +66,9 @@
     <h2 class="header2">Flip a Coin!</h2>
     <div class="centering">
       <button class="dice-btn" onclick="headstails()">Flip</button>
+      <br />
+      <br />
+      <img id="coin_img" class="coin-img" />
       <p id="headOrTail" class="magenta-text">_____</p>
       <button class="reset-btn" onclick="reset_coin()">Reset</button>
     </div>
@@ -89,8 +92,64 @@
 
     <!--line divider-->
     <hr class="solid valentine-pink" />
+    <!--Burger wordle-->
+    <div class="centering">
+      <h2 class="header2">Burger!</h2>
+      <p class="pinkText">
+        It's like
+        <a href="https://horsle.glitch.me/" target="_blank">"Horsle"</a>, but
+        the word is always burger
+      </p>
+
+      <!-- get input -->
+      <div>
+        <label class="pinkText">Guess The Word (6 letters):</label>
+
+        <input
+          type="text"
+          id="word"
+          word="word"
+          minlength="6"
+          maxlength="6"
+          required
+        />
+      </div>
+      <div>
+        <br />
+        <button class="pink-button" onclick="ValidateBurger()">Submit</button>
+      </div>
+      <!-- validation -->
+      <p class="pinkText" id="BurgerConfirm"></p>
+
+      <!-- info -->
+      <button class="burger-btn" id="burger_button" onclick="BurgerWho()">
+        Who's Burger?
+      </button>
+      <p class="pinkText" id="burger_text"></p>
+      <img class="burger-img" id="burger_img" />
+    </div>
+
+    <!--line divider-->
+    <hr class="solid valentine-pink" />
     <!--timer-->
     <h2 class="header2">Timer!</h2>
+
+    <!-- time input -->
+    <div class="centering">
+      <label class="pinkText">Input time in seconds (0-300):</label>
+
+      <input
+        type="number"
+        id="timer"
+        number="0"
+        minlength="0"
+        maxlength="300"
+        required
+      />
+      <br />
+      <br />
+      <button class="pink-button" onclick="ValidateBurger()">Submit</button>
+    </div>
 
     <!--line divider-->
     <hr class="solid valentine-pink" />

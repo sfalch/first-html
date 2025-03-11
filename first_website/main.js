@@ -4,7 +4,7 @@ function random_print() {
 
   const randomText = document.getElementById("random-print");
 
-  randomText.innerHTML = "your random number is: " + a;
+  randomText.textContent = "your random number is: " + a;
 }
 
 // Dice roll
@@ -12,7 +12,7 @@ function dice_roll(x) {
   let a = Math.floor(Math.random() * 6) + 1;
   const dices = document.getElementById(`dice${x}`);
 
-  dices.innerHTML = a;
+  dices.textContent = a;
 }
 
 // Reset dice
@@ -24,28 +24,43 @@ function reset_dice() {
   const dice5 = document.getElementById(`dice5`);
   const dice6 = document.getElementById(`dice6`);
 
-  dice1.innerHTML = "+";
-  dice2.innerHTML = "+";
-  dice3.innerHTML = "+";
-  dice4.innerHTML = "+";
-  dice5.innerHTML = "+";
-  dice6.innerHTML = "+";
+  dice1.textContent = "+";
+  dice2.textContent = "+";
+  dice3.textContent = "+";
+  dice4.textContent = "+";
+  dice5.textContent = "+";
+  dice6.textContent = "+";
 }
 
 // Heads or tails
 function headstails() {
   let a = Math.floor(Math.random() * 2);
   let array = ["heads", "tails"];
-  const coin = document.getElementById("headOrTail");
 
-  coin.innerHTML = array[a];
+  const coin = document.getElementById("headOrTail");
+  const image = document.getElementById("coin_img");
+
+  image.src = "./img/coin spin.gif";
+  coin.textContent = "...";
+
+  setTimeout(function () {
+    coin.textContent = array[a];
+    if (a === 0) {
+      image.src = "./img/snoopy head.gif";
+    } else {
+      image.src = "./img/snoopy-wag-tail.gif";
+    }
+  }, 3000);
 }
 
 // Reset heads or tails
 function reset_coin() {
   const coin = document.getElementById("headOrTail");
 
-  coin.innerHTML = "_____";
+  const image = document.getElementById("coin_img");
+
+  image.src = "";
+  coin.textContent = "______";
 }
 
 // Valentine no button
@@ -57,7 +72,7 @@ function noBtn() {
   let currHeight_yes = myDiv1.getBoundingClientRect().height;
   // Stop increasing size
   if (currWidth_yes >= 400) {
-    yes_text.innerHTML = "Ok :(";
+    yes_text.textContent = "Ok :(";
   } else {
     myDiv1.style.width = currWidth_yes + 10 + "px";
     myDiv1.style.height = currHeight_yes + 10 + "px";
@@ -81,7 +96,7 @@ function noBtn() {
   // confirmation messages
   if (currWidth_no <= 110) {
     document.getElementById("no-btn").style.fontSize = "100px";
-    text.innerHTML = "";
+    text.textContent = "";
   }
 
   const array = [
@@ -90,9 +105,10 @@ function noBtn() {
     "reconsider.. :((",
     "stop:((",
     "don't do this!",
+    "please confirm again",
   ];
 
-  a = Math.floor(Math.random() * 5);
+  a = Math.floor(Math.random() * 6);
 
   // condition to accept "no" and stop size change
   if (currWidth_yes >= 200 && currWidth_yes < 400) {
@@ -112,4 +128,39 @@ function yesBtn() {
   } else {
     alert("yay<3");
   }
+}
+
+//create text saying who burger is and image of burger
+function BurgerWho() {
+  let burger_text = document.querySelector("#burger_text");
+  let burger_img = document.querySelector("#burger_img");
+
+  if (burger_text.textContent === "Burger, the Cat:") {
+    burger_text.textContent = "";
+    burger_img.src = "";
+    burger_img.alt = "";
+    burger_img.title = "";
+  } else {
+    burger_text.textContent = "Burger, the Cat:";
+
+    burger_img.src = "./img/burger_photo.JPEG";
+    burger_img.alt = "Photo of a black cat; the cat's name is burger";
+    burger_img.title = "Photo of a black cat; the cat's name is burger";
+  }
+}
+function ValidateBurger() {
+  let guess = document.getElementById("word");
+  let word = guess.value;
+  console.log(word);
+  let validatedWord = word.toLowerCase();
+
+  let confirmation = "";
+  if (validatedWord === "burger") {
+    confirmation = "Correct! The word is: " + word;
+  } else {
+    confirmation = "Wrong! Try again.";
+  }
+  console.log(validatedWord);
+  console.log(confirmation);
+  document.getElementById("BurgerConfirm").textContent = confirmation;
 }
