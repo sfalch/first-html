@@ -43,16 +43,18 @@
       <button class="dice-btn" onclick="dice_roll(5)">Dice 5</button>
       <div class="divider"></div>
       <button class="dice-btn" onclick="dice_roll(6)">Dice 6</button>
+      <div class="divider"></div>
+      <button class="dice-btn" onclick="dice_all()">All</button>
     </div>
     <br />
     <br />
     <div class="flex-container">
-      <div id="dice1" class="magenta-text">+</div>
-      <div id="dice2" class="magenta-text">+</div>
-      <div id="dice3" class="magenta-text">+</div>
-      <div id="dice4" class="magenta-text">+</div>
-      <div id="dice5" class="magenta-text">+</div>
-      <div id="dice6" class="magenta-text">+</div>
+      <img id="dice1" class="dice-img" img />
+      <img id="dice2" class="dice-img" img />
+      <img id="dice3" class="dice-img" img />
+      <img id="dice4" class="dice-img" img />
+      <img id="dice5" class="dice-img" img />
+      <img id="dice6" class="dice-img" img />
     </div>
     <br />
     <div class="centering">
@@ -109,6 +111,7 @@
           type="text"
           id="word"
           word="word"
+          value=""
           minlength="6"
           maxlength="6"
           required
@@ -142,6 +145,7 @@
         type="number"
         id="timer"
         number="0"
+        value="0"
         minlength="0"
         maxlength="300"
         required

@@ -45,6 +45,11 @@
   border-radius: 4px;
   display: inline-flex;
 }
+
+.dice-img {
+  width: 80px;
+  border-color: black;
+}
 .reset-btn {
   color: black;
   background-color: hotpink;

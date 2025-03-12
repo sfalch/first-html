@@ -12,7 +12,56 @@ function dice_roll(x) {
   let a = Math.floor(Math.random() * 6) + 1;
   const dices = document.getElementById(`dice${x}`);
 
-  dices.textContent = a;
+  dices.src = "./img/dice roll.gif";
+
+  setTimeout(function () {
+    dices.src = `./img/dice${a}.png`;
+  }, 1500);
+}
+
+//Dice roll all
+function dice_all() {
+  let dice = document.querySelectorAll(".flex-container img");
+  for (const die of dice) {
+    die.src = "./img/dice roll.gif";
+  }
+
+  setTimeout(() => {
+    for (const die of dice) {
+      const num = Math.floor(Math.random() * 6) + 1;
+      die.src = `./img/dice${num}.png`;
+    }
+  }, 1500);
+
+  // let a = Math.floor(Math.random() * 6) + 1;
+  // let b = Math.floor(Math.random() * 6) + 1;
+  // let c = Math.floor(Math.random() * 6) + 1;
+  // let d = Math.floor(Math.random() * 6) + 1;
+  // let e = Math.floor(Math.random() * 6) + 1;
+  // let f = Math.floor(Math.random() * 6) + 1;
+
+  // const dice1 = document.getElementById(`dice1`);
+  // const dice2 = document.getElementById(`dice2`);
+  // const dice3 = document.getElementById(`dice3`);
+  // const dice4 = document.getElementById(`dice4`);
+  // const dice5 = document.getElementById(`dice5`);
+  // const dice6 = document.getElementById(`dice6`);
+
+  // dice1.src = "./img/dice roll.gif";
+  // dice2.src = "./img/dice roll.gif";
+  // dice3.src = "./img/dice roll.gif";
+  // dice4.src = "./img/dice roll.gif";
+  // dice5.src = "./img/dice roll.gif";
+  // dice6.src = "./img/dice roll.gif";
+
+  // setTimeout(function () {
+  //   dice1.src = `./img/dice${a}.png`;
+  //   dice2.src = `./img/dice${b}.png`;
+  //   dice3.src = `./img/dice${c}.png`;
+  //   dice4.src = `./img/dice${d}.png`;
+  //   dice5.src = `./img/dice${e}.png`;
+  //   dice6.src = `./img/dice${f}.png`;
+  // }, 1500);
 }
 
 // Reset dice
@@ -24,12 +73,12 @@ function reset_dice() {
   const dice5 = document.getElementById(`dice5`);
   const dice6 = document.getElementById(`dice6`);
 
-  dice1.textContent = "+";
-  dice2.textContent = "+";
-  dice3.textContent = "+";
-  dice4.textContent = "+";
-  dice5.textContent = "+";
-  dice6.textContent = "+";
+  dice1.src = "";
+  dice2.src = "";
+  dice3.src = "";
+  dice4.src = "";
+  dice5.src = "";
+  dice6.src = "";
 }
 
 // Heads or tails
