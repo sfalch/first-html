@@ -104,7 +104,7 @@ function headstails() {
     } else {
       image.src = "./img/snoopy-wag-tail.gif";
     }
-  }, 3000);
+  }, 2000);
 }
 
 // Reset heads or tails
@@ -220,7 +220,7 @@ function ValidateBurger() {
 }
 
 //clear burger input form
-function clearInputForm() {
+function clearBurgerForm() {
   let burger_input = document.getElementById("word");
   burger_input.value = "";
 
