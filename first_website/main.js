@@ -66,19 +66,24 @@ function dice_all() {
 
 // Reset dice
 function reset_dice() {
-  const dice1 = document.getElementById(`dice1`);
-  const dice2 = document.getElementById(`dice2`);
-  const dice3 = document.getElementById(`dice3`);
-  const dice4 = document.getElementById(`dice4`);
-  const dice5 = document.getElementById(`dice5`);
-  const dice6 = document.getElementById(`dice6`);
+  let dice = document.querySelectorAll(".flex-container img");
+  for (const die of dice) {
+    die.src = "";
+  }
 
-  dice1.src = "";
-  dice2.src = "";
-  dice3.src = "";
-  dice4.src = "";
-  dice5.src = "";
-  dice6.src = "";
+  // const dice1 = document.getElementById(`dice1`);
+  // const dice2 = document.getElementById(`dice2`);
+  // const dice3 = document.getElementById(`dice3`);
+  // const dice4 = document.getElementById(`dice4`);
+  // const dice5 = document.getElementById(`dice5`);
+  // const dice6 = document.getElementById(`dice6`);
+
+  // dice1.src = "";
+  // dice2.src = "";
+  // dice3.src = "";
+  // dice4.src = "";
+  // dice5.src = "";
+  // dice6.src = "";
 }
 
 // Heads or tails
