@@ -218,3 +218,13 @@ function ValidateBurger() {
   console.log(confirmation);
   document.getElementById("BurgerConfirm").textContent = confirmation;
 }
+
+//clear burger input form
+function clearInputForm() {
+  let burger_input = document.getElementById("word");
+  burger_input.value = "";
+
+  let burger_input2 = document.getElementById("burger_input");
+  burger_input2.reset();
+  //one of them work
+}
