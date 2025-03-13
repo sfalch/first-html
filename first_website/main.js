@@ -228,3 +228,14 @@ function clearBurgerForm() {
   burger_input2.reset();
   //one of them work
 }
+
+let count = 0;
+function ClickButton() {
+  count++;
+  let button = document.getElementById("click-box");
+  if (count === 69) {
+    button.textContent = "nice";
+  } else {
+    button.textContent = count;
+  }
+}

@@ -139,11 +139,35 @@
 
     <!--line divider-->
     <hr class="solid valentine-pink" />
+    <!--stop-watch-->
+    <h2 class="header2">Stop-Watch!</h2>
+    <div class="centering">
+      <div class="timer-box">
+        <p id="stop_hour"></p>
+        <p id="stop_min"></p>
+        <p id="stop_sec"></p>
+      </div>
+    </div>
+
+    <!--line divider-->
+    <hr class="solid valentine-pink" />
+    <!--click-->
+    <h2 class="header2">Click!</h2>
+    <div class="centering">
+      <button class="burger-btn" onclick="ClickButton()">Click</button>
+      <br />
+      <p class="timer-box" id="click-box">0</p>
+    </div>
+
+    <!--line divider-->
+    <hr class="solid valentine-pink" />
     <!--timer-->
     <h2 class="header2">Timer!</h2>
-
     <!-- time input -->
     <div class="centering">
+      <!-- not working message -->
+      <p class="pinkText">(Can't get it to work rn)</p>
+
       <label class="pinkText">Input time in seconds (0-300):</label>
       <form>
         <input
@@ -155,10 +179,13 @@
           maxlength="300"
           required
         />
+        <input class="pink-button" type="reset" value="Reset" />
       </form>
       <br />
-      <br />
-      <button class="pink-button" onclick="ValidateBurger()">Submit</button>
+      <button class="burger-btn" onclick="StartTimer()">Start timer</button>
+      <div class="centering">
+        <p class="timer-box" id="timer_box">0</p>
+      </div>
     </div>
 
     <!--line divider-->
