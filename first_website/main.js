@@ -229,6 +229,48 @@ function clearBurgerForm() {
   //one of them work
 }
 
+//guess the number
+let guess_number = 0;
+function GuessNumber_roll() {
+  let a = Math.floor(Math.random() * 100);
+  guess_number = a;
+  console.log(guess_number);
+}
+
+function resetNumberForm() {
+  let x = document.getElementById("numberGuess_form");
+  x.reset();
+}
+
+function GuessNumber_submit() {
+  let guess = document.getElementById("number_guess").value;
+  console.log(guess);
+  console.log(guess_number);
+
+  guess = parseInt(guess);
+
+  let x = document.getElementById("number_reveal");
+  if (guess === guess_number) {
+    x.textContent = "Correct! The number is " + guess_number;
+  }
+
+  if (guess != guess_number) {
+    {
+      x.textContent = "Wrong! Guess again or re-roll";
+    }
+  }
+}
+
+function GuessNumber_reveal() {
+  let x = document.getElementById("number_reveal");
+  x.textContent = guess_number;
+}
+
+function GuessNumber_hide() {
+  let x = document.getElementById("number_reveal");
+  x.textContent = "";
+}
+
 //click button
 let click_count = 0;
 function ClickButton() {

@@ -139,12 +139,56 @@
 
     <!--line divider-->
     <hr class="solid valentine-pink" />
+    <!--guess the number-->
+    <div class="centering">
+      <h2 class="header2">Guess the number!</h2>
+      <p class="pinkText">From 1 to 100</p>
+      <button
+        class="burger-btn"
+        id="guessNumber_submit"
+        onclick="GuessNumber_submit()"
+      >
+        Submit
+      </button>
+      <br />
+      <br />
+      <form id="numberGuess_form">
+        <input
+          type="number"
+          id="number_guess"
+          value=""
+          min="1"
+          max="100"
+          required
+        />
+      </form>
+      <p class="pinkText" id="number_reveal"></p>
+      <button class="burger-btn" id="get_number" onclick="GuessNumber_roll()">
+        Re-roll number
+      </button>
+      <button
+        class="burger-btn"
+        id="reveal_number"
+        onclick="GuessNumber_reveal()"
+      >
+        Reveal number
+      </button>
+      <button class="burger-btn" onclick="GuessNumber_hide()">
+        Hide Number
+      </button>
+      <button class="burger-btn" onclick="resetNumberForm()">Reset</button>
+    </div>
+
+    <!--line divider-->
+    <hr class="solid valentine-pink" />
     <!--click-->
     <h2 class="header2">Click!</h2>
     <div class="centering">
       <button class="burger-btn" onclick="ClickButton()">Click</button>
       <br />
       <p class="timer-box" id="click-box">0</p>
+      <br />
+      <button class="burger-btn" onclick="stopCountdown()">Refresh page</button>
     </div>
 
     <!--line divider-->
@@ -216,8 +260,8 @@
           id="timer"
           number="0"
           value="0"
-          minlength="0"
-          maxlength="300"
+          min="0"
+          max="300"
           placeholder="Enter time"
           required
         />
