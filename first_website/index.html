@@ -176,6 +176,32 @@
 
     <!--line divider-->
     <hr class="solid valentine-pink" />
+    <!--countdown-->
+    <h2 class="header2">Countdown!</h2>
+    <div class="centering">
+      <p class="pinkText">How long to Halloween?</p>
+      <button class="burger-btn" onclick="HalloweenCountdown()">
+        Get Time
+      </button>
+      <br />
+      <br />
+      <div class="timer-box">
+        <span id="C_days">00</span>
+        <span>d</span>
+        <span id="C_hours">00</span>
+        <span>h</span>
+        <span id="C_minutes">00</span>
+        <span>m</span>
+        <span id="C_seconds">00</span>
+        <span>s</span>
+      </div>
+      <br />
+      <br />
+      <button class="burger-btn" onclick="stopCountdown()">Refresh page</button>
+    </div>
+
+    <!--line divider-->
+    <hr class="solid valentine-pink" />
     <!--timer-->
     <h2 class="header2">Timer!</h2>
     <!-- time input -->
@@ -192,14 +218,18 @@
           value="0"
           minlength="0"
           maxlength="300"
+          placeholder="Enter time"
           required
         />
-        <input class="pink-button" type="reset" value="Reset" />
       </form>
       <br />
       <button class="burger-btn" onclick="StartTimer()">Start timer</button>
       <div class="centering">
-        <p class="timer-box" id="timer_box">0</p>
+        <p class="timer-box" id="timer_box">00 : 00 : 00</p>
+      </div>
+      <div>
+        <button class="burger-btn" disabled>STOP</button>
+        <button class="burger-btn" disabled>RESET</button>
       </div>
     </div>
 

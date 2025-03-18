@@ -322,3 +322,46 @@ function startTimer() {
     appendMinutes.textContent = "0" + 0;
   }
 }
+
+//halloween countdown time
+
+function HalloweenCountdown() {
+  // Set the date we're counting down to
+  let countDownDate = new Date("Oct 31, 2025 12:00:00").getTime();
+
+  // Update the count down every 1 second
+  let x = setInterval(function () {
+    // Get todays date and time
+    let now = new Date().getTime();
+
+    // Find the distance between now and the count down date
+    let distance = countDownDate - now;
+
+    // Time calculations for days, hours, minutes and seconds
+    let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    let hours = Math.floor(
+      (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    );
+    let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.querySelector("#C_days").textContent = days;
+    document.querySelector("#C_hours").textContent = hours;
+    document.querySelector("#C_minutes").textContent = minutes;
+    document.querySelector("#C_seconds").textContent = seconds;
+
+    // If the count down is finished, write some text
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById("halloween").textContent = "Happy Halloween!";
+    }
+  }, 1000);
+}
+
+//stop time
+function stopCountdown() {
+  window.location.reload();
+}
+
+//start timer
+//https://codepen.io/thecodingpie/pen/JjGeyVO?editors=1010
