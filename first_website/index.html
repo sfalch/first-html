@@ -139,24 +139,39 @@
 
     <!--line divider-->
     <hr class="solid valentine-pink" />
-    <!--stop-watch-->
-    <h2 class="header2">Stop-Watch!</h2>
-    <div class="centering">
-      <div class="timer-box">
-        <p id="stop_hour"></p>
-        <p id="stop_min"></p>
-        <p id="stop_sec"></p>
-      </div>
-    </div>
-
-    <!--line divider-->
-    <hr class="solid valentine-pink" />
     <!--click-->
     <h2 class="header2">Click!</h2>
     <div class="centering">
       <button class="burger-btn" onclick="ClickButton()">Click</button>
       <br />
       <p class="timer-box" id="click-box">0</p>
+    </div>
+
+    <!--line divider-->
+    <hr class="solid valentine-pink" />
+    <!--stop-watch-->
+    <h2 class="header2">Stop-Watch!</h2>
+    <div class="centering">
+      <button class="burger-btn" id="start_watch" onclick="startStopwatch()">
+        Start
+      </button>
+      <button class="burger-btn" id="stop_watch" onclick="stopStopwatch()">
+        Stop
+      </button>
+      <button class="burger-btn" id="reset_watch" onclick="resetStopwatch()">
+        Reset
+      </button>
+      <br />
+      <br />
+      <div class="timer-box">
+        <span id="stop_hour">00</span>
+        <span>h</span>
+        <span id="stop_min">00</span>
+        <span>s</span>
+        <span id="stop_sec">00</span>
+        <span>s</span>
+        <span id="stop_millis">00</span>
+      </div>
     </div>
 
     <!--line divider-->

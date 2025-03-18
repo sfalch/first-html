@@ -229,13 +229,96 @@ function clearBurgerForm() {
   //one of them work
 }
 
-let count = 0;
+//click button
+let click_count = 0;
 function ClickButton() {
-  count++;
+  click_count++;
   let button = document.getElementById("click-box");
-  if (count === 69) {
+  if (click_count === 69) {
     button.textContent = "nice";
   } else {
-    button.textContent = count;
+    button.textContent = click_count;
+  }
+}
+
+//stop watch
+//https://codepen.io/cathydutton/pen/xxpOOw
+
+//null times
+let millis = 0;
+let seconds = 0;
+let minutes = 0;
+let hours = 0;
+
+//get elements id
+let appendHours = document.getElementById("stop_hour");
+let appendMinutes = document.getElementById("stop_min");
+let appendSeconds = document.getElementById("stop_sec");
+let appendMillis = document.getElementById("stop_millis");
+
+//set an interval for time
+let interval;
+
+//button on click starts timer
+function startStopwatch() {
+  clearInterval(interval);
+  interval = setInterval(startTimer, 10);
+}
+
+//button on click stops timer
+function stopStopwatch() {
+  clearInterval(interval);
+}
+
+//button resets watch
+function resetStopwatch() {
+  clearInterval(interval);
+  millis = 0;
+  seconds = 0;
+  minutes = 0;
+  hours = 0;
+  document.getElementById("stop_hour").textContent = "00";
+  document.getElementById("stop_min").textContent = "00";
+  document.getElementById("stop_sec").textContent = "00";
+  document.getElementById("stop_millis").textContent = "00";
+}
+
+//the function with the time
+function startTimer() {
+  millis++;
+  if (millis <= 9) {
+    appendMillis.textContent = "0" + millis;
+  }
+
+  if (millis > 9) {
+    appendMillis.textContent = millis;
+  }
+
+  if (millis > 99) {
+    // console.log("seconds:" + seconds);
+    seconds++;
+    appendSeconds.textContent = "0" + seconds;
+    millis = 0;
+    appendMillis.textContent = "0" + 0;
+  }
+
+  if (seconds > 9) {
+    appendSeconds.textContent = seconds;
+  }
+
+  if (seconds > 59) {
+    // console.log("minutes:" + minutes);
+    minutes++;
+    appendMinutes.textContent = "0" + minutes;
+    seconds = 0;
+    appendSeconds.textContent = "0" + 0;
+  }
+
+  if (minutes > 59) {
+    // console.log("hours:" + hours);
+    hours++;
+    appendHours.textContent = "0" + hours;
+    minutes = 0;
+    appendMinutes.textContent = "0" + 0;
   }
 }
