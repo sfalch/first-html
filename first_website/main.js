@@ -32,36 +32,6 @@ function dice_all() {
       die.src = `./img/dice${num}.png`;
     }
   }, 1500);
-
-  // let a = Math.floor(Math.random() * 6) + 1;
-  // let b = Math.floor(Math.random() * 6) + 1;
-  // let c = Math.floor(Math.random() * 6) + 1;
-  // let d = Math.floor(Math.random() * 6) + 1;
-  // let e = Math.floor(Math.random() * 6) + 1;
-  // let f = Math.floor(Math.random() * 6) + 1;
-
-  // const dice1 = document.getElementById(`dice1`);
-  // const dice2 = document.getElementById(`dice2`);
-  // const dice3 = document.getElementById(`dice3`);
-  // const dice4 = document.getElementById(`dice4`);
-  // const dice5 = document.getElementById(`dice5`);
-  // const dice6 = document.getElementById(`dice6`);
-
-  // dice1.src = "./img/dice roll.gif";
-  // dice2.src = "./img/dice roll.gif";
-  // dice3.src = "./img/dice roll.gif";
-  // dice4.src = "./img/dice roll.gif";
-  // dice5.src = "./img/dice roll.gif";
-  // dice6.src = "./img/dice roll.gif";
-
-  // setTimeout(function () {
-  //   dice1.src = `./img/dice${a}.png`;
-  //   dice2.src = `./img/dice${b}.png`;
-  //   dice3.src = `./img/dice${c}.png`;
-  //   dice4.src = `./img/dice${d}.png`;
-  //   dice5.src = `./img/dice${e}.png`;
-  //   dice6.src = `./img/dice${f}.png`;
-  // }, 1500);
 }
 
 // Reset dice
@@ -70,20 +40,6 @@ function reset_dice() {
   for (const die of dice) {
     die.src = "";
   }
-
-  // const dice1 = document.getElementById(`dice1`);
-  // const dice2 = document.getElementById(`dice2`);
-  // const dice3 = document.getElementById(`dice3`);
-  // const dice4 = document.getElementById(`dice4`);
-  // const dice5 = document.getElementById(`dice5`);
-  // const dice6 = document.getElementById(`dice6`);
-
-  // dice1.src = "";
-  // dice2.src = "";
-  // dice3.src = "";
-  // dice4.src = "";
-  // dice5.src = "";
-  // dice6.src = "";
 }
 
 // Heads or tails
@@ -255,7 +211,11 @@ function GuessNumber_submit() {
   }
 
   if (guess != guess_number) {
-    {
+    if (guess < guess_number) {
+      x.textContent = "Too low! Guess again or re-roll";
+    } else if (guess > guess_number) {
+      x.textContent = "Too high! Guess again or re-roll";
+    } else {
       x.textContent = "Wrong! Guess again or re-roll";
     }
   }
@@ -407,3 +367,94 @@ function stopCountdown() {
 
 //start timer
 //https://codepen.io/thecodingpie/pen/JjGeyVO?editors=1010
+
+//rock paper scissors
+let bot_hand = "";
+let player_hand = "";
+let player2_hand = "";
+//r = rock, p = paper, s = scissor
+let hand_array = ["r", "p", "s"];
+
+//get display id
+let display_rps_winner = document.getElementById("rps_winner");
+let announcement = "";
+
+//bot select
+function rps_bot() {
+  let a = Math.floor(Math.random() * 3);
+
+  bot_hand = hand_array[a];
+  console.log("Bot-hand: " + bot_hand);
+
+  let x = document.getElementById("rps_player2_div");
+  x.style.display = "none";
+}
+
+//player select
+function check_rps_winner(hand) {
+  //0 = rock, 1 = paper, 2 = scissor
+  player_hand = hand_array[hand];
+
+  if (bot_hand === "r" || bot_hand === "p" || bot_hand === "s") {
+    announcement = helper_rps_check(bot_hand, "Bot");
+
+    display_rps_winner.textContent = announcement;
+  }
+}
+
+//player 2 select
+function player_rps_winner(hand) {
+  player2_hand = hand_array[hand];
+
+  announcement = helper_rps_check(player2_hand, "Player 2");
+  display_rps_winner.textContent = announcement;
+}
+
+//player 1 vs opponent
+//this can be optimized but not going to right now
+function helper_rps_check(opponent, string) {
+  if (player_hand === opponent) {
+    return "Tie!";
+  }
+  if (player_hand === "r" && opponent === "p") {
+    return `${string} wins!`;
+  }
+  if (player_hand === "p" && opponent === "s") {
+    return `${string} wins!`;
+  }
+  if (player_hand === "s" && opponent === "r") {
+    return `${string} wins!`;
+  }
+  if (player_hand === "r" && opponent === "s") {
+    return "Player 1 wins!";
+  }
+  if (player_hand === "s" && opponent === "p") {
+    return "Player 1 wins!";
+  }
+  if (player_hand === "p" && opponent === "r") {
+    return "Player 1 wins!";
+  }
+}
+
+//show the div
+function rps_player2() {
+  let x = document.getElementById("rps_player2_div");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+//play again button
+function ReplayRPS() {
+  bot_hand = "";
+  player_hand = "";
+  player2_hand = "";
+  display_rps_winner.textContent = "";
+
+  console.log(bot_hand + player2_hand + player2_hand);
+
+  let x = document.getElementById("rps_player2_div");
+  x.style.display = "none";
+}
