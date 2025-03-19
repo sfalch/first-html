@@ -417,22 +417,22 @@ function helper_rps_check(opponent, string) {
     return "Tie!";
   }
   if (player_hand === "r" && opponent === "p") {
-    return `${string} wins!`;
+    return `${string} chose paper, ${string} wins!`;
   }
   if (player_hand === "p" && opponent === "s") {
-    return `${string} wins!`;
+    return `${string} chose scissors, ${string} wins!`;
   }
   if (player_hand === "s" && opponent === "r") {
-    return `${string} wins!`;
+    return `${string} chose rock, ${string} wins!`;
   }
   if (player_hand === "r" && opponent === "s") {
-    return "Player 1 wins!";
+    return "Player 1 chose scissors, Player 1 wins!";
   }
   if (player_hand === "s" && opponent === "p") {
-    return "Player 1 wins!";
+    return "Player 1 chose paper, Player 1 wins!";
   }
   if (player_hand === "p" && opponent === "r") {
-    return "Player 1 wins!";
+    return "Player 1 chose rock, Player 1 wins!";
   }
 }
 
