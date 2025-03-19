@@ -196,6 +196,39 @@ input[type="number"] {
   display: none;
 }
 
+.ttt-board {
+  color: darkmagenta;
+  align-content: center;
+  text-align: center;
+  border-color: darkmagenta;
+  border: solid 2px;
+  font-family: fantasy;
+  font-size: 20px;
+  border-radius: 4px;
+  padding: 50px;
+  background-color: rgb(255, 142, 198);
+  width: 500px;
+  height: 500px;
+  display: inline-block;
+}
+.ttt-btn {
+  color: pink;
+  align-content: center;
+  text-align: center;
+  border: solid 2px darkmagenta;
+  font-family: fantasy;
+  font-size: 30px;
+  border-radius: 4px;
+  padding: 40px 50px;
+  /* width: 30px;
+  height: 30px; */
+  background-color: darkmagenta;
+  display: inline-flex;
+  justify-content: center;
+  /* margin: auto; */
+  /* vertical-align: middle; */
+}
+
 body {
   background-color: pink;
 }
