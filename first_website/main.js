@@ -379,6 +379,10 @@ let hand_array = ["r", "p", "s"];
 let display_rps_winner = document.getElementById("rps_winner");
 let announcement = "";
 
+//images
+let player1_img = document.getElementById("rps_1_img");
+let player2_img = document.getElementById("rps_2_img");
+
 //bot select
 function rps_bot() {
   let a = Math.floor(Math.random() * 3);
@@ -414,24 +418,49 @@ function player_rps_winner(hand) {
 //this can be optimized but not going to right now
 function helper_rps_check(opponent, string) {
   if (player_hand === opponent) {
+    if (player_hand === "r") {
+      player1_img.src = "./img/rps/rock.png";
+      player2_img.src = "./img/rps/rock.png";
+    }
+    if (player_hand === "p") {
+      player1_img.src = "./img/rps/paper.png";
+      player2_img.src = "./img/rps/paper.png";
+    }
+    if (player_hand === "s") {
+      player1_img.src = "./img/rps/scissor.png";
+      player2_img.src = "./img/rps/scissor.png";
+    }
+
     return "Tie!";
   }
   if (player_hand === "r" && opponent === "p") {
+    player1_img.src = "./img/rps/rock.png";
+    player2_img.src = "./img/rps/paper.png";
     return `${string} chose paper, ${string} wins!`;
   }
   if (player_hand === "p" && opponent === "s") {
+    player1_img.src = "./img/rps/paper.png";
+    player2_img.src = "./img/rps/scissor.png";
     return `${string} chose scissors, ${string} wins!`;
   }
   if (player_hand === "s" && opponent === "r") {
+    player1_img.src = "./img/rps/scissor.png";
+    player2_img.src = "./img/rps/rock.png";
     return `${string} chose rock, ${string} wins!`;
   }
   if (player_hand === "r" && opponent === "s") {
+    player1_img.src = "./img/rps/rock.png";
+    player2_img.src = "./img/rps/scissor.png";
     return "Player 1 chose rock, Player 1 wins!";
   }
   if (player_hand === "s" && opponent === "p") {
+    player1_img.src = "./img/rps/scissor.png";
+    player2_img.src = "./img/rps/paper.png";
     return "Player 1 chose scissor, Player 1 wins!";
   }
   if (player_hand === "p" && opponent === "r") {
+    player1_img.src = "./img/rps/paper.png";
+    player2_img.src = "./img/rps/rock.png";
     return "Player 1 chose paper, Player 1 wins!";
   }
 }
@@ -455,6 +484,11 @@ function ReplayRPS() {
 
   console.log(bot_hand + player2_hand + player2_hand);
 
+  player1_img.src = "";
+  player2_img.src = "";
+
   let x = document.getElementById("rps_player2_div");
   x.style.display = "none";
 }
+
+//palindrome checker
