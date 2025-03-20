@@ -248,6 +248,14 @@
       <br />
       <br />
       <button class="burger-btn" onclick="stopCountdown()">Refresh page</button>
+      <p class="pinkText">How long since 2024 Halloween?</p>
+      <button class="burger-btn" onclick="sinceHalloween()">Get Time</button>
+      <br />
+      <br />
+      <div class="timer-box">
+        <span id="hallowen_days">00</span>
+        <span>days</span>
+      </div>
     </div>
 
     <!--line divider-->
@@ -329,19 +337,23 @@
     <hr class="solid valentine-pink" />
     <!--tic-tac-toe-->
     <h2 class="header2">Palindrome checker!</h2>
-    <form>
-      <input
-        type="text"
-        maxlength="30"
-        minlength="2"
-        id="palindrome"
-        number="0"
-        value="0"
-        placeholder="kayak"
-        required
-      />
-    </form>
-    <p id="palindrome_reveal"></p>
+    <div class="centering">
+      <form>
+        <input
+          type="text"
+          maxlength="30"
+          minlength="2"
+          id="palindrome"
+          number="0"
+          value="kayak"
+          placeholder="kayak"
+          required
+        />
+      </form>
+      <br />
+      <p class="pinkText" id="palindrome_reveal"></p>
+      <button class="burger-btn" onclick="check_palindrome()">Check</button>
+    </div>
 
     <!--line divider-->
     <hr class="solid valentine-pink" />

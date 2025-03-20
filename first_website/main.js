@@ -365,6 +365,18 @@ function stopCountdown() {
   window.location.reload();
 }
 
+//time since halloween 2024
+function sinceHalloween() {
+  let origin = new Date("Oct 31, 2024 12:00:00").getTime();
+  let now = new Date().getTime();
+
+  let difference = now - origin;
+  let days = Math.floor(difference / (1000 * 60 * 60 * 24));
+
+  let text = document.getElementById("hallowen_days");
+  text.textContent = days;
+}
+
 //start timer
 //https://codepen.io/thecodingpie/pen/JjGeyVO?editors=1010
 
@@ -492,3 +504,24 @@ function ReplayRPS() {
 }
 
 //palindrome checker
+function check_palindrome() {
+  let palindrome_input = document.getElementById("palindrome");
+  let palindrome_text = document.getElementById("palindrome_reveal");
+  let input_text = palindrome_input.value;
+
+  let lower_case = input_text.toLowerCase();
+
+  const reverse = lower_case.split("").reverse().join("");
+
+  console.log("input" + palindrome_input);
+  console.log("" + lower_case);
+  console.log(reverse);
+
+  if (reverse === lower_case) {
+    palindrome_text.textContent =
+      input_text + " is a palindrome of " + reverse + "!";
+  } else {
+    palindrome_text.textContent =
+      input_text + " is NOT a palindrome of " + reverse + "!";
+  }
+}
