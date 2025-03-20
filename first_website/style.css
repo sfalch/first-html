@@ -474,6 +474,19 @@ input[type="number"] {
   border: solid 2px;
   border-color: darkmagenta;
   border-radius: 4px;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.calc-btn:hover {
+  opacity: 80%;
+}
+
+.calc-btn:active {
+  opacity: 120%;
 }
 
 .clear-calc {

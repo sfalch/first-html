@@ -386,35 +386,65 @@
     <h2 class="header2">Calculator!</h2>
     <div class="centering">
       <div class="calculator-board">
-        <div class="calculator-display">0</div>
+        <div class="calculator-display" id="calc_display">0</div>
         <br />
         <br />
         <div>
-          <button class="calc-btn clear-calc">C</button>
-          <button class="calc-btn operator-calc">/</button>
-          <button class="calc-btn operator-calc">×</button>
-          <button class="calc-btn operator-calc">-</button>
+          <button class="calc-btn clear-calc" onclick="clearDisplay()">
+            C
+          </button>
+          <button class="calc-btn operator-calc" onclick="appendOperation('/')">
+            /
+          </button>
+          <button class="calc-btn operator-calc" onclick="appendOperation('*')">
+            ×
+          </button>
+          <button class="calc-btn operator-calc" onclick="appendOperation('-')">
+            -
+          </button>
         </div>
         <br />
         <div>
-          <button class="calc-btn number-calc">7</button>
-          <button class="calc-btn number-calc">8</button>
-          <button class="calc-btn number-calc">9</button>
-          <button class="calc-btn operator-calc">+</button>
+          <button class="calc-btn number-calc" onclick="appendNumber('7')">
+            7
+          </button>
+          <button class="calc-btn number-calc" onclick="appendNumber('8')">
+            8
+          </button>
+          <button class="calc-btn number-calc" onclick="appendNumber('9')">
+            9
+          </button>
+          <button class="calc-btn operator-calc" onclick="appendOperation('+')">
+            +
+          </button>
         </div>
         <br />
         <div>
-          <button class="calc-btn number-calc">4</button>
-          <button class="calc-btn number-calc">5</button>
-          <button class="calc-btn number-calc">6</button>
-          <button class="calc-btn equal-calc">=</button>
+          <button class="calc-btn number-calc" onclick="appendNumber('4')">
+            4
+          </button>
+          <button class="calc-btn number-calc" onclick="appendNumber('5')">
+            5
+          </button>
+          <button class="calc-btn number-calc" onclick="appendNumber('6')">
+            6
+          </button>
+          <button class="calc-btn equal-calc" onclick="calculate()">=</button>
         </div>
         <br />
         <div>
-          <button class="calc-btn number-calc">1</button>
-          <button class="calc-btn number-calc">2</button>
-          <button class="calc-btn number-calc">3</button>
-          <button class="calc-btn number-calc">0</button>
+          <button class="calc-btn number-calc" onclick="appendNumber('1')">
+            1
+          </button>
+          <button class="calc-btn number-calc" onclick="appendNumber('2')">
+            2
+          </button>
+          <button class="calc-btn number-calc" onclick="appendNumber('3')">
+            3
+          </button>
+          <button class="calc-btn number-calc" onclick="appendNumber('0')">
+            0
+          </button>
         </div>
       </div>
     </div>
