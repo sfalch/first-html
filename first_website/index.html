@@ -449,6 +449,57 @@
       </div>
     </div>
 
+    <!--line divider-->
+    <hr class="solid valentine-pink" />
+    <!--calculator-->
+    <h2 class="header2">TV-Time-Total!</h2>
+    <div class="centering">
+      <p class="pinkText">Amount of seasons?</p>
+      <form id="form_seasons">
+        <input
+          type="number"
+          name="seasons"
+          id="TV-seasons"
+          min="1"
+          max="50"
+          value="0"
+          placeholder="3"
+          required
+        />
+      </form>
+      <p class="pinkText">Average season length (episodes)?</p>
+      <form id="form_episodes">
+        <input
+          type="number"
+          name="episodes"
+          id="TV-episodes"
+          min="1"
+          max="50"
+          value="0"
+          placeholder="22"
+          required
+        />
+      </form>
+      <p class="pinkText">Average duration (in minutes)?</p>
+      <form id="form_duration">
+        <input
+          type="number"
+          name="duration"
+          id="TV-duration"
+          min="1"
+          max="150"
+          value="0"
+          placeholder="40"
+          required
+        />
+      </form>
+      <br />
+      <p class="pinkText" id="TV-reveal"></p>
+      <br />
+      <button class="burger-btn" onclick="calculateTV()">Calculate</button>
+      <button class="burger-btn" onclick="resetTVbtn()">Reset</button>
+    </div>
+
     <footer class="pinkText">©sfalch</footer>
 
     <script src="main.js"></script>

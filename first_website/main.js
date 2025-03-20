@@ -663,3 +663,63 @@ function clearDisplay() {
   currentOperation = "";
   display.textContent = "0";
 }
+
+// --------------------------TV-SERIES TIME CALCULATOR------------
+function calculateTV() {
+  let seasons_input = document.getElementById("TV-seasons");
+  let episodes_input = document.getElementById("TV-episodes");
+  let duration_input = document.getElementById("TV-duration");
+
+  let seasons = seasons_input.value;
+  let episodes = episodes_input.value;
+  let duration = duration_input.value;
+
+  console.log(seasons);
+  console.log(episodes);
+  console.log(duration);
+
+  let minutes = 0;
+  let remainder_min = 0;
+  let hours = 0;
+  let remainder_h = 0;
+  let days = 0;
+
+  if (
+    seasons > 0 &&
+    seasons < 50 &&
+    episodes > 0 &&
+    episodes < 50 &&
+    duration > 0 &&
+    duration < 150
+  ) {
+    minutes = seasons * episodes * duration;
+
+    if (minutes >= 24 * 60) {
+      days = Math.floor(minutes / (24 * 60));
+      remainder_h = minutes % (24 * 60);
+      hours = Math.floor(remainder_h / 24);
+      remainder_min = remainder_h % 24;
+      minutes = Math.floor(remainder_min);
+    } else if (minutes >= 60 && minutes <= 24 * 60) {
+      hours = Math.floor(minutes / 60);
+      remainder_min = minutes % 60;
+      minutes = Math.floor(remainder_min);
+    } else if (minutes >= 0 && minutes < 60) {
+      minutes = Math.floor(minutes);
+    }
+  }
+
+  let reveal = document.getElementById("TV-reveal");
+  reveal.textContent =
+    days + " days " + hours + " hours " + minutes + " minutes";
+}
+
+function resetTVbtn() {
+  let seasons = document.getElementById("form_seasons");
+  let episodes = document.getElementById("form_episodes");
+  let duration = document.getElementById("form_duration");
+
+  seasons.reset();
+  episodes.reset();
+  duration.reset();
+}
