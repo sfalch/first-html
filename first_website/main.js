@@ -697,24 +697,22 @@ function calculateTV() {
     hours = minutes / 60;
     console.log(hours);
 
-    if (minutes >= 24 * 60) {
-      days = Math.floor(hours / 24);
-      console.log(days);
-      remainder_h = hours % 24;
-      console.log(remainder_h);
-      hours = Math.floor(remainder_h);
-      console.log(hours);
-      remainder_min = remainder_h % 24;
-      console.log(remainder_min);
-      minutes = Math.floor(remainder_min);
-      console.log(minutes);
-      // } else if (minutes >= 60 && minutes <= 24 * 60) {
-      //   hours = Math.floor(minutes / 60);
-      //   remainder_min = minutes % 60;
-      //   minutes = Math.floor(remainder_min);
-      // } else if (minutes >= 0 && minutes < 60) {
-      //   minutes = Math.floor(minutes);
-    }
+    days = Math.floor(hours / 24);
+    console.log(days);
+    remainder_h = Math.floor(hours % 24);
+    console.log(remainder_h);
+    hours = Math.floor(remainder_h);
+    console.log(hours);
+    remainder_min = remainder_h % 24;
+    console.log(remainder_min);
+    minutes = Math.floor(remainder_min);
+    console.log(minutes);
+    // } else if (minutes >= 60 && minutes <= 24 * 60) {
+    //   hours = Math.floor(minutes / 60);
+    //   remainder_min = minutes % 60;
+    //   minutes = Math.floor(remainder_min);
+    // } else if (minutes >= 0 && minutes < 60) {
+    //   minutes = Math.floor(minutes);
   }
 
   let reveal = document.getElementById("TV-reveal");
@@ -752,6 +750,9 @@ function resetTVbtn() {
   seasons.reset();
   episodes.reset();
   duration.reset();
+
+  document.getElementById("TV-reveal").textContent = "";
+  document.getElementById("TV-reveal2").textContent = "";
 }
 
 //---------------------------------------
