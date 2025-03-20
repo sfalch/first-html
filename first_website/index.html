@@ -451,7 +451,7 @@
 
     <!--line divider-->
     <hr class="solid valentine-pink" />
-    <!--calculator-->
+    <!--time to wathc a tv show calculator-->
     <h2 class="header2">TV-Time-Total!</h2>
     <div class="centering">
       <p class="pinkText">Amount of seasons?</p>
@@ -467,8 +467,8 @@
           required
         />
       </form>
-      <p class="pinkText">Average season length (episodes)</p>
-      <p class="pinkText">Or total episodes (set season as "1")?</p>
+      <p class="pinkText">Average season length (episodes)?</p>
+      <p class="pinkText">(Or total episodes, then set season as "1")</p>
       <form id="form_episodes">
         <input
           type="number"
@@ -500,6 +500,32 @@
       <br />
       <button class="burger-btn" onclick="calculateTV()">Calculate</button>
       <button class="burger-btn" onclick="resetTVbtn()">Reset</button>
+      <br /><br />
+      <a href="https://www.bingeclock.com/" target="_blank">
+        <button class="burger-btn">Bingeclock.com</button>
+      </a>
+    </div>
+
+    <!--line divider-->
+    <hr class="solid valentine-pink" />
+    <!--hex color-->
+    <h2 class="header2">Random hex-color!</h2>
+    <div class="centering">
+      <button class="dice-btn" onclick="random_hex()">Get Hexed</button>
+      <p class="pinkText" id="first_hex_text"></p>
+      <div class="hex-circle" id="first_hex"></div>
+    </div>
+
+    <!--line divider-->
+    <hr class="solid valentine-pink" />
+    <!--hex color guess-->
+    <h2 class="header2">Guess the Hex!</h2>
+    <div class="centering">
+      <div class="hex-circle" id="hex1"></div>
+      <div class="hex-circle" id="hex2"></div>
+      <div class="hex-circle" id="hex3"></div>
+      <div class="hex-circle" id="hex4"></div>
+      <div class="hex-circle" id="hex5"></div>
     </div>
 
     <footer class="pinkText">©sfalch</footer>

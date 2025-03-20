@@ -693,19 +693,27 @@ function calculateTV() {
     duration < 150
   ) {
     minutes = seasons * episodes * duration;
+    console.log(minutes);
+    hours = minutes / 60;
+    console.log(hours);
 
     if (minutes >= 24 * 60) {
-      days = Math.floor(minutes / (24 * 60));
-      remainder_h = minutes % (24 * 60);
-      hours = Math.floor(remainder_h / 24);
+      days = Math.floor(hours / 24);
+      console.log(days);
+      remainder_h = hours % 24;
+      console.log(remainder_h);
+      hours = Math.floor(remainder_h);
+      console.log(hours);
       remainder_min = remainder_h % 24;
+      console.log(remainder_min);
       minutes = Math.floor(remainder_min);
-    } else if (minutes >= 60 && minutes <= 24 * 60) {
-      hours = Math.floor(minutes / 60);
-      remainder_min = minutes % 60;
-      minutes = Math.floor(remainder_min);
-    } else if (minutes >= 0 && minutes < 60) {
-      minutes = Math.floor(minutes);
+      console.log(minutes);
+      // } else if (minutes >= 60 && minutes <= 24 * 60) {
+      //   hours = Math.floor(minutes / 60);
+      //   remainder_min = minutes % 60;
+      //   minutes = Math.floor(remainder_min);
+      // } else if (minutes >= 0 && minutes < 60) {
+      //   minutes = Math.floor(minutes);
     }
   }
 
@@ -713,39 +721,27 @@ function calculateTV() {
   reveal.textContent =
     days + " days " + hours + " hours " + minutes + " minutes straight";
 
-  // if (
-  //   seasons > 0 &&
-  //   seasons < 50 &&
-  //   episodes > 0 &&
-  //   episodes < 10000 &&
-  //   duration > 0 &&
-  //   duration < 150
-  // ) {
-  //   minutes = seasons * episodes * duration;
+  // for 8 hours a day
+  let minutes2 = 0;
+  let hours2 = 0;
+  let days2 = 0;
 
-  //   if (minutes >= 8 * 24 * 60) {
-  //     days = Math.floor(minutes / (8 * 24 * 60));
-  //     remainder_h = minutes % (8 * 24 * 60);
-  //     hours = Math.floor(remainder_h / (8 * 24));
-  //     remainder_min = remainder_h % (8 * 24);
-  //     minutes = Math.floor(remainder_min);
-  //   } else if (minutes >= 60 && minutes <= 8 * 24 * 60) {
-  //     hours = Math.floor(minutes / 60);
-  //     remainder_min = minutes % 60;
-  //     minutes = Math.floor(remainder_min);
-  //   } else if (minutes >= 0 && minutes < 60) {
-  //     minutes = Math.floor(minutes);
-  //   }
-  // }
-  // let reveal2 = document.getElementById("TV-reveal2");
+  if (
+    seasons > 0 &&
+    seasons < 50 &&
+    episodes > 0 &&
+    episodes < 10000 &&
+    duration > 0 &&
+    duration < 150
+  ) {
+    minutes2 = seasons * episodes * duration;
+    hours2 = minutes2 / 60;
 
-  // reveal2.textContent =
-  //   days +
-  //   " days " +
-  //   hours +
-  //   " hours " +
-  //   minutes +
-  //   " minutes for 8 hours a day";
+    days2 = Math.ceil(hours2 / 8);
+  }
+  let reveal2 = document.getElementById("TV-reveal2");
+
+  reveal2.textContent = days2 + " days for 8 hours per day";
 }
 
 function resetTVbtn() {
@@ -756,4 +752,19 @@ function resetTVbtn() {
   seasons.reset();
   episodes.reset();
   duration.reset();
+}
+
+//---------------------------------------
+//https://www.30secondsofcode.org/js/s/random-hex-color-code/
+function random_hex() {
+  let n = (Math.random() * 0xfffff * 1000000).toString(16);
+  console.log("hex: " + n);
+  let hex = n.slice(0, 6);
+  console.log("hex: " + hex);
+
+  let circle_id = document.getElementById("first_hex");
+  circle_id.style.backgroundColor = "#" + hex;
+
+  let text_id = document.getElementById("first_hex_text");
+  text_id.textContent = "#" + hex;
 }

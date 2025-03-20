@@ -506,3 +506,13 @@ input[type="number"] {
 .number-calc {
   background-color: rgb(139, 44, 139);
 }
+
+/* ------------------------- */
+.hex-circle {
+  text-align: center;
+  background-color: white;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  border-radius: 100%;
+}
