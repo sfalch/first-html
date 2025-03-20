@@ -377,8 +377,63 @@ function sinceHalloween() {
   text.textContent = days;
 }
 
+//reset countdown
+function resetCountDown() {
+  document.getElementById("timer_box").textContent = "00 : 00 : 00";
+}
+
 //start timer
 //https://codepen.io/thecodingpie/pen/JjGeyVO?editors=1010
+//https://codepen.io/praveensoniofficial/pen/BaoaKPw
+let interval2;
+
+let time = document.getElementById("timer");
+let time_value = time.value;
+let text_timer = "";
+let remainder = 0;
+
+function StartTimer() {
+  clearInterval(interval2);
+  interval2 = setInterval(timertimer, 1000);
+}
+
+//stop timer
+function stopTimer() {
+  clearInterval(interval2);
+}
+
+//reset timer
+function resetTimer() {
+  clearInterval(interval2);
+  document.getElementById("timer_box").textContent = "00 : 00";
+}
+
+function timertimer() {
+  if (time_value === 0) {
+    document.getElementById("timer_box").textContent = "END";
+  } else if (time_value > 300) {
+    document.getElementById("timer_box").textContent = "Invalid input";
+  } else {
+    if (time_value > 60) {
+      let minute = Math.floor(time_value / 60);
+
+      remainder = time_value % 60;
+
+      if (remainder < 10 && remainder >= 0) {
+        text_timer = "0" + minute + " : 0" + remainder;
+      } else {
+        text_timer = "0" + minute + " : " + remainder;
+      }
+    } else if (time_value < 10 && time_value > 0) {
+      text_timer = "00 : 0" + time_value;
+    } else {
+      text_timer = "00 : " + time_value;
+    }
+
+    document.getElementById("timer_box").textContent = text_timer;
+    time_value--;
+  }
+}
 
 //rock paper scissors
 let bot_hand = "";

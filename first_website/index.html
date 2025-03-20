@@ -264,10 +264,9 @@
     <h2 class="header2">Timer!</h2>
     <!-- time input -->
     <div class="centering">
-      <!-- not working message -->
-      <p class="pinkText">(Can't get it to work rn)</p>
-
-      <label class="pinkText">Input time in seconds (0-300):</label>
+      <label class="pinkText">Input time in seconds (1-300):</label>
+      <br />
+      <br />
       <form>
         <input
           type="number"
@@ -280,14 +279,13 @@
           required
         />
       </form>
-      <br />
-      <button class="burger-btn" onclick="StartTimer()">Start timer</button>
       <div class="centering">
-        <p class="timer-box" id="timer_box">00 : 00 : 00</p>
+        <p class="timer-box" id="timer_box">00 : 00</p>
       </div>
       <div>
-        <button class="burger-btn" disabled>STOP</button>
-        <button class="burger-btn" disabled>RESET</button>
+        <button class="burger-btn" onclick="StartTimer()">Start</button>
+        <button class="burger-btn" onclick="stopTimer()">Stop</button>
+        <button class="burger-btn" onclick="resetTimer()">Reset</button>
       </div>
     </div>
 
