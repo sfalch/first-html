@@ -267,7 +267,7 @@
       <label class="pinkText">Input time in seconds (1-300):</label>
       <br />
       <br />
-      <form>
+      <form id="timer_form">
         <input
           type="number"
           id="timer"
@@ -279,6 +279,10 @@
           required
         />
       </form>
+      <br />
+      <button class="burger-btn" id="reset_timer" onclick="resetTimer()">
+        Reset input
+      </button>
       <div class="centering">
         <img class="rps_img" id="timer_img" />
       </div>

@@ -404,6 +404,12 @@ function stopTimer() {
   clearInterval(interval2);
 }
 
+//reset timer input
+function resetTimer() {
+  let x = document.getElementById("timer_form");
+  x.reset();
+}
+
 function timertimer() {
   if (time_value === 0) {
     document.getElementById("timer_box").textContent = "END";
@@ -411,7 +417,7 @@ function timertimer() {
   } else if (time_value > 300) {
     document.getElementById("timer_box").textContent = "Invalid input";
   } else {
-    if (time_value > 60) {
+    if (time_value >= 60) {
       let minute = Math.floor(time_value / 60);
 
       remainder = time_value % 60;
