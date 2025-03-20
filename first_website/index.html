@@ -467,14 +467,15 @@
           required
         />
       </form>
-      <p class="pinkText">Average season length (episodes)?</p>
+      <p class="pinkText">Average season length (episodes)</p>
+      <p class="pinkText">Or total episodes (set season as "1")?</p>
       <form id="form_episodes">
         <input
           type="number"
           name="episodes"
           id="TV-episodes"
           min="1"
-          max="50"
+          max="10000"
           value="0"
           placeholder="22"
           required
@@ -495,6 +496,7 @@
       </form>
       <br />
       <p class="pinkText" id="TV-reveal"></p>
+      <p class="pinkText" id="TV-reveal2"></p>
       <br />
       <button class="burger-btn" onclick="calculateTV()">Calculate</button>
       <button class="burger-btn" onclick="resetTVbtn()">Reset</button>

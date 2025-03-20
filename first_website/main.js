@@ -688,7 +688,7 @@ function calculateTV() {
     seasons > 0 &&
     seasons < 50 &&
     episodes > 0 &&
-    episodes < 50 &&
+    episodes < 10000 &&
     duration > 0 &&
     duration < 150
   ) {
@@ -711,7 +711,41 @@ function calculateTV() {
 
   let reveal = document.getElementById("TV-reveal");
   reveal.textContent =
-    days + " days " + hours + " hours " + minutes + " minutes";
+    days + " days " + hours + " hours " + minutes + " minutes straight";
+
+  // if (
+  //   seasons > 0 &&
+  //   seasons < 50 &&
+  //   episodes > 0 &&
+  //   episodes < 10000 &&
+  //   duration > 0 &&
+  //   duration < 150
+  // ) {
+  //   minutes = seasons * episodes * duration;
+
+  //   if (minutes >= 8 * 24 * 60) {
+  //     days = Math.floor(minutes / (8 * 24 * 60));
+  //     remainder_h = minutes % (8 * 24 * 60);
+  //     hours = Math.floor(remainder_h / (8 * 24));
+  //     remainder_min = remainder_h % (8 * 24);
+  //     minutes = Math.floor(remainder_min);
+  //   } else if (minutes >= 60 && minutes <= 8 * 24 * 60) {
+  //     hours = Math.floor(minutes / 60);
+  //     remainder_min = minutes % 60;
+  //     minutes = Math.floor(remainder_min);
+  //   } else if (minutes >= 0 && minutes < 60) {
+  //     minutes = Math.floor(minutes);
+  //   }
+  // }
+  // let reveal2 = document.getElementById("TV-reveal2");
+
+  // reveal2.textContent =
+  //   days +
+  //   " days " +
+  //   hours +
+  //   " hours " +
+  //   minutes +
+  //   " minutes for 8 hours a day";
 }
 
 function resetTVbtn() {
