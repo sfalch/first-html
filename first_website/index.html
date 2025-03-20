@@ -280,12 +280,17 @@
         />
       </form>
       <div class="centering">
+        <img class="rps_img" id="timer_img" />
+      </div>
+      <div class="centering">
         <p class="timer-box" id="timer_box">00 : 00</p>
       </div>
       <div>
         <button class="burger-btn" onclick="StartTimer()">Start</button>
         <button class="burger-btn" onclick="stopTimer()">Stop</button>
-        <button class="burger-btn" onclick="resetTimer()">Reset</button>
+        <button class="burger-btn" onclick="stopCountdown()">
+          Refresh page
+        </button>
       </div>
     </div>
 
@@ -395,5 +400,6 @@
     <footer class="pinkText">©sfalch</footer>
 
     <script src="main.js"></script>
+    <script src="./games script/tic-tac-toe.js"></script>
   </body>
 </html>

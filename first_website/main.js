@@ -210,13 +210,15 @@ function GuessNumber_submit() {
     x.textContent = "Correct! The number is " + guess_number;
   }
 
-  if (guess != guess_number) {
-    if (guess < guess_number) {
-      x.textContent = "Too low! Guess again or re-roll";
-    } else if (guess > guess_number) {
-      x.textContent = "Too high! Guess again or re-roll";
-    } else {
-      x.textContent = "Wrong! Guess again or re-roll";
+  if (guess <= 100) {
+    if (guess != guess_number) {
+      if (guess < guess_number) {
+        x.textContent = "Too low! Guess again or re-roll";
+      } else if (guess > guess_number) {
+        x.textContent = "Too high! Guess again or re-roll";
+      } else {
+        x.textContent = "Wrong! Guess again or re-roll";
+      }
     }
   }
 }
@@ -402,15 +404,10 @@ function stopTimer() {
   clearInterval(interval2);
 }
 
-//reset timer
-function resetTimer() {
-  clearInterval(interval2);
-  document.getElementById("timer_box").textContent = "00 : 00";
-}
-
 function timertimer() {
   if (time_value === 0) {
     document.getElementById("timer_box").textContent = "END";
+    document.getElementById("timer_img").src = "./img/goon.webp";
   } else if (time_value > 300) {
     document.getElementById("timer_box").textContent = "Invalid input";
   } else {
