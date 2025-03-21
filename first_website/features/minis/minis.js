@@ -189,3 +189,20 @@ function random_rgb() {
   text_id.textContent = color_string;
   text_id.style.color = color_string;
 }
+
+//card reveal
+let card_text = "";
+
+let card_img = ;
+
+function getCard(){
+  let suit_arr[] = ["♥️", "♠️", "♦️", "♣️"];
+  let number_arr = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
+
+  let s = Math.floor(Math.random() * 4);
+  let n = Math.floor(Math.random() * 13);
+
+  card_text = suit_arr[s] + number_arr[n];
+
+
+}
