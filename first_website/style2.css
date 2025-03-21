@@ -2,6 +2,31 @@ body {
   background-color: pink;
 }
 
+.header {
+  top: 5px;
+  width: 100%;
+}
+
+.header1 {
+  color: darkmagenta;
+  font-family: fantasy;
+  font-size: 64px;
+}
+
+.header2 {
+  color: darkmagenta;
+  font-family: fantasy;
+  font-size: 40px;
+  text-align: center;
+}
+
+.pinkText {
+  color: darkmagenta;
+  font-family: fantasy;
+  padding: 5px;
+  font-size: 20px;
+}
+
 .nav1 {
   width: 140px;
   height: 70px;
@@ -26,4 +51,19 @@ body {
   background-color: rgb(139, 44, 139);
   box-shadow: 0 5px rgb(85, 0, 85);
   transform: translateY(5px);
+}
+
+ul {
+  color: darkmagenta;
+  font-size: 20px;
+  font-family: fantasy;
+  font-weight: bold;
+}
+
+li {
+  color: darkmagenta;
+  font-size: 16px;
+  font-family: fantasy;
+  font-weight: normal;
+  margin-left: 20px;
 }

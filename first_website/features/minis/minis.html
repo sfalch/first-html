@@ -163,9 +163,17 @@
     <!--hex color-->
     <h2 class="header2">Random hex-color!</h2>
     <div class="centering">
-      <button class="dice-btn" onclick="random_hex()">Get Hexed</button>
-      <p class="pinkText" id="first_hex_text"></p>
-      <div class="hex-circle" id="first_hex"></div>
+      <div class="color-box">
+        <button class="dice-btn" onclick="random_hex()">Get Hexed</button>
+        <p class="whiteText"><span id="first_hex_text">HEX</span></p>
+        <div class="hex-circle" id="first_hex"></div>
+      </div>
+      <div class="divider"></div>
+      <div class="color-box">
+        <button class="dice-btn" onclick="random_rgb()">RGB?!</button>
+        <p class="whiteText"><span id="first_rgb_text">RGB</span></p>
+        <div class="hex-circle" id="first_rgb"></div>
+      </div>
     </div>
 
     <footer class="pinkText">

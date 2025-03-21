@@ -156,6 +156,7 @@ function check_palindrome() {
   }
 }
 
+//get random hex
 //https://www.30secondsofcode.org/js/s/random-hex-color-code/
 function random_hex() {
   let n = (Math.random() * 0xfffff * 1000000).toString(16);
@@ -168,4 +169,23 @@ function random_hex() {
 
   let text_id = document.getElementById("first_hex_text");
   text_id.textContent = "#" + hex;
+  text_id.style.color = "#" + hex;
+}
+
+//get random rgb
+function random_rgb() {
+  //each color goes to 255
+  let r = Math.floor(Math.random() * 255);
+  let g = Math.floor(Math.random() * 255);
+  let b = Math.floor(Math.random() * 255);
+
+  let color_string = `rgb(${r}, ${g}, ${b})`;
+
+  let circle_id = document.getElementById("first_rgb");
+  circle_id.style.backgroundColor = color_string;
+  circle_id.style.color = color_string;
+
+  let text_id = document.getElementById("first_rgb_text");
+  text_id.textContent = color_string;
+  text_id.style.color = color_string;
 }
