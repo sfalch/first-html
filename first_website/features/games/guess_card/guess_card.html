@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess the card!</title>
+    <link rel="icon" type="image/x-icon" href="../../../img/favicon.ico" />
+    <link rel="stylesheet" href="../../../style1.css" />
+    <link rel="stylesheet" href="../../../style2.css" />
+    <link rel="stylesheet" href="guess_card.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="right-div">
+        <!-- git-hub link -->
+        <a href="https://github.com/sfalch/first-html" target="_blank">
+          <button class="pink-button">girlie-hub</button>
+        </a>
+      </div>
+    </header>
+
+    <h1 class="header1">Cards!</h1>
+    <p class="pinkText">Guess the card in the deck 🃏</p>
+    <nav>
+      <a href="../../../index.html"> <button class="dice-btn">Home</button></a>
+      <a href="../games.html"> <button class="dice-btn">Back</button></a>
+    </nav>
+
+    <!--line divider-->
+    <hr class="solid valentine-pink" />
+    <!--guess the card-->
+    <h2 class="header2">Guess the Card!</h2>
+    <div class="centering">
+      <button class="dice-btn" id="card_get" onclick="getCard()">
+        Get card
+      </button>
+      <br />
+      <br />
+
+      <div class="color-box">
+        <img
+          class="cards"
+          id="card_img"
+          title="Click to flip card!"
+          alt="Mystery card"
+          src="../../../img/cards_deck/mystery.png"
+        />
+      </div>
+
+      <div class="color-box">
+        <img
+          class="cards-shake"
+          id="guess_img"
+          title="Your card"
+          alt="Your card"
+          src="../../../img/cards_deck/back.png"
+        />
+      </div>
+
+      <br /><br />
+      <p class="pinkText" id="guess_accuracy"></p>
+
+      <p class="pinkText">Pick a suit:</p>
+      <form id="suit_guess">
+        <label class="rank" for="hearts" title="Hearts">♥️</label>
+        <input type="radio" name="suit" value="hearts" title="Hearts" />
+        <div class="divider"></div>
+        <label class="rank" for="spades" title="Spades">♠️</label>
+        <input type="radio" name="suit" value="spades" title="Spades" />
+        <div class="divider"></div>
+        <label class="rank" for="diamond" title="Diamonds">♦️</label>
+        <input type="radio" name="suit" value="diamond" title="Diamonds" />
+        <div class="divider"></div>
+        <label class="rank" for="clubs" title="Clubs">♣️</label>
+        <input type="radio" name="suit" value="clubs" title="Clubs" />
+      </form>
+
+      <p class="pinkText">Pick a rank:</p>
+      <form id="rank_guess">
+        <label class="rank" for="ace" title="Ace">A</label>
+        <input type="radio" name="rank" value="ace" title="Ace" />
+        <div class="divider"></div>
+
+        <label class="rank" for="two" title="Two">2</label>
+        <input type="radio" name="rank" value="two" title="Two" />
+        <div class="divider"></div>
+
+        <label class="rank" for="three" title="Three">3</label>
+        <input type="radio" name="rank" value="three" title="Three" />
+        <div class="divider"></div>
+
+        <label class="rank" for="four" title="Four">4</label>
+        <input type="radio" name="rank" value="four" title="Four" />
+        <div class="divider"></div>
+
+        <label class="rank" for="five" title="Five">5</label>
+        <input type="radio" name="rank" value="five" title="Five" />
+        <div class="divider"></div>
+
+        <label class="rank" for="six" title="Six">6</label>
+        <input type="radio" name="rank" value="six" title="Six" />
+        <div class="divider"></div>
+
+        <label class="rank" for="seven" title="Seven">7</label>
+        <input type="radio" name="rank" value="seven" title="Seven" />
+        <div class="divider"></div>
+
+        <label class="rank" for="eight" title="Eight">8</label>
+        <input type="radio" name="rank" value="eight" title="Eight" />
+        <div class="divider"></div>
+
+        <label class="rank" for="nine" title="Nine">9</label>
+        <input type="radio" name="rank" value="nine" title="Nine" />
+        <div class="divider"></div>
+
+        <label class="rank" for="ten" title="Ten">10</label>
+        <input type="radio" name="rank" value="ten" title="Ten" />
+        <div class="divider"></div>
+
+        <label class="rank" for="jack" title="Jack">J</label>
+        <input type="radio" name="rank" value="jack" title="Jack" />
+        <div class="divider"></div>
+
+        <label class="rank" for="queen" title="Queen">Q</label>
+        <input type="radio" name="rank" value="queen" title="Queen" />
+        <div class="divider"></div>
+
+        <label class="rank" for="king" title="King">K</label>
+        <input type="radio" name="rank" value="king" title="King" />
+        <div class="divider"></div>
+      </form>
+
+      <br />
+
+      <button class="dice-btn" id="card_guess" onclick="guessCard()">
+        Guess!
+      </button>
+      <br /><br />
+      <button class="reset-btn" onclick="revealAnswers()">Reveal answer</button>
+      <br /><br />
+      <button class="reset-btn" onclick="resetCards()">Reset game</button>
+      <br />
+      <br />
+    </div>
+
+    <footer class="pinkText">
+      <!--line divider-->
+      <hr class="solid valentine-pink" />
+      ©sfalch
+    </footer>
+  </body>
+  <script src="guess_card.js"></script>
+  <script src="../../../main.js"></script>
+</html>

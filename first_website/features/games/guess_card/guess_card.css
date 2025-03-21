@@ -5,9 +5,17 @@
 }
 
 .cards:active {
+  animation: shake 1s;
+}
+
+.cards-shake {
   border-color: darkmagenta;
   width: 200px;
   border-radius: 2px;
+}
+
+.cards-shake:hover,
+.cards-shake:active {
   animation: shake 1s;
 }
 
@@ -47,4 +55,10 @@
   100% {
     transform: translate(1px, -2px) rotate(-1deg);
   }
+}
+
+.rank {
+  color: darkmagenta;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 28px;
 }
