@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minis!</title>
+    <link rel="icon" type="image/x-icon" href="../../../img/favicon.ico" />
+    <link rel="stylesheet" href="../../../style1.css" />
+    <link rel="stylesheet" href="../../../style2.css" />
+    <link rel="stylesheet" href="calculator.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="right-div">
+        <!-- git-hub link -->
+        <a href="https://github.com/sfalch/first-html" target="_blank">
+          <button class="pink-button">girlie-hub</button>
+        </a>
+      </div>
+    </header>
+
+    <h1 class="header1">Calculator!</h1>
+    <p class="pinkText">Calc U later ;3</p>
+    <nav>
+      <a href="../../../index.html"> <button class="dice-btn">Home</button></a>
+    </nav>
+
+    <!--line divider-->
+    <hr class="solid valentine-pink" />
+    <!--calculator-->
+    <h2 class="header2">Calculator!</h2>
+
+    <div class="centering">
+      <div class="calculator-board">
+        <div class="calculator-display" id="calc_display">0</div>
+        <br />
+        <br />
+        <div>
+          <button class="calc-btn clear-calc" onclick="clearDisplay()">
+            C
+          </button>
+          <button class="calc-btn operator-calc" onclick="appendOperation('/')">
+            /
+          </button>
+          <button class="calc-btn operator-calc" onclick="appendOperation('*')">
+            ×
+          </button>
+          <button class="calc-btn operator-calc" onclick="appendOperation('-')">
+            -
+          </button>
+        </div>
+        <br />
+        <div>
+          <button class="calc-btn number-calc" onclick="appendNumber('7')">
+            7
+          </button>
+          <button class="calc-btn number-calc" onclick="appendNumber('8')">
+            8
+          </button>
+          <button class="calc-btn number-calc" onclick="appendNumber('9')">
+            9
+          </button>
+          <button class="calc-btn operator-calc" onclick="appendOperation('+')">
+            +
+          </button>
+        </div>
+        <br />
+        <div>
+          <button class="calc-btn number-calc" onclick="appendNumber('4')">
+            4
+          </button>
+          <button class="calc-btn number-calc" onclick="appendNumber('5')">
+            5
+          </button>
+          <button class="calc-btn number-calc" onclick="appendNumber('6')">
+            6
+          </button>
+          <button class="calc-btn equal-calc" onclick="calculate()">=</button>
+        </div>
+        <br />
+        <div>
+          <button class="calc-btn number-calc" onclick="appendNumber('1')">
+            1
+          </button>
+          <button class="calc-btn number-calc" onclick="appendNumber('2')">
+            2
+          </button>
+          <button class="calc-btn number-calc" onclick="appendNumber('3')">
+            3
+          </button>
+          <button class="calc-btn number-calc" onclick="appendNumber('0')">
+            0
+          </button>
+        </div>
+      </div>
+      <br /><br />
+    </div>
+
+    <footer class="pinkText">
+      <!--line divider-->
+      <hr class="solid valentine-pink" />
+      ©sfalch
+    </footer>
+  </body>
+  <script src="calculator.js"></script>
+  <script src="../../main.js"></script>
+</html>

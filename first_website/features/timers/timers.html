@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timers!</title>
+    <link rel="icon" type="image/x-icon" href="../../img/favicon.ico" />
+    <link rel="stylesheet" href="../../style1.css" />
+    <link rel="stylesheet" href="../../style2.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="right-div">
+        <!-- git-hub link -->
+        <a href="https://github.com/sfalch/first-html" target="_blank">
+          <button class="pink-button">girlie-hub</button>
+        </a>
+      </div>
+    </header>
+
+    <h1 class="header1">Timers!</h1>
+    <p class="pinkText">Tick-Tock-Tick-Tock ⏲️</p>
+    <nav>
+      <a href="../../index.html"> <button class="dice-btn">Home</button></a>
+    </nav>
+
+    <!--line divider-->
+    <hr class="solid valentine-pink" />
+    <!--stop-watch-->
+    <h2 class="header2">Stop-Watch!</h2>
+    <div class="centering">
+      <button class="burger-btn" id="start_watch" onclick="startStopwatch()">
+        Start
+      </button>
+      <button class="burger-btn" id="stop_watch" onclick="stopStopwatch()">
+        Stop
+      </button>
+      <button class="burger-btn" id="reset_watch" onclick="resetStopwatch()">
+        Reset
+      </button>
+      <br />
+      <br />
+      <div class="timer-box">
+        <span id="stop_hour">00</span>
+        <span>h</span>
+        <span id="stop_min">00</span>
+        <span>m</span>
+        <span id="stop_sec">00</span>
+        <span>s</span>
+        <span id="stop_millis">00</span>
+      </div>
+    </div>
+
+    <!--line divider-->
+    <hr class="solid valentine-pink" />
+    <!--timer-->
+    <h2 class="header2">Timer!</h2>
+    <!-- time input -->
+    <div class="centering">
+      <label class="pinkText">Input time in seconds (1-300):</label>
+      <br />
+      <br />
+      <form id="timer_form">
+        <input
+          type="number"
+          id="timer"
+          number="0"
+          value="0"
+          min="0"
+          max="300"
+          placeholder="Enter time"
+          required
+        />
+      </form>
+      <br />
+      <button class="burger-btn" id="reset_timer" onclick="resetTimer()">
+        Reset input
+      </button>
+      <div class="centering">
+        <img class="rps_img" id="timer_img" />
+      </div>
+      <div class="centering">
+        <p class="timer-box" id="timer_box">00 : 00</p>
+      </div>
+      <div>
+        <button class="burger-btn" onclick="StartTimer()">Start</button>
+        <button class="burger-btn" onclick="stopTimer()">Stop</button>
+        <button class="burger-btn" onclick="refreshPage()">Refresh page</button>
+      </div>
+    </div>
+
+    <!--line divider-->
+    <hr class="solid valentine-pink" />
+    <!--time to wathc a tv show calculator-->
+    <h2 class="header2">TV-Time-Total!</h2>
+    <div class="centering">
+      <p class="pinkText">Amount of seasons?</p>
+      <form id="form_seasons">
+        <input
+          type="number"
+          name="seasons"
+          id="TV-seasons"
+          min="1"
+          max="50"
+          value="0"
+          placeholder="3"
+          required
+        />
+      </form>
+      <p class="pinkText">Average season length (episodes)?</p>
+      <p class="pinkText">(Or total episodes, then set season as "1")</p>
+      <form id="form_episodes">
+        <input
+          type="number"
+          name="episodes"
+          id="TV-episodes"
+          min="1"
+          max="10000"
+          value="0"
+          placeholder="22"
+          required
+        />
+      </form>
+      <p class="pinkText">Average duration (in minutes)?</p>
+      <form id="form_duration">
+        <input
+          type="number"
+          name="duration"
+          id="TV-duration"
+          min="1"
+          max="150"
+          value="0"
+          placeholder="40"
+          required
+        />
+      </form>
+      <br />
+      <p class="pinkText" id="TV-reveal"></p>
+      <p class="pinkText" id="TV-reveal2"></p>
+      <br />
+      <button class="burger-btn" onclick="calculateTV()">Calculate</button>
+      <button class="burger-btn" onclick="resetTVbtn()">Reset</button>
+      <br /><br />
+      <a href="https://www.bingeclock.com/" target="_blank">
+        <button class="burger-btn">Bingeclock.com</button>
+      </a>
+    </div>
+
+    <footer class="pinkText">
+      <!--line divider-->
+      <hr class="solid valentine-pink" />
+      ©sfalch
+    </footer>
+  </body>
+  <script src="timers.js"></script>
+  <script src="../main.js"></script>
+</html>

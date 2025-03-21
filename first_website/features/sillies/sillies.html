@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sillies!</title>
+    <link rel="icon" type="image/x-icon" href="../../img/favicon.ico" />
+    <link rel="stylesheet" href="../../style1.css" />
+    <link rel="stylesheet" href="../../style2.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="right-div">
+        <!-- git-hub link -->
+        <a href="https://github.com/sfalch/first-html" target="_blank">
+          <button class="pink-button">girlie-hub</button>
+        </a>
+      </div>
+    </header>
+
+    <h1 class="header1">Sillies!</h1>
+    <p class="pinkText">For my valentine &lt;3</p>
+    <nav>
+      <a href="../../index.html"> <button class="dice-btn">Home</button></a>
+    </nav>
+
+    <!--line divider-->
+    <hr class="solid valentine-pink" />
+
+    <!--valentine animation-->
+    <h1 class="valentine-h1">Will you be my Valentine?</h1>
+    <img
+      src="../../img/charlie-brown-happy-valentines-cute-greetings-animated-gif-2.gif"
+      class="gif"
+    />
+    <br />
+
+    <div class="centering">
+      <button class="yes-btn" id="yes-btn" onclick="yesBtn()">Yes</button>
+      <div class="divider"></div>
+      <button class="no-btn" id="no-btn" onclick="noBtn()">no</button>
+    </div>
+
+    <!--line divider-->
+    <hr class="solid valentine-pink" />
+    <!--Burger wordle-->
+    <div class="centering">
+      <h2 class="header2">Burger!</h2>
+      <p class="pinkText">
+        It's like
+        <a href="https://horsle.glitch.me/" target="_blank">"Horsle"</a>, but
+        the word is always burger
+      </p>
+
+      <!-- get input -->
+      <div>
+        <label class="pinkText">Guess The Word (6 letters):</label>
+
+        <form id="burger_form">
+          <input
+            type="text"
+            id="word"
+            word="word"
+            value=""
+            minlength="6"
+            maxlength="6"
+            required
+          />
+        </form>
+      </div>
+      <div>
+        <br />
+        <button class="pink-button" onclick="ValidateBurger()">Submit</button>
+        <button class="pink-button" onclick="clearBurgerForm()">
+          Clear Input
+        </button>
+      </div>
+      <!-- validation -->
+      <p class="pinkText" id="BurgerConfirm"></p>
+
+      <!-- info -->
+      <button class="burger-btn" id="burger_button" onclick="BurgerWho()">
+        Who's Burger?
+      </button>
+      <p class="pinkText" id="burger_text"></p>
+      <img class="burger-img" id="burger_img" />
+    </div>
+
+    <!--line divider-->
+    <hr class="solid valentine-pink" />
+    <!--countdown-->
+    <h2 class="header2">Countdown!</h2>
+    <div class="centering">
+      <p class="pinkText">How long to Halloween?</p>
+      <button class="burger-btn" onclick="HalloweenCountdown()">
+        Get Time
+      </button>
+      <br />
+      <br />
+      <div class="timer-box">
+        <span id="C_days">00</span>
+        <span>d</span>
+        <span id="C_hours">00</span>
+        <span>h</span>
+        <span id="C_minutes">00</span>
+        <span>m</span>
+        <span id="C_seconds">00</span>
+        <span>s</span>
+      </div>
+      <br />
+      <br />
+      <button class="burger-btn" onclick="refreshPage()">Refresh page</button>
+      <p class="pinkText">How long since 2024 Halloween?</p>
+      <button class="burger-btn" onclick="sinceHalloween()">Get Time</button>
+      <br />
+      <br />
+      <div class="timer-box">
+        <span id="hallowen_days">00</span>
+        <span>days</span>
+      </div>
+    </div>
+
+    <footer class="pinkText">
+      <!--line divider-->
+      <hr class="solid valentine-pink" />
+      ©sfalch
+    </footer>
+  </body>
+  <script src="sillies.js"></script>
+  <script src="../main.js"></script>
+</html>

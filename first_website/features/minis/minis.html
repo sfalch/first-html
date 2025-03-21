@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minis!</title>
+    <link rel="icon" type="image/x-icon" href="../../img/favicon.ico" />
+    <link rel="stylesheet" href="../../style1.css" />
+    <link rel="stylesheet" href="../../style2.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="right-div">
+        <!-- git-hub link -->
+        <a href="https://github.com/sfalch/first-html" target="_blank">
+          <button class="pink-button">girlie-hub</button>
+        </a>
+      </div>
+    </header>
+
+    <h1 class="header1">Minis!</h1>
+    <p class="pinkText">Mini features :3</p>
+    <nav>
+      <a href="../../index.html"> <button class="dice-btn">Home</button></a>
+    </nav>
+
+    <!--line divider-->
+    <hr class="solid valentine-pink" />
+    <!--Random number generator-->
+    <h2 class="header2">Number from 1 to 100:</h2>
+    <div class="centering">
+      <button class="dice-btn" onclick="random_print()">spin!</button>
+    </div>
+    <p id="random-print" class="magenta-text"></p>
+
+    <!--line divider-->
+    <hr class="solid valentine-pink" />
+
+    <!--Dice roll-->
+    <h2 class="header2">Dice roll!</h2>
+    <div class="centering">
+      <button class="dice-btn" onclick="dice_roll(1)">Dice 1</button>
+      <div class="divider"></div>
+      <button class="dice-btn" onclick="dice_roll(2)">Dice 2</button>
+      <div class="divider"></div>
+      <button class="dice-btn" onclick="dice_roll(3)">Dice 3</button>
+      <div class="divider"></div>
+      <button class="dice-btn" onclick="dice_roll(4)">Dice 4</button>
+      <div class="divider"></div>
+      <button class="dice-btn" onclick="dice_roll(5)">Dice 5</button>
+      <div class="divider"></div>
+      <button class="dice-btn" onclick="dice_roll(6)">Dice 6</button>
+      <div class="divider"></div>
+      <button class="dice-btn" onclick="dice_all()">All</button>
+    </div>
+    <br />
+    <br />
+    <div class="flex-container">
+      <img id="dice1" class="dice-img" img />
+      <img id="dice2" class="dice-img" img />
+      <img id="dice3" class="dice-img" img />
+      <img id="dice4" class="dice-img" img />
+      <img id="dice5" class="dice-img" img />
+      <img id="dice6" class="dice-img" img />
+    </div>
+    <br />
+    <div class="centering">
+      <button class="reset-btn" onclick="reset_dice()">Reset dice</button>
+    </div>
+
+    <!--line divider-->
+    <hr class="solid valentine-pink" />
+
+    <!--heads or tails-->
+    <h2 class="header2">Flip a Coin!</h2>
+    <div class="centering">
+      <button class="dice-btn" onclick="headstails()">Flip</button>
+      <br />
+      <br />
+      <img id="coin_img" class="coin-img" />
+      <p id="headOrTail" class="magenta-text">_____</p>
+      <button class="reset-btn" onclick="reset_coin()">Reset</button>
+    </div>
+
+    <!--line divider-->
+    <hr class="solid valentine-pink" />
+    <!--guess the number-->
+    <div class="centering">
+      <h2 class="header2">Guess the number!</h2>
+      <p class="pinkText">From 1 to 100</p>
+      <button
+        class="dice-btn"
+        id="guessNumber_submit"
+        onclick="GuessNumber_submit()"
+      >
+        Submit
+      </button>
+      <br />
+      <br />
+      <form id="numberGuess_form">
+        <input
+          type="number"
+          id="number_guess"
+          value=""
+          min="1"
+          max="100"
+          required
+        />
+      </form>
+      <p class="pinkText" id="number_reveal"></p>
+      <button class="reset-btn" id="get_number" onclick="GuessNumber_roll()">
+        Re-roll number
+      </button>
+      <button
+        class="reset-btn"
+        id="reveal_number"
+        onclick="GuessNumber_reveal()"
+      >
+        Reveal number
+      </button>
+      <button class="reset-btn" onclick="GuessNumber_hide()">
+        Hide Number
+      </button>
+      <button class="reset-btn" onclick="resetNumberForm()">Reset</button>
+    </div>
+
+    <!--line divider-->
+    <hr class="solid valentine-pink" />
+    <!--click-->
+    <h2 class="header2">Click!</h2>
+    <div class="centering">
+      <button class="dice-btn" onclick="ClickButton()">Click</button>
+      <br />
+      <p class="timer-box" id="click-box">0</p>
+      <br />
+      <button class="reset-btn" onclick="refreshPage()">Refresh page</button>
+    </div>
+
+    <!--line divider-->
+    <hr class="solid valentine-pink" />
+    <!--palindrome checker-->
+    <h2 class="header2">Palindrome checker!</h2>
+    <div class="centering">
+      <form>
+        <input
+          type="text"
+          maxlength="30"
+          minlength="2"
+          id="palindrome"
+          number="0"
+          value="kayak"
+          placeholder="kayak"
+          required
+        />
+      </form>
+      <br />
+      <p class="pinkText" id="palindrome_reveal"></p>
+      <button class="dice-btn" onclick="check_palindrome()">Check</button>
+    </div>
+
+    <!--line divider-->
+    <hr class="solid valentine-pink" />
+    <!--hex color-->
+    <h2 class="header2">Random hex-color!</h2>
+    <div class="centering">
+      <button class="dice-btn" onclick="random_hex()">Get Hexed</button>
+      <p class="pinkText" id="first_hex_text"></p>
+      <div class="hex-circle" id="first_hex"></div>
+    </div>
+
+    <footer class="pinkText">
+      <!--line divider-->
+      <hr class="solid valentine-pink" />
+      ©sfalch
+    </footer>
+  </body>
+  <script src="minis.js"></script>
+  <script src="../main.js"></script>
+</html>

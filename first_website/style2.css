@@ -1,0 +1,29 @@
+body {
+  background-color: pink;
+}
+
+.nav1 {
+  width: 140px;
+  height: 70px;
+  outline: none;
+  color: pink;
+  background: darkmagenta;
+  cursor: pointer;
+  border-color: darkmagenta;
+  border-radius: 4px;
+  position: relative;
+  z-index: 0;
+  font-size: larger;
+  font-family: fantasy;
+  box-shadow: 1px 10px rgb(85, 0, 85);
+}
+
+.nav1:hover {
+  background-color: rgb(139, 44, 139);
+}
+
+.nav1:active {
+  background-color: rgb(139, 44, 139);
+  box-shadow: 0 5px rgb(85, 0, 85);
+  transform: translateY(5px);
+}
