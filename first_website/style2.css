@@ -67,3 +67,7 @@ li {
   font-weight: normal;
   margin-left: 20px;
 }
+
+input[type="radio"] {
+  accent-color: darkmagenta;
+}

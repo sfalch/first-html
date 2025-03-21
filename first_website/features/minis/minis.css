@@ -8,7 +8,7 @@
   border-color: darkmagenta;
   width: 200px;
   border-radius: 2px;
-  animation: shake 0.5s;
+  animation: shake 1s;
 }
 
 /* https://www.w3schools.com/howto/howto_css_shake_image.asp */
