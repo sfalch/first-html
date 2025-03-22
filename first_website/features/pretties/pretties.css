@@ -228,3 +228,58 @@
 }
 
 /* ------------------------------------------------------ */
+/* Carousel  */
+.box {
+  height: 300px;
+}
+
+.vertical-center {
+  position: relative;
+  float: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.carousel-img {
+  border-color: darkmagenta;
+  width: 200px;
+  border-radius: 2px;
+}
+
+.carousel-img-sides {
+  border-color: darkmagenta;
+  width: 180px;
+  border-radius: 2px;
+}
+
+.direction-btn {
+  color: pink;
+  font-family: fantasy;
+  font-size: 28px;
+  width: 50px;
+  height: 50px;
+  padding: 7px;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+
+  border: none;
+  background-color: darkmagenta;
+  border-radius: 100%;
+}
+
+.direction-btn:hover {
+  background-color: rgb(139, 44, 139);
+}
+
+.left-btn:active {
+  transform: translateX(-10px);
+}
+
+.right-btn:active {
+  transform: translateX(10px);
+}

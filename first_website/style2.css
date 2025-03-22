@@ -27,6 +27,16 @@ body {
   font-size: 20px;
 }
 
+.centering {
+  text-align: center;
+}
+
+.divider {
+  width: 40px;
+  height: auto;
+  display: inline-block;
+}
+
 .nav1 {
   width: 140px;
   height: 70px;
