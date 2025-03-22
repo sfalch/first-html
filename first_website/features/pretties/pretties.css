@@ -266,20 +266,41 @@
   text-align: center;
   justify-content: center;
   display: flex;
-
   border: none;
   background-color: darkmagenta;
   border-radius: 100%;
+  cursor: pointer;
 }
 
-.direction-btn:hover {
+.direction-btn:hover,
+.dot:hover {
   background-color: rgb(139, 44, 139);
 }
 
 .left-btn:active {
   transform: translateX(-10px);
+  background-color: rgb(139, 44, 139);
 }
 
 .right-btn:active {
   transform: translateX(10px);
+  background-color: rgb(139, 44, 139);
+}
+
+.dot {
+  color: pink;
+  font-family: fantasy;
+  font-size: 10px;
+  width: 10px;
+  height: 10px;
+  /* padding: 1px; */
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  border: none;
+  background-color: darkmagenta;
+  border-radius: 100%;
+  cursor: pointer;
+  margin: 10px;
+  border: none;
 }
