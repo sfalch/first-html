@@ -32,7 +32,7 @@ let b1 = "../../img/cards_deck/21.png";
 let c1 = "../../img/cards_deck/22.png";
 let d1 = "../../img/cards_deck/23.png";
 let e1 = "../../img/cards_deck/24.png";
-let f = "../../img/cards_deck/25.png";
+let f1 = "../../img/cards_deck/25.png";
 let g1 = "../../img/cards_deck/26.png";
 let h1 = "../../img/cards_deck/27.png";
 let i1 = "../../img/cards_deck/28.png";
@@ -57,7 +57,7 @@ let z1 = "../../img/cards_deck/312.png";
 let cards_arr = [
   a,
   b,
-  d,
+  c,
   d,
   e,
   f,
@@ -83,7 +83,7 @@ let cards_arr = [
   z,
   a1,
   b1,
-  d1,
+  c1,
   d1,
   e1,
   f1,
@@ -123,27 +123,86 @@ let cards_arr = [
 //     });
 // }
 
-let left_id = document.getElementById("left_id");
-let main_id = document.getElementById("main_id");
-let right_id = document.getElementById("right_id");
+let left_id = document.getElementById("left-card");
+let main_id = document.getElementById("main-card");
+let right_id = document.getElementById("right-card");
 
 //index the cards start at
-let index_l = 52;
+let index_l = 51;
 let index_m = 0;
 let index_r = 1;
 
 //length of array
-let len = cards_arr.length;
+let len = 51;
 
 function goLeft() {
   //
-  if (index_r === 0) {
+  if (index_r === 51) {
     left_id.src = cards_arr[index_m];
     main_id.src = cards_arr[index_r];
-    right_id.src = cards_arr[len];
+    right_id.src = cards_arr[0];
 
     index_l = index_m;
     index_m = index_r;
-    index_r = len;
+    index_r = 0;
+
+    console.log("GoL - left: " + left_id.src);
+    console.log("GoL - main: " + main_id.src);
+    console.log("GoL - right: " + right_id.src);
+
+    console.log("INDEX L l" + index_l);
+    console.log("INDEX L m" + index_m);
+    console.log("INDEX L r" + index_r);
   }
+  left_id.src = cards_arr[index_m];
+  main_id.src = cards_arr[index_r];
+  right_id.src = cards_arr[index_r + 1];
+
+  index_l = index_m;
+  index_m = index_r;
+  index_r = index_r + 1;
+
+  console.log("GoL - left: " + left_id.src);
+  console.log("GoL - main: " + main_id.src);
+  console.log("GoL - right: " + right_id.src);
+
+  console.log("INDEX L l" + index_l);
+  console.log("INDEX L m" + index_m);
+  console.log("INDEX L r" + index_r);
+}
+
+function goRight() {
+  //
+  if (index_l === 0) {
+    right_id.src = cards_arr[index_m];
+    main_id.src = cards_arr[index_l];
+    left_id.src = cards_arr[len];
+
+    index_r = index_m;
+    index_m = index_l;
+    index_l = len;
+
+    console.log("GoR - left: " + left_id.src);
+    console.log("GoR - main: " + main_id.src);
+    console.log("GoR - right: " + right_id.src);
+
+    console.log("INDEX R l" + index_l);
+    console.log("INDEX R m" + index_m);
+    console.log("INDEX R r" + index_r);
+  }
+  right_id.src = cards_arr[index_m];
+  main_id.src = cards_arr[index_l];
+  left_id.src = cards_arr[index_l - 1];
+
+  index_r = index_m;
+  index_m = index_l;
+  index_l = index_l - 1;
+
+  console.log("GoR - left: " + left_id.src);
+  console.log("GoR - main: " + main_id.src);
+  console.log("GoR - right: " + right_id.src);
+
+  console.log("INDEX R l" + index_l);
+  console.log("INDEX R m" + index_m);
+  console.log("INDEX R r" + index_r);
 }
