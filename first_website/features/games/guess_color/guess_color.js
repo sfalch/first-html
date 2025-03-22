@@ -54,3 +54,20 @@ function checkRGB(n) {
     reveal_id.textContent = "Wrong! That was " + color;
   }
 }
+
+//guess the color by the code
+let color_guess = "";
+
+//get a random color to the circle
+function getColor() {
+  let mystery2 = document.getElementById("color_mystery");
+
+  color_guess = randomRGB();
+  console.log(color_guess);
+  mystery2.style.backgroundColor = color_guess;
+}
+
+//function that does:
+//number input for r,g,b
+// button that gets input
+// compares numbers, updates message: more/less r,g,b

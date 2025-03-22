@@ -32,6 +32,7 @@
     <h2 class="header2">RGB!</h2>
 
     <div class="centering">
+      <p class="pinkText">Guess the code by the color</p>
       <button class="circle-btn" onclick="guessRGBcode()">Spin!</button>
       <p class="pinkText" id="rgb_mystery">rgb(0,0,0)</p>
       <p class="pinkText" id="rgb_mystery1">-</p>
@@ -51,11 +52,11 @@
     <h2 class="header2">RGB 2!</h2>
 
     <div class="centering">
-      <p class="pinkText">guess the rgb code from a color</p>
+      <p class="pinkText">Guess the color with the code</p>
       <button class="circle-btn" onclick="getColor()">Spin!</button>
       <br />
       <br />
-      <button class="circle2" onclick="checkRGB(1)"></button>
+      <button class="circle2" id="color_mystery" onclick="checkRGB(1)"></button>
     </div>
 
     <footer class="pinkText">
