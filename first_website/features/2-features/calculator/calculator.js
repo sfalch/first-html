@@ -44,12 +44,12 @@ function calculate() {
       return;
   }
 
-  console.log(previousInput);
-  console.log(currentOperation);
-  console.log(currentInput);
-  console.log(result);
-  console.log(prev);
-  console.log(current);
+  // console.log(previousInput);
+  // console.log(currentOperation);
+  // console.log(currentInput);
+  // console.log(result);
+  // console.log(prev);
+  // console.log(current);
 
   currentInput = result.toString();
   currentOperation = "";

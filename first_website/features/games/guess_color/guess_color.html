@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Guess the Hex!</title>
+    <title>Guess the Color!</title>
     <link rel="icon" type="image/x-icon" href="../../../img/favicon.ico" />
     <link rel="stylesheet" href="../../../style1.css" />
     <link rel="stylesheet" href="../../../style2.css" />
@@ -20,7 +20,7 @@
     </header>
 
     <h1 class="header1">Guess the Color!</h1>
-    <p class="pinkText">Guess the hex or the RGB 🌈</p>
+    <p class="pinkText">Guess the HEX or the RGB 🌈</p>
     <nav>
       <a href="../../..//index.html"> <button class="dice-btn">Home</button></a>
       <a href="../games.html"> <button class="dice-btn">Back</button></a>
@@ -28,47 +28,35 @@
 
     <!--line divider-->
     <hr class="solid valentine-pink" />
-    <!--hex color guess-->
-    <h2 class="header2">Guess the Hex!</h2>
+    <!--rgb color guess-->
+    <h2 class="header2">RGB!</h2>
 
     <div class="centering">
-      <p class="pinkText">Choose how many colors to guess between:</p>
-      <button class="circle-btn" onclick="showThree_1()">3</button>
-      <div class="divider"></div>
-      <button class="circle-btn" onclick="showFive_1()">5</button>
-      <div class="divider"></div>
-      <button class="circle-btn" onclick="showTen_1()">10</button>
-      <br /><br /><br />
-      <button class="dice-btn" onclick="hexSpin1()">Get hexes</button>
-      <!-- <p class="magenta-text" id="controlHex1"></p> -->
+      <button class="circle-btn" onclick="guessRGBcode()">Spin!</button>
+      <p class="pinkText" id="rgb_mystery">rgb(0,0,0)</p>
+      <p class="pinkText" id="rgb_mystery1">-</p>
     </div>
 
-    <br /><br /><br />
+    <div class="centering" id="rgb_div1">
+      <button class="circle1" id="rgb_circ1" onclick="checkRGB(1)"></button>
+      <button class="circle1" id="rgb_circ2" onclick="checkRGB(2)"></button>
+      <button class="circle1" id="rgb_circ3" onclick="checkRGB(3)"></button>
+      <button class="circle1" id="rgb_circ4" onclick="checkRGB(4)"></button>
+      <button class="circle1" id="rgb_circ5" onclick="checkRGB(5)"></button>
+    </div>
 
-    <div class="centering" id="hex_div1">
-      <div class="hex-circle" id="hex1"></div>
-      <div class="divider"></div>
-      <div class="hex-circle" id="hex2"></div>
-      <div class="divider"></div>
-      <div class="hex-circle" id="hex3"></div>
-      <div class="divider"></div>
-      <div class="hex-circle" id="hex4"></div>
-      <div class="divider"></div>
-      <div class="hex-circle" id="hex5"></div>
+    <!--line divider-->
+    <hr class="solid valentine-pink" />
+    <!--rgb color text guess-->
+    <h2 class="header2">RGB 2!</h2>
+
+    <div class="centering">
+      <p class="pinkText">guess the rgb code from a color</p>
+      <button class="circle-btn" onclick="getColor()">Spin!</button>
       <br />
-      <br /><br />
-      <div class="hex-circle" id="hex6"></div>
-      <div class="divider"></div>
-      <div class="hex-circle" id="hex7"></div>
-      <div class="divider"></div>
-      <div class="hex-circle" id="hex8"></div>
-      <div class="divider"></div>
-      <div class="hex-circle" id="hex9"></div>
-      <div class="divider"></div>
-      <div class="hex-circle" id="hex10"></div>
+      <br />
+      <button class="circle2" onclick="checkRGB(1)"></button>
     </div>
-
-    <div class="centering"></div>
 
     <footer class="pinkText">
       <!--line divider-->

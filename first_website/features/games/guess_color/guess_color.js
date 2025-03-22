@@ -1,105 +1,56 @@
-// get random hex
-function random_hex() {
-  let n = (Math.random() * 0xfffff * 1000000).toString(16);
-  console.log("hex: " + n);
-  let hex = n.slice(0, 6);
-  console.log("hex: " + hex);
+function randomRGB() {
+  let r = Math.floor(Math.random() * 255);
+  let g = Math.floor(Math.random() * 255);
+  let b = Math.floor(Math.random() * 255);
 
-  return "#" + hex;
+  return `rgb(${r}, ${g}, ${b})`;
 }
 
-//element id for the first hex game
-let hex1 = document.getElementById("hex1");
-let hex2 = document.getElementById("hex2");
-let hex3 = document.getElementById("hex3");
-let hex4 = document.getElementById("hex4");
-let hex5 = document.getElementById("hex5");
-let hex6 = document.getElementById("hex6");
-let hex7 = document.getElementById("hex7");
-let hex8 = document.getElementById("hex8");
-let hex9 = document.getElementById("hex9");
-let hex10 = document.getElementById("hex10");
+//the string for the mystery color
+let mystery_string = "";
 
-//if for control hex
-let controlHex1 = document.getElementById("controlHex1");
+//the rgb text id
+let text_id = document.getElementById("rgb_mystery");
 
-//keep trakc of circles displayed:
-let circles = 10;
+//the rgb reveal message id
+let reveal_id = document.getElementById("rgb_mystery1");
 
-function showThree_1() {
-  hex1.style.display = "none";
-  hex5.style.display = "none";
-  hex6.style.display = "none";
-  hex7.style.display = "none";
-  hex8.style.display = "none";
-  hex9.style.display = "none";
-  hex10.style.display = "none";
+//guesss rgb code
+function guessRGBcode() {
+  //get circles ids
+  let circles = document.getElementsByClassName("circle1");
 
-  hex2.style.display = "";
-  hex3.style.display = "";
-  hex4.style.display = "";
+  //iterate through all and change their background color to random
+  for (const circ of circles) {
+    let rgb = randomRGB();
+    circ.style.backgroundColor = rgb;
+  }
 
-  circles = 3;
+  //get random number for one of the circles
+  let random = Math.floor(Math.random() * 5);
+  //id for the specific random circle
+  let mystery_id = document.getElementById(`rgb_circ${random}`);
+  //set mystery string to the name of the random circles background color
+  mystery_string = mystery_id.style.backgroundColor;
+
+  //update the rgb text to new color
+  text_id.textContent = mystery_string;
+  //reset reveal text to blank
+  reveal_id.textContent = "-";
 }
 
-function showFive_1() {
-  hex6.style.display = "none";
-  hex7.style.display = "none";
-  hex8.style.display = "none";
-  hex9.style.display = "none";
-  hex10.style.display = "none";
+function checkRGB(n) {
+  //get id for the selected button
+  let button_id = document.getElementById(`rgb_circ${n}`);
 
-  hex1.style.display = "";
-  hex2.style.display = "";
-  hex3.style.display = "";
-  hex4.style.display = "";
-  hex5.style.display = "";
+  //get the string for the background color
+  let color = button_id.style.backgroundColor;
 
-  circles = 5;
-}
-
-function showTen_1() {
-  hex1.style.display = "";
-  hex2.style.display = "";
-  hex3.style.display = "";
-  hex4.style.display = "";
-  hex5.style.display = "";
-  hex6.style.display = "";
-  hex7.style.display = "";
-  hex8.style.display = "";
-  hex9.style.display = "";
-  hex10.style.display = "";
-
-  circles = 10;
-}
-
-function hexSpin1() {
-  hex1.style.backgroundColor = random_hex();
-  hex2.style.backgroundColor = random_hex();
-  hex3.style.backgroundColor = random_hex();
-  hex4.style.backgroundColor = random_hex();
-  hex5.style.backgroundColor = random_hex();
-  hex6.style.backgroundColor = random_hex();
-  hex7.style.backgroundColor = random_hex();
-  hex8.style.backgroundColor = random_hex();
-  hex9.style.backgroundColor = random_hex();
-  hex10.style.backgroundColor = random_hex();
-
-  //   let n = 0;
-  //   if (circles === 10) {
-  //     n = Math.floor(Math.random() * 10);
-  //     controlHex1.textContent = `hex${n}`.style.backgroundColor;
-  //     console.log(`hex${n}`.style.backgroundColor);
-  //     console.log(controlHex1.textContent);
-  //   } else if (circles === 5) {
-  //     n = Math.floor(Math.random() * 5);
-  //     controlHex1.textContent = `hex${n}`.style.backgroundColor;
-  //     console.log(`hex${n}`.style.backgroundColor);
-  //     console.log(controlHex1.textContent);
-  //   } else if (circles === 3) {
-  //     n = Math.floor(Math.random() * 3);
-  //     controlHex1.textContent = `hex${n}`.style.backgroundColor;
-  //     console.log(`hex${n}`.style.backgroundColor);
-  //     console.log(controlHex1.textContent);
-  //   }
+  // if the colors are the same, then change reveal text to correct,
+  // else  wrong and reveal color name
+  if (color === mystery_string) {
+    reveal_id.textContent = "Correct! It is circle " + n;
+  } else {
+    reveal_id.textContent = "Wrong! That was " + color;
+  }
 }
