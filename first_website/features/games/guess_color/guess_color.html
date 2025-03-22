@@ -7,7 +7,7 @@
     <link rel="icon" type="image/x-icon" href="../../../img/favicon.ico" />
     <link rel="stylesheet" href="../../../style1.css" />
     <link rel="stylesheet" href="../../../style2.css" />
-    <link rel="stylesheet" href="calculator.css" />
+    <link rel="stylesheet" href="guess_color.css" />
   </head>
   <body>
     <header class="header">
@@ -30,13 +30,45 @@
     <hr class="solid valentine-pink" />
     <!--hex color guess-->
     <h2 class="header2">Guess the Hex!</h2>
+
     <div class="centering">
-      <div class="hex-circle" id="hex1"></div>
-      <div class="hex-circle" id="hex2"></div>
-      <div class="hex-circle" id="hex3"></div>
-      <div class="hex-circle" id="hex4"></div>
-      <div class="hex-circle" id="hex5"></div>
+      <p class="pinkText">Choose how many colors to guess between:</p>
+      <button class="circle-btn" onclick="showThree_1()">3</button>
+      <div class="divider"></div>
+      <button class="circle-btn" onclick="showFive_1()">5</button>
+      <div class="divider"></div>
+      <button class="circle-btn" onclick="showTen_1()">10</button>
+      <br /><br /><br />
+      <button class="dice-btn" onclick="hexSpin1()">Get hexes</button>
+      <!-- <p class="magenta-text" id="controlHex1"></p> -->
     </div>
+
+    <br /><br /><br />
+
+    <div class="centering" id="hex_div1">
+      <div class="hex-circle" id="hex1"></div>
+      <div class="divider"></div>
+      <div class="hex-circle" id="hex2"></div>
+      <div class="divider"></div>
+      <div class="hex-circle" id="hex3"></div>
+      <div class="divider"></div>
+      <div class="hex-circle" id="hex4"></div>
+      <div class="divider"></div>
+      <div class="hex-circle" id="hex5"></div>
+      <br />
+      <br /><br />
+      <div class="hex-circle" id="hex6"></div>
+      <div class="divider"></div>
+      <div class="hex-circle" id="hex7"></div>
+      <div class="divider"></div>
+      <div class="hex-circle" id="hex8"></div>
+      <div class="divider"></div>
+      <div class="hex-circle" id="hex9"></div>
+      <div class="divider"></div>
+      <div class="hex-circle" id="hex10"></div>
+    </div>
+
+    <div class="centering"></div>
 
     <footer class="pinkText">
       <!--line divider-->

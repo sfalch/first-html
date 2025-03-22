@@ -1,0 +1,25 @@
+.circle-btn {
+  color: pink;
+  font-family: fantasy;
+  font-size: 40px;
+  font-weight: bold;
+  background-color: darkmagenta;
+  border: none;
+  border-radius: 100%;
+  width: 100px;
+  height: 100px;
+  box-shadow: 1px 12px rgb(85, 0, 85);
+  z-index: 0;
+  position: relative;
+  cursor: pointer;
+}
+
+.circle-btn:hover {
+  background-color: rgb(139, 44, 139);
+}
+
+.circle-btn:active {
+  background-color: rgb(139, 44, 139);
+  box-shadow: 0 5px rgb(85, 0, 85);
+  transform: translateY(5px);
+}
