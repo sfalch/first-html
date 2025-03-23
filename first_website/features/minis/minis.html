@@ -23,341 +23,359 @@
     <p class="pinkText">Mini features :3</p>
     <nav>
       <a href="../../index.html"> <button class="dice-btn">Home</button></a>
+      <button class="reset-btn right-div" onclick="scrollToBottom()">
+        Bottom of page
+      </button>
     </nav>
 
-    <!--line divider-->
-    <hr class="solid valentine-pink" />
-    <!--Random number generator-->
-    <h2 class="header2">Number from 1 to 100:</h2>
-    <div class="centering">
-      <button class="dice-btn" onclick="random_print()">spin!</button>
-    </div>
-    <p id="random-print" class="magenta-text"></p>
+    <div id="scrolling-page">
+      <!--line divider-->
+      <hr class="solid valentine-pink" />
+      <!--Random number generator-->
+      <h2 class="header2">Number from 1 to 100:</h2>
+      <div class="centering">
+        <button class="dice-btn" onclick="random_print()">spin!</button>
+      </div>
+      <p id="random-print" class="magenta-text"></p>
 
-    <!--line divider-->
-    <hr class="solid valentine-pink" />
-    <!--Dice roll-->
-    <h2 class="header2">Dice roll!</h2>
-    <div class="centering">
-      <button class="dice-btn" onclick="dice_roll(1)">Dice 1</button>
-      <div class="divider"></div>
-      <button class="dice-btn" onclick="dice_roll(2)">Dice 2</button>
-      <div class="divider"></div>
-      <button class="dice-btn" onclick="dice_roll(3)">Dice 3</button>
-      <div class="divider"></div>
-      <button class="dice-btn" onclick="dice_roll(4)">Dice 4</button>
-      <div class="divider"></div>
-      <button class="dice-btn" onclick="dice_roll(5)">Dice 5</button>
-      <div class="divider"></div>
-      <button class="dice-btn" onclick="dice_roll(6)">Dice 6</button>
-      <div class="divider"></div>
-      <button class="dice-btn" onclick="dice_all()">All</button>
-    </div>
-    <br />
-    <br />
-    <div class="flex-container">
-      <img id="dice1" class="dice-img" img />
-      <img id="dice2" class="dice-img" img />
-      <img id="dice3" class="dice-img" img />
-      <img id="dice4" class="dice-img" img />
-      <img id="dice5" class="dice-img" img />
-      <img id="dice6" class="dice-img" img />
-    </div>
-    <br />
-    <div class="centering">
-      <button class="reset-btn" onclick="reset_dice()">Reset dice</button>
-    </div>
-
-    <!--line divider-->
-    <hr class="solid valentine-pink" />
-
-    <!--heads or tails-->
-    <h2 class="header2">Flip a Coin!</h2>
-    <div class="centering">
-      <button class="dice-btn" onclick="headstails()">Flip</button>
+      <!--line divider-->
+      <hr class="solid valentine-pink" />
+      <!--Dice roll-->
+      <h2 class="header2">Dice roll!</h2>
+      <div class="centering">
+        <button class="dice-btn" onclick="dice_roll(1)">Dice 1</button>
+        <div class="divider"></div>
+        <button class="dice-btn" onclick="dice_roll(2)">Dice 2</button>
+        <div class="divider"></div>
+        <button class="dice-btn" onclick="dice_roll(3)">Dice 3</button>
+        <div class="divider"></div>
+        <button class="dice-btn" onclick="dice_roll(4)">Dice 4</button>
+        <div class="divider"></div>
+        <button class="dice-btn" onclick="dice_roll(5)">Dice 5</button>
+        <div class="divider"></div>
+        <button class="dice-btn" onclick="dice_roll(6)">Dice 6</button>
+        <div class="divider"></div>
+        <button class="dice-btn" onclick="dice_all()">All</button>
+      </div>
       <br />
       <br />
-      <img id="coin_img" class="coin-img" />
-      <p id="headOrTail" class="magenta-text">_____</p>
-      <button class="reset-btn" onclick="reset_coin()">Reset</button>
-    </div>
+      <div class="flex-container">
+        <img id="dice1" class="dice-img" img />
+        <img id="dice2" class="dice-img" img />
+        <img id="dice3" class="dice-img" img />
+        <img id="dice4" class="dice-img" img />
+        <img id="dice5" class="dice-img" img />
+        <img id="dice6" class="dice-img" img />
+      </div>
+      <br />
+      <div class="centering">
+        <button class="reset-btn" onclick="reset_dice()">Reset dice</button>
+      </div>
 
-    <!--line divider-->
-    <hr class="solid valentine-pink" />
-    <!--guess the number-->
-    <div class="centering">
-      <h2 class="header2">Guess the number!</h2>
-      <p class="pinkText">From 1 to 100</p>
-      <button
-        class="dice-btn"
-        id="guessNumber_submit"
-        onclick="GuessNumber_submit()"
-      >
-        Submit
-      </button>
-      <br />
-      <br />
-      <form id="numberGuess_form">
+      <!--line divider-->
+      <hr class="solid valentine-pink" />
+
+      <!--heads or tails-->
+      <h2 class="header2">Flip a Coin!</h2>
+      <div class="centering">
+        <button class="dice-btn" onclick="headstails()">Flip</button>
+        <br />
+        <br />
+        <img id="coin_img" class="coin-img" />
+        <p id="headOrTail" class="magenta-text">_____</p>
+        <button class="reset-btn" onclick="reset_coin()">Reset</button>
+      </div>
+
+      <!--line divider-->
+      <hr class="solid valentine-pink" />
+      <!--guess the number-->
+      <div class="centering">
+        <h2 class="header2">Guess the number!</h2>
+        <p class="pinkText">From 1 to 100</p>
+        <button
+          class="dice-btn"
+          id="guessNumber_submit"
+          onclick="GuessNumber_submit()"
+        >
+          Submit
+        </button>
+        <br />
+        <br />
+        <form id="numberGuess_form">
+          <input
+            type="number"
+            id="number_guess"
+            value=""
+            min="1"
+            max="100"
+            required
+          />
+        </form>
+        <p class="pinkText" id="number_reveal"></p>
+        <button class="reset-btn" id="get_number" onclick="GuessNumber_roll()">
+          Re-roll number
+        </button>
+        <button
+          class="reset-btn"
+          id="reveal_number"
+          onclick="GuessNumber_reveal()"
+        >
+          Reveal number
+        </button>
+        <button class="reset-btn" onclick="GuessNumber_hide()">
+          Hide Number
+        </button>
+        <button class="reset-btn" onclick="resetNumberForm()">Reset</button>
+      </div>
+
+      <!--line divider-->
+      <hr class="solid valentine-pink" />
+      <!--click-->
+      <h2 class="header2">Click!</h2>
+      <div class="centering">
+        <button class="dice-btn" onclick="ClickButton()">Click</button>
+        <br />
+        <p class="timer-box" id="click-box">0</p>
+        <br />
+        <button class="reset-btn" onclick="refreshPage()">Refresh page</button>
+      </div>
+
+      <!--line divider-->
+      <hr class="solid valentine-pink" />
+      <!--palindrome checker-->
+      <h2 class="header2">Palindrome checker!</h2>
+      <div class="centering">
+        <form>
+          <input
+            type="text"
+            maxlength="30"
+            minlength="2"
+            id="palindrome"
+            number="0"
+            value="kayak"
+            placeholder="kayak"
+            required
+          />
+        </form>
+        <br />
+        <p class="pinkText" id="palindrome_reveal"></p>
+        <button class="dice-btn" onclick="check_palindrome()">Check</button>
+      </div>
+
+      <!--line divider-->
+      <hr class="solid valentine-pink" />
+      <!--hex color and rgb color-->
+      <h2 class="header2">Random hex-color!</h2>
+      <div class="centering">
+        <div class="color-box">
+          <button class="dice-btn" onclick="random_hex()">Get Hexed</button>
+          <p class="whiteText"><span id="first_hex_text">HEX</span></p>
+          <div class="hex-circle" id="first_hex"></div>
+        </div>
+        <div class="divider"></div>
+        <div class="color-box">
+          <button class="dice-btn" onclick="random_rgb()">RGB?!</button>
+          <p class="whiteText"><span id="first_rgb_text">RGB</span></p>
+          <div class="hex-circle" id="first_rgb"></div>
+        </div>
+      </div>
+
+      <!--line divider-->
+      <hr class="solid valentine-pink" />
+      <!--even or odd -->
+      <h2 class="header2">Even or Odd!</h2>
+      <div class="centering">
+        <p class="pinkText" id="now">Function practice</p>
+        <button class="dice-btn" onclick="number()">1-200</button>
+        <button class="dice-btn" onclick="bigger()">1-1000</button>
+        <br /><br />
+        <button class="dice-btn" onclick="even()">even</button>
+        <button class="dice-btn" onclick="odd()">odd</button>
+        <br /><br />
+        <p class="pinkText">Even or odd: <span id="my_number"></span></p>
+
         <input
           type="number"
-          id="number_guess"
-          value=""
+          id="odd"
+          max="1000000000"
           min="1"
-          max="100"
           required
+          value="1"
+          placeholder="2"
         />
-      </form>
-      <p class="pinkText" id="number_reveal"></p>
-      <button class="reset-btn" id="get_number" onclick="GuessNumber_roll()">
-        Re-roll number
-      </button>
-      <button
-        class="reset-btn"
-        id="reveal_number"
-        onclick="GuessNumber_reveal()"
-      >
-        Reveal number
-      </button>
-      <button class="reset-btn" onclick="GuessNumber_hide()">
-        Hide Number
-      </button>
-      <button class="reset-btn" onclick="resetNumberForm()">Reset</button>
-    </div>
+        <br />
+        <br />
+        <button class="dice-btn" onclick="even2()">even</button>
+        <button class="dice-btn" onclick="odd2()">odd</button>
+        <br /><br />
+        <button class="reset-btn" onclick="reset()">Reset</button>
+      </div>
 
-    <!--line divider-->
-    <hr class="solid valentine-pink" />
-    <!--click-->
-    <h2 class="header2">Click!</h2>
-    <div class="centering">
-      <button class="dice-btn" onclick="ClickButton()">Click</button>
-      <br />
-      <p class="timer-box" id="click-box">0</p>
-      <br />
-      <button class="reset-btn" onclick="refreshPage()">Refresh page</button>
-    </div>
+      <!--line divider-->
+      <hr class="solid valentine-pink" />
+      <!--objects -->
+      <h2 class="header2">Age!</h2>
+      <div class="centering">
+        <p class="pinkText">Objects practice</p>
+        <p class="pinkText">Your birthday</p>
+        <form id="birthday_form">
+          <label class="pinkText" for="day">Day</label>
+          <input
+            type="number"
+            id="day"
+            max="31"
+            min="1"
+            required
+            value="1"
+            placeholder="20"
+          />
+          <label class="pinkText" for="month">Month</label>
+          <input
+            type="number"
+            id="month"
+            max="12"
+            min="1"
+            required
+            value="1"
+            placeholder="4"
+          />
+          <label class="pinkText" for="year">Year</label>
+          <input
+            type="number"
+            id="year"
+            max="2025"
+            min="1"
+            required
+            value="1"
+            placeholder="1998"
+          />
+        </form>
+        <br /><br /><br />
+        <button class="dice-btn" onclick="getAge()">Get age</button>
+        <p class="pinkText" id="birthday">Birthday</p>
+        <p class="pinkText" id="age">Age</p>
+        <button class="reset-btn" onclick="resetPage()">Re-fresh page</button>
+      </div>
 
-    <!--line divider-->
-    <hr class="solid valentine-pink" />
-    <!--palindrome checker-->
-    <h2 class="header2">Palindrome checker!</h2>
-    <div class="centering">
-      <form>
+      <!--line divider-->
+      <hr class="solid valentine-pink" />
+      <!--objects adn this -->
+      <h2 class="header2">Name!</h2>
+      <div class="centering">
+        <label class="pinkText" for="first">First name: </label>
         <input
           type="text"
+          id="first"
           maxlength="30"
+          minlength="1"
+          required
+          value="first"
+          placeholder="John"
+        />
+        <label class="pinkText" for="last">Last name: </label>
+        <input
+          type="text"
+          id="last"
+          maxlength="30"
+          minlength="1"
+          required
+          value="last"
+          placeholder="Doe"
+        />
+        <p class="pinkText" id="name">John Doe</p>
+        <button class="dice-btn" onclick="yourName()">Name</button>
+        <br /><br />
+        <button class="reset-btn" onclick="resetPage()">Re-fresh page</button>
+      </div>
+
+      <!--line divider-->
+      <hr class="solid valentine-pink" />
+      <!--fetch api with pokemon -->
+      <h2 class="header2">Pokemon API!</h2>
+
+      <div class="centering">
+        <p class="pinkText">Learning fetch(), show shiny pokemon!</p>
+
+        <button class="dice-btn" onclick="fetchPokemon()">Pokémon</button>
+        <br /><br />
+        <input
+          type="text"
+          maxlength="20"
           minlength="2"
-          id="palindrome"
-          number="0"
-          value="kayak"
-          placeholder="kayak"
+          id="pokemonName"
+          placeholder="Enter Pokémon name"
           required
         />
-      </form>
-      <br />
-      <p class="pinkText" id="palindrome_reveal"></p>
-      <button class="dice-btn" onclick="check_palindrome()">Check</button>
-    </div>
 
-    <!--line divider-->
-    <hr class="solid valentine-pink" />
-    <!--hex color and rgb color-->
-    <h2 class="header2">Random hex-color!</h2>
-    <div class="centering">
-      <div class="color-box">
-        <button class="dice-btn" onclick="random_hex()">Get Hexed</button>
-        <p class="whiteText"><span id="first_hex_text">HEX</span></p>
-        <div class="hex-circle" id="first_hex"></div>
+        <br /><br />
+
+        <img
+          class="coin-img"
+          alt="Pokemon-img"
+          id="pokemon_img"
+          style="display: none"
+        />
       </div>
-      <div class="divider"></div>
-      <div class="color-box">
-        <button class="dice-btn" onclick="random_rgb()">RGB?!</button>
-        <p class="whiteText"><span id="first_rgb_text">RGB</span></p>
-        <div class="hex-circle" id="first_rgb"></div>
+
+      <!--line divider-->
+      <hr class="solid valentine-pink" />
+      <!--fetch api with isEven -->
+      <h2 class="header2">isEven API!</h2>
+
+      <div class="centering">
+        <p class="pinkText">Learning fetch(), even number API!</p>
+        <input
+          type="number"
+          id="isEvenInput"
+          placeholder="Input number"
+          value="7"
+          required
+        />
+        <p class="pinkText" id="revealEven">Is the number even?</p>
+        <button class="dice-btn" onclick="fetchisEven()">Check!</button
+        ><br /><br />
       </div>
-    </div>
 
-    <!--line divider-->
-    <hr class="solid valentine-pink" />
-    <!--even or odd -->
-    <h2 class="header2">Even or Odd!</h2>
-    <div class="centering">
-      <p class="pinkText" id="now">Function practice</p>
-      <button class="dice-btn" onclick="number()">1-200</button>
-      <button class="dice-btn" onclick="bigger()">1-1000</button>
-      <br /><br />
-      <button class="dice-btn" onclick="even()">even</button>
-      <button class="dice-btn" onclick="odd()">odd</button>
-      <br /><br />
-      <p class="pinkText">Even or odd: <span id="my_number"></span></p>
-
-      <input
-        type="number"
-        id="odd"
-        max="1000000000"
-        min="1"
-        required
-        value="1"
-        placeholder="2"
-      />
-      <br />
-      <br />
-      <button class="dice-btn" onclick="even2()">even</button>
-      <button class="dice-btn" onclick="odd2()">odd</button>
-      <br /><br />
-      <button class="reset-btn" onclick="reset()">Reset</button>
-    </div>
-
-    <!--line divider-->
-    <hr class="solid valentine-pink" />
-    <!--objects -->
-    <h2 class="header2">Age!</h2>
-    <div class="centering">
-      <p class="pinkText">Objects practice</p>
-      <p class="pinkText">Your birthday</p>
-      <form id="birthday_form">
-        <label class="pinkText" for="day">Day</label>
+      <!--line divider-->
+      <hr class="solid valentine-pink" />
+      <!--scroll bar -->
+      <h2 class="header2">Range input!</h2>
+      <div class="centering">
+        <label for="percent" class="pinkText">Percent:</label>
         <input
-          type="number"
-          id="day"
-          max="31"
-          min="1"
-          required
-          value="1"
-          placeholder="20"
+          type="range"
+          id="percent"
+          name="percent"
+          min="0"
+          max="100"
+          value="50"
+          step="1"
         />
-        <label class="pinkText" for="month">Month</label>
-        <input
-          type="number"
-          id="month"
-          max="12"
-          min="1"
-          required
-          value="1"
-          placeholder="4"
-        />
-        <label class="pinkText" for="year">Year</label>
-        <input
-          type="number"
-          id="year"
-          max="2025"
-          min="1"
-          required
-          value="1"
-          placeholder="1998"
-        />
-      </form>
-      <br /><br /><br />
-      <button class="dice-btn" onclick="getAge()">Get age</button>
-      <p class="pinkText" id="birthday">Birthday</p>
-      <p class="pinkText" id="age">Age</p>
-      <button class="reset-btn" onclick="resetPage()">Re-fresh page</button>
+
+        <br /><br />
+        <p>Percent: <span id="percent_text"></span>%</p>
+        <button class="dice-btn" onclick="updatePercent()">Submit</button>
+      </div>
+
+      <!--line divider-->
+      <hr class="solid valentine-pink" />
+      <!--adding or deleting elements  -->
+      <h2 class="header2">Append or delete!</h2>
+      <div class="centering">
+        <img src="../../img/snoopy dancing gif.gif" alt="Snoopy dancing gif" />
+      </div>
+
+      <!-- scrolling page end div -->
     </div>
-
-    <!--line divider-->
-    <hr class="solid valentine-pink" />
-    <!--objects adn this -->
-    <h2 class="header2">Name!</h2>
-    <div class="centering">
-      <label class="pinkText" for="first">First name: </label>
-      <input
-        type="text"
-        id="first"
-        maxlength="30"
-        minlength="1"
-        required
-        value="first"
-        placeholder="John"
-      />
-      <label class="pinkText" for="last">Last name: </label>
-      <input
-        type="text"
-        id="last"
-        maxlength="30"
-        minlength="1"
-        required
-        value="last"
-        placeholder="Doe"
-      />
-      <p class="pinkText" id="name">John Doe</p>
-      <button class="dice-btn" onclick="yourName()">Name</button>
-      <br /><br />
-      <button class="reset-btn" onclick="resetPage()">Re-fresh page</button>
-    </div>
-
-    <!--line divider-->
-    <hr class="solid valentine-pink" />
-    <!--fetch api with pokemon -->
-    <h2 class="header2">Pokemon API!</h2>
-
-    <div class="centering">
-      <p class="pinkText">Learning fetch(), show shiny pokemon!</p>
-
-      <button class="dice-btn" onclick="fetchPokemon()">Pokémon</button>
-      <br /><br />
-      <input
-        type="text"
-        maxlength="20"
-        minlength="2"
-        id="pokemonName"
-        placeholder="Enter Pokémon name"
-        required
-      />
-
-      <br /><br />
-
-      <img
-        class="coin-img"
-        alt="Pokemon-img"
-        id="pokemon_img"
-        style="display: none"
-      />
-    </div>
-
-    <!--line divider-->
-    <hr class="solid valentine-pink" />
-    <!--fetch api with isEven -->
-    <h2 class="header2">isEven API!</h2>
-
-    <div class="centering">
-      <p class="pinkText">Learning fetch(), even number API!</p>
-      <input
-        type="number"
-        id="isEvenInput"
-        placeholder="Input number"
-        value="7"
-        required
-      />
-      <p class="pinkText" id="revealEven">Is the number even?</p>
-      <button class="dice-btn" onclick="fetchisEven()">Check!</button
-      ><br /><br />
-    </div>
-
-    <!--line divider-->
-    <hr class="solid valentine-pink" />
-    <!--scroll bar -->
-    <h2 class="header2">Range input!</h2>
-    <div class="centering">
-      <label for="percent" class="pinkText">Percent:</label>
-      <input
-        type="range"
-        id="percent"
-        name="percent"
-        min="0"
-        max="100"
-        value="50"
-        step="1"
-      />
-
-      <br /><br />
-      <p>Percent: <span id="percent_text"></span>%</p>
-      <button class="dice-btn" onclick="updatePercent()">Submit</button>
-    </div>
-
     <!-- --------------------------------------------------------------------- -->
     <footer class="pinkText">
       <!--line divider-->
       <hr class="solid valentine-pink" />
+
       ©sfalch
+      <button class="reset-btn right-div" onclick="scrollToTop()">
+        Top of page
+      </button>
     </footer>
   </body>
   <script src="minis.js"></script>
