@@ -386,3 +386,34 @@ const updatePercent = () => {
 
   document.getElementById("percent_text").textContent = percent;
 };
+
+//-------------------------------------
+//append or delete gif
+//https://www.educative.io/answers/how-to-add-an-id-to-element-in-javascript
+//https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild
+
+const appendSnoopy = () => {
+  //if it doesnt exist already
+  if (document.getElementById("snoopy-gif") === null) {
+    //div where it needs to be appended to
+    const parent = document.getElementById("parent");
+
+    //create a new element with id, src, alt text, class
+    const new_img = document.createElement("img");
+    new_img.id = "snoopy-gif";
+    new_img.src = "../../img/snoopy dancing gif.gif";
+    new_img.alt = "Snoopy dancing gif";
+    new_img.className = "coin-img";
+    //append child of the new_img, to the parent variable set at top.
+    parent.appendChild(new_img);
+  }
+};
+
+const deleteSnoopy = () => {
+  const node = document.getElementById("snoopy-gif");
+  //if node.parentnode ??
+  //anyways, remove the child
+  if (node.parentNode) {
+    node.parentNode.removeChild(node);
+  }
+};
