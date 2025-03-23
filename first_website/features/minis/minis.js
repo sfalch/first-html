@@ -417,3 +417,15 @@ const deleteSnoopy = () => {
     node.parentNode.removeChild(node);
   }
 };
+
+//add text on click event handler
+let state = false;
+//https://www.w3schools.com/js/js_htmldom_document.asp
+document.getElementById("append_btn").onclick = () => {
+  state = !state;
+  if (state === false) {
+    document.getElementById("snoopy_text").textContent = "Snoopy be groovy";
+  } else {
+    document.getElementById("snoopy_text").textContent = "";
+  }
+};
