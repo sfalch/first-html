@@ -284,6 +284,32 @@
       <button class="reset-btn" onclick="resetPage()">Re-fresh page</button>
     </div>
 
+    <!--line divider-->
+    <hr class="solid valentine-pink" />
+    <!--fetch api with pokemon -->
+    <h2 class="header2">Pokemon!</h2>
+
+    <div class="centering">
+      <p class="pinkText">Learning fetch(), show shiny pokemon!</p>
+      <input
+        type="text"
+        maxlength="20"
+        minlength="2"
+        id="pokemonName"
+        placeholder="Enter Pokémon name"
+        required
+      />
+      <button class="dice-btn" onclick="fetchPokemon()">Pokémon</button
+      ><br /><br />
+
+      <img
+        class="coin-img"
+        alt="Pokemon-img"
+        id="pokemon_img"
+        style="display: none"
+      />
+    </div>
+
     <footer class="pinkText">
       <!--line divider-->
       <hr class="solid valentine-pink" />

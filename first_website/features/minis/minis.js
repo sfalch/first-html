@@ -310,7 +310,7 @@ let name_object = {
   first: document.getElementById("first").value,
   last: document.getElementById("last").value,
 };
-console.log(name_object);
+// console.log(name_object);
 
 let combine = {
   full_name: function () {
@@ -325,3 +325,30 @@ const yourName = () => {
   //update name
   document.getElementById("name").textContent = name;
 };
+
+//-----------------------------------FETCH POKEMON
+//https://www.youtube.com/watch?v=37vxWr0WgQk
+
+async function fetchPokemon() {
+  try {
+    const pokemonName = document
+      .getElementById("pokemonName")
+      .value.toLowerCase();
+
+    const response = await fetch(
+      `https://pokeapi.co/api/v2/pokemon/${pokemonName}`
+    );
+
+    if (!response.ok) {
+      throw new Error("Could not fetch resource");
+    }
+
+    const data = await response.json();
+    const pokemon_img = data.sprites.front_shiny;
+    const imgElement = document.getElementById("pokemon_img");
+    imgElement.src = pokemon_img;
+    imgElement.style.display = "block";
+  } catch (error) {
+    console.log(error);
+  }
+}
