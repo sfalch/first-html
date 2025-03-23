@@ -27,7 +27,7 @@ function guessRGBcode() {
   }
 
   //get random number for one of the circles
-  let random = Math.floor(Math.random() * 5);
+  let random = Math.floor(Math.random() * 5) + 1;
   //id for the specific random circle
   let mystery_id = document.getElementById(`rgb_circ${random}`);
   //set mystery string to the name of the random circles background color

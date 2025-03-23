@@ -99,6 +99,26 @@
       <p class="pinkText">Guess: <span id="guess_counter"></span></p>
     </div>
 
+    <!--line divider-->
+    <hr class="solid valentine-pink" />
+    <!--hex color guess-->
+    <h2 class="header2">HEX!</h2>
+
+    <div class="centering">
+      <p class="pinkText">Guess the code by the color</p>
+      <button class="circle-btn" onclick="guessHEXcode()">Spin!</button>
+      <p class="pinkText" id="hex_mystery">#000000</p>
+      <p class="pinkText" id="hex_mystery1">-</p>
+    </div>
+
+    <div class="centering" id="hex_div1">
+      <button class="circle3" id="hex_circ1" onclick="checkHEX(1)"></button>
+      <button class="circle3" id="hex_circ2" onclick="checkHEX(2)"></button>
+      <button class="circle3" id="hex_circ3" onclick="checkHEX(3)"></button>
+      <button class="circle3" id="hex_circ4" onclick="checkHEX(4)"></button>
+      <button class="circle3" id="hex_circ5" onclick="checkHEX(5)"></button>
+    </div>
+
     <footer class="pinkText">
       <!--line divider-->
       <hr class="solid valentine-pink" />
