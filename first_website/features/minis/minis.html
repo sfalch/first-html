@@ -287,10 +287,13 @@
     <!--line divider-->
     <hr class="solid valentine-pink" />
     <!--fetch api with pokemon -->
-    <h2 class="header2">Pokemon!</h2>
+    <h2 class="header2">Pokemon API!</h2>
 
     <div class="centering">
       <p class="pinkText">Learning fetch(), show shiny pokemon!</p>
+
+      <button class="dice-btn" onclick="fetchPokemon()">Pokémon</button>
+      <br /><br />
       <input
         type="text"
         maxlength="20"
@@ -299,8 +302,8 @@
         placeholder="Enter Pokémon name"
         required
       />
-      <button class="dice-btn" onclick="fetchPokemon()">Pokémon</button
-      ><br /><br />
+
+      <br /><br />
 
       <img
         class="coin-img"
@@ -313,7 +316,7 @@
     <!--line divider-->
     <hr class="solid valentine-pink" />
     <!--fetch api with isEven -->
-    <h2 class="header2">Even API!</h2>
+    <h2 class="header2">isEven API!</h2>
 
     <div class="centering">
       <p class="pinkText">Learning fetch(), even number API!</p>
@@ -329,6 +332,28 @@
       ><br /><br />
     </div>
 
+    <!--line divider-->
+    <hr class="solid valentine-pink" />
+    <!--scroll bar -->
+    <h2 class="header2">Range input!</h2>
+    <div class="centering">
+      <label for="percent" class="pinkText">Percent:</label>
+      <input
+        type="range"
+        id="percent"
+        name="percent"
+        min="0"
+        max="100"
+        value="50"
+        step="1"
+      />
+
+      <br /><br />
+      <p>Percent: <span id="percent_text"></span>%</p>
+      <button class="dice-btn" onclick="updatePercent()">Submit</button>
+    </div>
+
+    <!-- --------------------------------------------------------------------- -->
     <footer class="pinkText">
       <!--line divider-->
       <hr class="solid valentine-pink" />

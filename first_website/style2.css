@@ -13,14 +13,23 @@ body {
   font-size: 64px;
 }
 
-.header2 {
+.header2,
+h2 {
   color: darkmagenta;
   font-family: fantasy;
   font-size: 40px;
   text-align: center;
 }
 
-.pinkText {
+h3 {
+  color: darkmagenta;
+  font-family: fantasy;
+  font-size: 30px;
+  text-align: center;
+}
+
+.pinkText,
+p {
   color: darkmagenta;
   font-family: fantasy;
   padding: 5px;
@@ -79,5 +88,29 @@ li {
 }
 
 input[type="radio"] {
+  accent-color: darkmagenta;
+}
+
+input[type="text"] {
+  color: black;
+  background-color: rgb(255, 220, 226);
+  font-family: fantasy;
+  font-size: 16px;
+  border-color: darkmagenta;
+  border-radius: 4px;
+}
+
+input[type="number"] {
+  color: black;
+  background-color: rgb(255, 220, 226);
+  font-family: fantasy;
+  font-size: 16px;
+  border-color: darkmagenta;
+  border-radius: 4px;
+}
+
+input[type="range"] {
+  color: darkmagenta;
+  background-color: darkmagenta;
   accent-color: darkmagenta;
 }

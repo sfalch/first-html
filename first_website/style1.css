@@ -126,22 +126,6 @@
   border-radius: 20%;
 }
 
-input[type="text"] {
-  color: black;
-  background-color: rgb(255, 220, 226);
-  font-family: fantasy;
-  font-size: 16px;
-  border-color: darkmagenta;
-}
-
-input[type="number"] {
-  color: black;
-  background-color: rgb(255, 220, 226);
-  font-family: fantasy;
-  font-size: 16px;
-  border-color: darkmagenta;
-}
-
 .timer-box {
   color: darkmagenta;
   align-content: center;

@@ -379,3 +379,10 @@ async function fetchisEven() {
     console.log(error);
   }
 }
+
+//percent range input
+const updatePercent = () => {
+  const percent = document.getElementById("percent").value;
+
+  document.getElementById("percent_text").textContent = percent;
+};
