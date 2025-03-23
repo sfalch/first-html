@@ -189,3 +189,59 @@ function random_rgb() {
   text_id.textContent = color_string;
   text_id.style.color = color_string;
 }
+
+//anonymous function practice
+let n = 0;
+let x = 0;
+const number = function () {
+  n = Math.floor(Math.random() * 200);
+  console.log(n);
+  document.getElementById("now").textContent = "number = " + n;
+};
+
+const bigger = () => {
+  n = Math.floor(Math.random() * 1000);
+  console.log(n);
+  document.getElementById("now").textContent = "number = " + n;
+};
+
+const odd = () => {
+  n = document.getElementById("odd").value;
+  if (n % 2 === 1) {
+    document.getElementById("now").textContent = "yes";
+  } else {
+    document.getElementById("now").textContent = "even";
+  }
+};
+
+const even = () => {
+  n = document.getElementById("odd").value;
+  if (n % 2 === 0) {
+    document.getElementById("now").textContent = "yes";
+  } else {
+    document.getElementById("now").textContent = "odd";
+  }
+};
+
+const odd2 = () => {
+  x = document.getElementById("odd").value;
+  if (x % 2 === 1) {
+    document.getElementById("my_number").textContent = "yes";
+  } else {
+    document.getElementById("my_number").textContent = "even";
+  }
+};
+
+const even2 = () => {
+  x = document.getElementById("odd").value;
+  if (x % 2 === 0) {
+    document.getElementById("my_number").textContent = "yes";
+  } else {
+    document.getElementById("my_number").textContent = "odd";
+  }
+};
+
+const reset = () => {
+  document.getElementById("odd").value = 0;
+  document.getElementById("odd").reset();
+};

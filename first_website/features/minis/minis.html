@@ -36,7 +36,6 @@
 
     <!--line divider-->
     <hr class="solid valentine-pink" />
-
     <!--Dice roll-->
     <h2 class="header2">Dice roll!</h2>
     <div class="centering">
@@ -175,6 +174,37 @@
         <p class="whiteText"><span id="first_rgb_text">RGB</span></p>
         <div class="hex-circle" id="first_rgb"></div>
       </div>
+    </div>
+
+    <!--line divider-->
+    <hr class="solid valentine-pink" />
+    <!--time today -->
+    <h2 class="header2">Even or Odd!</h2>
+    <div class="centering">
+      <p class="pinkText" id="now">Function practice</p>
+      <button class="dice-btn" onclick="number()">1-200</button>
+      <button class="dice-btn" onclick="bigger()">1-1000</button>
+      <br /><br />
+      <button class="dice-btn" onclick="even()">even</button>
+      <button class="dice-btn" onclick="odd()">odd</button>
+      <br /><br />
+      <p class="pinkText">Even or odd: <span id="my_number"></span></p>
+
+      <input
+        type="number"
+        id="odd"
+        max="1000000000"
+        min="1"
+        required
+        value="1"
+        placeholder="2"
+      />
+      <br />
+      <br />
+      <button class="dice-btn" onclick="even2()">even</button>
+      <button class="dice-btn" onclick="odd2()">odd</button>
+      <br /><br />
+      <button class="reset-btn" onclick="reset()">Reset</button>
     </div>
 
     <footer class="pinkText">
