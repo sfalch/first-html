@@ -57,12 +57,19 @@ function checkRGB(n) {
 
 //guess the color by the code
 let color_guess = "";
+let r_color = "";
+let g_color = "";
+let b_color = "";
 
 //get a random color to the circle
 function getColor() {
   let mystery2 = document.getElementById("color_mystery");
 
-  color_guess = randomRGB();
+  r_color = Math.floor(Math.random() * 255);
+  g_color = Math.floor(Math.random() * 255);
+  b_color = Math.floor(Math.random() * 255);
+
+  color_guess = `rgb(${r_color}, ${g_color}, ${b_color})`;
   console.log(color_guess);
   mystery2.style.backgroundColor = color_guess;
 }
@@ -71,3 +78,99 @@ function getColor() {
 //number input for r,g,b
 // button that gets input
 // compares numbers, updates message: more/less r,g,b
+
+//get input and validate code guess.
+
+//id's for text
+let validate_id = document.getElementById("rgb_validate");
+let guess_id = document.getElementById("rgb_guess");
+//id for guess circle
+let guess_circle = document.getElementById("color_guess");
+
+//guess counter
+let guess_counter_id = document.getElementById("guess_counter");
+let guess_counter = 0;
+
+//the input id's
+let r_id = document.getElementById("r_guess");
+let g_id = document.getElementById("g_guess");
+let b_id = document.getElementById("b_guess");
+
+//text parts for the validation string
+let r_string = "";
+let g_string = "";
+let b_string = "";
+let validation_string = "";
+
+function guessCode() {
+  //update guess counter
+  guess_counter++;
+  guess_counter_id.textContent = guess_counter;
+
+  //getting the values
+  let r_value = r_id.value;
+  let g_value = g_id.value;
+  let b_value = b_id.value;
+
+  //make into ints for comparison
+  r_value = parseInt(r_value);
+  g_value = parseInt(g_value);
+  b_value = parseInt(b_value);
+  // console.log("guess: " + r_value);
+  // console.log("guess: " + g_value);
+  // console.log("guess: " + b_value);
+
+  // console.log("color: " + r_color);
+  // console.log("color: " + g_color);
+  // console.log("color: " + b_color);
+
+  if (r_value <= 255 && g_value <= 255 && b_value <= 255) {
+    //update the guess text
+    guess_id.textContent = `Your guess: rgb(${r_value}, ${g_value}, ${b_value})`;
+
+    //conditions for updating the validation text
+
+    //if all is correct:
+    if (r_value === r_color && g_value === g_color && b_value === b_color) {
+      validation_string = "Correct! The color is " + color_guess;
+      validate_id.textContent = validation_string;
+      guess_circle.style.backgroundColor = color_guess;
+    } else {
+      //validate red
+      if (r_value === r_color) {
+        r_string = "Red is correct";
+      } else if (r_value > r_color) {
+        r_string = "Too much red";
+      } else if (r_value < r_color) {
+        r_string = "Too little red";
+      }
+
+      //validate green
+      if (g_value === g_color) {
+        g_string = "Green is correct";
+      } else if (g_value > g_color) {
+        g_string = "Too much green";
+      } else if (g_value < g_color) {
+        g_string = "Too little green";
+      }
+
+      //validate blue
+      if (b_value === b_color) {
+        b_string = "Blue is correct";
+      } else if (b_value > b_color) {
+        b_string = "Too much blue";
+      } else if (b_value < b_color) {
+        b_string = "Too little blue";
+      }
+
+      //combining and updating string
+      validation_string = r_string + "; " + g_string + "; " + b_string;
+      // console.log(validation_string);
+      validate_id.textContent = validation_string;
+
+      //get the color string so can update color square for comparison
+      let guess_circle_text = `rgb(${r_value}, ${g_value}, ${b_value})`;
+      guess_circle.style.backgroundColor = guess_circle_text;
+    }
+  }
+}

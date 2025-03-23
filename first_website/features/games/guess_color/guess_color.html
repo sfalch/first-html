@@ -51,12 +51,52 @@
     <!--rgb color text guess-->
     <h2 class="header2">RGB 2!</h2>
 
-    <div class="centering">
+    <div class="centering pinkText">
+      <!-- get the color -->
       <p class="pinkText">Guess the color with the code</p>
       <button class="circle-btn" onclick="getColor()">Spin!</button>
       <br />
       <br />
-      <button class="circle2" id="color_mystery" onclick="checkRGB(1)"></button>
+      <!-- the mystery color -->
+      <button class="circle2" id="color_mystery"></button>
+      <!-- your guess color -->
+      <button class="circle2" id="color_guess"></button>
+      <br /><br />
+      <!-- input the r, g, b, values  -->
+      <label for="r_guess" style="margin: 5px">r:</label>
+      <input
+        type="number"
+        id="r_guess"
+        value="0"
+        min="0"
+        max="255"
+        maxlength="3"
+        required
+      />
+      <label for="g_guess" style="margin: 5px">g:</label>
+      <input
+        type="number"
+        id="g_guess"
+        value="0"
+        min="0"
+        max="255"
+        maxlength="3"
+        required
+      />
+      <label for="b_guess" style="margin: 5px">b:</label>
+      <input
+        type="number"
+        id="b_guess"
+        value="0"
+        min="0"
+        max="255"
+        maxlength="3"
+        required
+      />
+      <p class="pinkText" id="rgb_guess">-</p>
+      <p class="pinkText" id="rgb_validate">-</p>
+      <button class="circle-btn" onclick="guessCode()">Guess</button>
+      <p class="pinkText">Guess: <span id="guess_counter"></span></p>
     </div>
 
     <footer class="pinkText">
