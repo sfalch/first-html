@@ -174,3 +174,64 @@ function guessCode() {
     }
   }
 }
+
+// ---------------- HEX --------------------
+//the mystery hex code
+let hex_code1 = "";
+
+//id for the hex string
+let mystery_id = document.getElementById("hex_mystery");
+let reveal_id2 = document.getElementById("hex_mystery1");
+
+//the selected circle:
+let random = 0;
+
+function randomHEX() {
+  let n = (Math.random() * 0xfffff * 1000000).toString(16);
+  let hex = n.slice(0, 6);
+  hex = "#" + hex;
+  return hex;
+}
+
+function guessHEXcode() {
+  //get circles ids
+  let circles = document.getElementsByClassName("circle3");
+
+  //iterate through all and change their background color to random
+  for (const circ of circles) {
+    let HEX = randomHEX();
+    console.log(HEX);
+    circ.style.backgroundColor = HEX;
+  }
+
+  //get random number for one of the circles
+  random = Math.floor(Math.random() * 5) + 1;
+
+  hex_code1 = randomHEX();
+
+  //overwrite and update
+  //id for the specific random circle
+  let mystery_circle = document.getElementById(`hex_circ${random}`);
+  mystery_circle.style.backgroundColor = hex_code1;
+
+  //update the code
+  mystery_id.textContent = hex_code1;
+
+  //reset reveal text to blank
+  reveal_id2.textContent = "-";
+}
+
+//check the hex match for the circle button
+function checkHEX(n) {
+  let circle_id = document.getElementById(`hex_circ${n}`);
+  let color = circle_id.style.backgroundColor;
+  let mystery_color_id = document.getElementById(`hex_circ${random}`);
+  let mystery = mystery_color_id.style.backgroundColor;
+
+  //update the reveal text
+  if (color === mystery) {
+    reveal_id2.textContent = "Correct!";
+  } else {
+    reveal_id2.textContent = "Wrong!";
+  }
+}
