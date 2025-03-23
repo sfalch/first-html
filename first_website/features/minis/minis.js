@@ -301,6 +301,27 @@ const getAge = () => {
   age_id.textContent = age.toString() + " Years old";
 };
 
-function resetBday() {
+function resetPage() {
   window.location.reload();
 }
+
+//using this object
+let name_object = {
+  first: document.getElementById("first").value,
+  last: document.getElementById("last").value,
+};
+console.log(name_object);
+
+let combine = {
+  full_name: function () {
+    return this.first + " " + this.last;
+  },
+};
+
+//puts object into the function and .this is placeholder for the object
+const yourName = () => {
+  let name = combine.full_name.call(name_object);
+  console.log(name);
+  //update name
+  document.getElementById("name").textContent = name;
+};
