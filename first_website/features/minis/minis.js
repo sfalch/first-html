@@ -245,3 +245,62 @@ const reset = () => {
   document.getElementById("odd").value = 0;
   document.getElementById("odd").reset();
 };
+
+//practice objects.
+let birthday_id = document.getElementById("birthday");
+let age_id = document.getElementById("age");
+
+let birthday = {
+  day: document.getElementById("day").value,
+  month: document.getElementById("month").value,
+  year: document.getElementById("year").value,
+};
+
+const getAge = () => {
+  switch (parseInt(birthday.month)) {
+    case 1:
+      birthday.month = "January";
+      break;
+    case 2:
+      birthday.month = "February";
+      break;
+    case 3:
+      birthday.month = "March";
+      break;
+    case 4:
+      birthday.month = "April";
+      break;
+    case 5:
+      birthday.month = "May";
+      break;
+    case 6:
+      birthday.month = "June";
+      break;
+    case 7:
+      birthday.month = "July";
+      break;
+    case 8:
+      birthday.month = "August";
+      break;
+    case 9:
+      birthday.month = "September";
+      break;
+    case 10:
+      birthday.month = "October";
+      break;
+    case 11:
+      birthday.month = "November";
+      break;
+    case 12:
+      birthday.month = "December";
+  }
+  birthday_id.textContent = `${birthday.day} ${birthday.month}, ${birthday.year}`;
+  console.log(`${birthday.day} ${birthday.month}, ${birthday.year}`);
+
+  let age = 2025 - birthday.year;
+  age_id.textContent = age.toString() + " Years old";
+};
+
+function resetBday() {
+  window.location.reload();
+}

@@ -178,7 +178,7 @@
 
     <!--line divider-->
     <hr class="solid valentine-pink" />
-    <!--time today -->
+    <!--even or odd -->
     <h2 class="header2">Even or Odd!</h2>
     <div class="centering">
       <p class="pinkText" id="now">Function practice</p>
@@ -205,6 +205,52 @@
       <button class="dice-btn" onclick="odd2()">odd</button>
       <br /><br />
       <button class="reset-btn" onclick="reset()">Reset</button>
+    </div>
+
+    <!--line divider-->
+    <hr class="solid valentine-pink" />
+    <!--objects -->
+    <h2 class="header2">Age!</h2>
+    <div class="centering">
+      <p class="pinkText">Objects practice</p>
+      <p class="pinkText">Your birthday</p>
+      <form id="birthday_form">
+        <label class="pinkText" for="day">Day</label>
+        <input
+          type="number"
+          id="day"
+          max="31"
+          min="1"
+          required
+          value="1"
+          placeholder="20"
+        />
+        <label class="pinkText" for="month">Month</label>
+        <input
+          type="number"
+          id="month"
+          max="12"
+          min="1"
+          required
+          value="1"
+          placeholder="4"
+        />
+        <label class="pinkText" for="year">Year</label>
+        <input
+          type="number"
+          id="year"
+          max="2025"
+          min="1"
+          required
+          value="1"
+          placeholder="1998"
+        />
+      </form>
+      <br /><br /><br />
+      <button class="dice-btn" onclick="getAge()">Get age</button>
+      <p class="pinkText" id="birthday">Birthday</p>
+      <p class="pinkText" id="age">Age</p>
+      <button class="reset-btn" onclick="resetBday()">Re-fresh page</button>
     </div>
 
     <footer class="pinkText">
