@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HEX Wordle!</title>
+    <link rel="icon" type="image/x-icon" href="../../../img/favicon.ico" />
+    <link rel="stylesheet" href="../../../style1.css" />
+    <link rel="stylesheet" href="../../../style2.css" />
+    <link rel="stylesheet" href="hex_wordle.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="right-div">
+        <!-- git-hub link -->
+        <a href="https://github.com/sfalch/first-html" target="_blank">
+          <button class="pink-button">girlie-hub</button>
+        </a>
+      </div>
+    </header>
+
+    <h1 class="header1">Colors!</h1>
+    <p class="pinkText">Work in progress</p>
+    <nav>
+      <a href="../../../index.html"> <button class="dice-btn">Home</button></a>
+      <a href="../games.html"> <button class="dice-btn">Back</button></a>
+      <button class="reset-btn right-div" onclick="scrollToBottom()">
+        Bottom of page
+      </button>
+    </nav>
+
+    <!--line divider-->
+    <hr class="solid valentine-pink" />
+    <!-- Hex wordle   -->
+    <h2 class="header2">HEXle!</h2>
+    <div class="centering">
+      <a class="pinkText" href="https://github.com/skyttenM/Colourdle"
+        >Source</a
+      >
+      <br /><br /><br />
+      <div class="arena centering">
+        <!-- color box  -->
+        <div class="color-box centering">
+          <div class="hex_circle" id="hex_circle"></div>
+          <p id="answer_text" class="smaller-txt"></p>
+        </div>
+        <br />
+        <!-- get color button -->
+        <button class="dice-btn" id="color_btn" onclick="getColor()">
+          Get color!
+        </button>
+        <button class="dice-btn" id="submit_btn" onclick="checkGuess()">
+          Get color!
+        </button>
+        <br />
+
+        <!-- text input -->
+
+        <div class="centering flex-container">
+          <table class="pinkText" style="width: 100%">
+            <tr>
+              <th style="width: 10px"></th>
+              <th style="width: 100px">Guess</th>
+              <th style="width: 100px">Code</th>
+              <th style="width: 60px">Color</th>
+              <th>RGB</th>
+              <th style="width: 40px">%</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>
+                <label for="guess1">#</label>
+                <input
+                  type="text"
+                  minlength="6"
+                  maxlength="6"
+                  required
+                  name="guess1"
+                  id="guess1"
+                  size="6"
+                />
+              </td>
+              <td id="guess1_code">#000000</td>
+              <td><div class="small-circle" id="guess1_circle"></div></td>
+              <td class="centering" id="guess1_rgb">
+                __ red, __ green, __ blue
+              </td>
+              <td id="percent1">%</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>
+                <label for="guess2">#</label>
+                <input
+                  type="text"
+                  minlength="6"
+                  maxlength="6"
+                  required
+                  name="guess2"
+                  id="guess2"
+                  size="6"
+                />
+              </td>
+              <td id="guess2_code">#000000</td>
+              <td><div class="small-circle" id="guess2_circle"></div></td>
+              <td class="centering" id="guess2_rgb">
+                __ red, __ green, __ blue
+              </td>
+              <td id="percent2">%</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>
+                <label for="guess3">#</label>
+                <input
+                  type="text"
+                  minlength="6"
+                  maxlength="6"
+                  required
+                  name="guess3"
+                  id="guess3"
+                  size="6"
+                />
+              </td>
+              <td id="guess3_code">#000000</td>
+              <td><div class="small-circle" id="guess3_circle"></div></td>
+              <td class="centering" id="guess3_rgb">
+                __ red, __ green, __ blue
+              </td>
+              <td id="percent3">%</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>
+                <label for="guess4">#</label>
+                <input
+                  type="text"
+                  minlength="6"
+                  maxlength="6"
+                  required
+                  name="guess4"
+                  id="guess4"
+                  size="6"
+                />
+              </td>
+              <td id="guess4_code">#000000</td>
+              <td><div class="small-circle" id="guess4_circle"></div></td>
+              <td class="centering" id="guess4_rgb">
+                __ red, __ green, __ blue
+              </td>
+              <td id="percent4">%</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>
+                <label for="guess5">#</label>
+                <input
+                  type="text"
+                  minlength="6"
+                  maxlength="6"
+                  required
+                  name="guess5"
+                  id="guess5"
+                  size="6"
+                />
+              </td>
+              <td id="guess5_code">#000000</td>
+              <td><div class="small-circle" id="guess5_circle"></div></td>
+              <td class="centering" id="guess5_rgb">
+                __ red, __ green, __ blue
+              </td>
+              <td id="percent5">%</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>
+                <label for="guess6">#</label>
+                <input
+                  type="text"
+                  minlength="6"
+                  maxlength="6"
+                  required
+                  name="guess6"
+                  id="guess6"
+                  size="6"
+                />
+              </td>
+              <td id="guess6_code">#000000</td>
+              <td><div class="small-circle" id="guess6_circle"></div></td>
+              <td class="centering" id="guess6_rgb">
+                __ red, __ green, __ blue
+              </td>
+              <td id="percent6">%</td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- reveal and hide answer buttons -->
+        <br />
+        <button class="reset-btn" id="reveal_btn" onclick="revealColor()">
+          Reveal answer!
+        </button>
+        <button class="reset-btn" id="hide_btn" onclick="hideColor()">
+          Hide answer!
+        </button>
+      </div>
+    </div>
+
+    <footer class="pinkText">
+      <!--line divider-->
+      <hr class="solid valentine-pink" />
+      ©sfalch
+      <button class="reset-btn right-div" onclick="scrollToTop()">
+        Top of page
+      </button>
+    </footer>
+  </body>
+  <script src="hex_wordle.js"></script>
+  <script src="../../../main.js"></script>
+</html>

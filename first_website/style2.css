@@ -36,6 +36,19 @@ p {
   font-size: 20px;
 }
 
+table,
+th,
+td {
+  border: 1.5px solid darkmagenta;
+
+  border-collapse: collapse;
+  margin: 2px;
+  padding: 5px;
+  border-radius: 4px;
+  background-color: white;
+  table-layout: fixed;
+}
+
 .centering {
   text-align: center;
 }

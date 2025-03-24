@@ -1,5 +1,6 @@
 //https://www.w3schools.com/howto/howto_js_slideshow.asp
 
+//i hadn't learned objects when i made this and don't want to go in and change it all
 //cards as letteers from a to z1
 let a = "../../img/cards_deck/00.png";
 let b = "../../img/cards_deck/01.png";
