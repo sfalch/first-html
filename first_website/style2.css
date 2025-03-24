@@ -60,6 +60,8 @@ p {
   font-size: larger;
   font-family: fantasy;
   box-shadow: 1px 10px rgb(85, 0, 85);
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .nav1:hover {
