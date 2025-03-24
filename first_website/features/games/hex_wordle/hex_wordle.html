@@ -49,8 +49,9 @@
         <button class="dice-btn" id="color_btn" onclick="getColor()">
           Get color!
         </button>
+        <br /><br />
         <button class="dice-btn" id="submit_btn" onclick="checkGuess()">
-          Get color!
+          Guess!
         </button>
         <br />
 
@@ -61,10 +62,10 @@
             <tr>
               <th style="width: 10px"></th>
               <th style="width: 100px">Guess</th>
-              <th style="width: 100px">Code</th>
+              <th style="width: 120px">Code</th>
               <th style="width: 60px">Color</th>
               <th>RGB</th>
-              <th style="width: 40px">%</th>
+              <!-- <th style="width: 40px">%</th> -->
             </tr>
             <tr>
               <td>1</td>
@@ -80,12 +81,19 @@
                   size="6"
                 />
               </td>
-              <td id="guess1_code">#000000</td>
+              <td id="guess1_code">
+                #<span id="r1_1">0</span>
+                <span id="r2_1">0</span>
+                <span id="g1_1">0</span>
+                <span id="g2_1">0</span>
+                <span id="b1_1">0</span>
+                <span id="b2_1">0</span>
+              </td>
               <td><div class="small-circle" id="guess1_circle"></div></td>
               <td class="centering" id="guess1_rgb">
                 __ red, __ green, __ blue
               </td>
-              <td id="percent1">%</td>
+              <!-- <td id="percent1">%</td> -->
             </tr>
             <tr>
               <td>2</td>
@@ -101,12 +109,19 @@
                   size="6"
                 />
               </td>
-              <td id="guess2_code">#000000</td>
+              <td id="guess2_code">
+                #<span id="r1_2">0</span>
+                <span id="r2_2">0</span>
+                <span id="g1_2">0</span>
+                <span id="g2_2">0</span>
+                <span id="b1_2">0</span>
+                <span id="b2_2">0</span>
+              </td>
               <td><div class="small-circle" id="guess2_circle"></div></td>
               <td class="centering" id="guess2_rgb">
                 __ red, __ green, __ blue
               </td>
-              <td id="percent2">%</td>
+              <!-- <td id="percent2">%</td> -->
             </tr>
             <tr>
               <td>3</td>
@@ -122,12 +137,19 @@
                   size="6"
                 />
               </td>
-              <td id="guess3_code">#000000</td>
+              <td id="guess3_code">
+                #<span id="r1_3">0</span>
+                <span id="r2_3">0</span>
+                <span id="g1_3">0</span>
+                <span id="g2_3">0</span>
+                <span id="b1_3">0</span>
+                <span id="b2_3">0</span>
+              </td>
               <td><div class="small-circle" id="guess3_circle"></div></td>
               <td class="centering" id="guess3_rgb">
                 __ red, __ green, __ blue
               </td>
-              <td id="percent3">%</td>
+              <!-- <td id="percent3">%</td> -->
             </tr>
             <tr>
               <td>4</td>
@@ -143,12 +165,19 @@
                   size="6"
                 />
               </td>
-              <td id="guess4_code">#000000</td>
+              <td id="guess4_code">
+                #<span id="r1_4">0</span>
+                <span id="r2_4">0</span>
+                <span id="g1_4">0</span>
+                <span id="g2_4">0</span>
+                <span id="b1_4">0</span>
+                <span id="b2_4">0</span>
+              </td>
               <td><div class="small-circle" id="guess4_circle"></div></td>
               <td class="centering" id="guess4_rgb">
                 __ red, __ green, __ blue
               </td>
-              <td id="percent4">%</td>
+              <!-- <td id="percent4">%</td> -->
             </tr>
             <tr>
               <td>5</td>
@@ -164,12 +193,19 @@
                   size="6"
                 />
               </td>
-              <td id="guess5_code">#000000</td>
+              <td id="guess5_code">
+                #<span id="r1_5">0</span>
+                <span id="r2_5">0</span>
+                <span id="g1_5">0</span>
+                <span id="g2_5">0</span>
+                <span id="b1_5">0</span>
+                <span id="b2_5">0</span>
+              </td>
               <td><div class="small-circle" id="guess5_circle"></div></td>
               <td class="centering" id="guess5_rgb">
                 __ red, __ green, __ blue
               </td>
-              <td id="percent5">%</td>
+              <!-- <td id="percent5">%</td> -->
             </tr>
             <tr>
               <td>6</td>
@@ -185,12 +221,19 @@
                   size="6"
                 />
               </td>
-              <td id="guess6_code">#000000</td>
+              <td id="guess6_code">
+                #<span id="r1_6">0</span>
+                <span id="r2_6">0</span>
+                <span id="g1_6">0</span>
+                <span id="g2_6">0</span>
+                <span id="b1_6">0</span>
+                <span id="b2_6">0</span>
+              </td>
               <td><div class="small-circle" id="guess6_circle"></div></td>
               <td class="centering" id="guess6_rgb">
                 __ red, __ green, __ blue
               </td>
-              <td id="percent6">%</td>
+              <!-- <td id="percent6">%</td> -->
             </tr>
           </table>
         </div>
