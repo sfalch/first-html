@@ -331,6 +331,44 @@
         />
       </div>
 
+      <!--line divider-->
+      <hr class="solid valentine-pink" />
+      <!--checkbox form -->
+      <h2 class="header2">Checkbox!</h2>
+      <div class="centering">
+        <label for="colors"></label>
+        <form class="color-form" id="form" name="form">
+          <label for="red" style="color: red">Red</label>
+          <input type="checkbox" name="red" id="red" />
+          <label for="green" style="color: green">Green</label>
+          <input type="checkbox" name="green" id="green" />
+          <label for="blue" style="color: blue">Blue</label>
+          <input type="checkbox" name="blue" id="blue" />
+        </form>
+        <br />
+        <div class="circle" id="color_circle"></div>
+        <br />
+        <button id="color-btn" class="dice-btn" onclick="colorUpdate()">
+          Color
+        </button>
+      </div>
+
+      <!--line divider-->
+      <hr class="solid valentine-pink" />
+      <!--data list form -->
+      <h2 class="header2">List!</h2>
+      <div class="centering">
+        <p>ok list :o</p>
+        <p id="accept_id">Accept?</p>
+        <input list="bool" id="bool_input" />
+        <datalist id="bool">
+          <option value="true">YES</option>
+          <option value="false">NO</option>
+        </datalist>
+        <br /><br />
+        <button class="dice" onclick="boolBtn()">Submit</button>
+      </div>
+
       <!-- scrolling page end div -->
     </div>
     <!-- --------------------------------------------------------------------- -->

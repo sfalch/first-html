@@ -375,3 +375,59 @@ document.getElementById("append_btn").onclick = () => {
     document.getElementById("snoopy_text").textContent = "";
   }
 };
+
+//checkbox wordle
+
+const circle = document.getElementById("color_circle");
+
+const red_id = document.getElementById("red");
+const green_id = document.getElementById("green");
+const blue_id = document.getElementById("blue");
+
+const colorUpdate = () => {
+  //all true
+  if (
+    red_id.checked === true &&
+    green_id.checked === true &&
+    blue_id.checked === true
+  ) {
+    circle.style.backgroundColor = "white";
+  }
+  //green + red
+  else if (red_id.checked === true && green_id.checked === true) {
+    circle.style.backgroundColor = "brown";
+  }
+  //red+ blue
+  else if (red_id.checked === true && blue_id.checked === true) {
+    circle.style.backgroundColor = "purple";
+  }
+  //green + blue
+  else if (green_id.checked === true && blue_id.checked === true) {
+    circle.style.backgroundColor = "teal";
+  } else if (red_id.checked === true) {
+    circle.style.backgroundColor = "red";
+  } else if (green_id.checked === true) {
+    circle.style.backgroundColor = "green";
+  } else if (blue_id.checked === true) {
+    circle.style.backgroundColor = "blue";
+  }
+  //none
+  else {
+    circle.style.backgroundColor = "black";
+  }
+};
+
+//datalist practice
+const datalist = document.getElementById("bool_input");
+const accept_text = document.getElementById("accept_id");
+
+const boolBtn = () => {
+  let value = datalist.value;
+  if (value === "true") {
+    accept_text.textContent = "Yay! :)";
+  } else if (value === "false") {
+    accept_text.textContent = "Oh... :(";
+  } else {
+    accept_text.textContent = "Accepted";
+  }
+};

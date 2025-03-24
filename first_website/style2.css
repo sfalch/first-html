@@ -129,3 +129,9 @@ input[type="range"] {
   background-color: darkmagenta;
   accent-color: darkmagenta;
 }
+
+input[type="checkbox"] {
+  color: darkmagenta;
+  background-color: darkmagenta;
+  accent-color: darkmagenta;
+}
