@@ -102,11 +102,9 @@ li {
   margin-left: 20px;
 }
 
-input[type="radio"] {
-  accent-color: darkmagenta;
-}
-
-input[type="text"] {
+input[type="text"],
+input[type="number"],
+datalist {
   color: black;
   background-color: rgb(255, 220, 226);
   font-family: fantasy;
@@ -115,21 +113,8 @@ input[type="text"] {
   border-radius: 4px;
 }
 
-input[type="number"] {
-  color: black;
-  background-color: rgb(255, 220, 226);
-  font-family: fantasy;
-  font-size: 16px;
-  border-color: darkmagenta;
-  border-radius: 4px;
-}
-
-input[type="range"] {
-  color: darkmagenta;
-  background-color: darkmagenta;
-  accent-color: darkmagenta;
-}
-
+input[type="radio"],
+input[type="range"],
 input[type="checkbox"] {
   color: darkmagenta;
   background-color: darkmagenta;

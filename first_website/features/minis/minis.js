@@ -431,3 +431,12 @@ const boolBtn = () => {
     accept_text.textContent = "Accepted";
   }
 };
+
+//color form
+const color_form = document.getElementById("color_form");
+const circle_color = document.getElementById("circle_color");
+
+const colorCircle = () => {
+  let color = color_form.value;
+  circle_color.style.backgroundColor = color;
+};
