@@ -1,12 +1,3 @@
 Learning basic HTML and JavaScript. :))
 
-
-Things to include:
-- timer
-- tic tac toe
-- rock-paper-scissor
-- snake
-- yahtzee
-- farkle
-- hex game
-- minesweeper
+There are mini features, silly features, CSS practice, Games, learning fetch API and more!
