@@ -435,8 +435,13 @@ const boolBtn = () => {
 //color form
 const color_form = document.getElementById("color_form");
 const circle_color = document.getElementById("circle_color");
+const color_text = document.getElementById("color_text");
 
 const colorCircle = () => {
   let color = color_form.value;
+
+  //update text
+  color_text.textContent = color;
+  //update the circle color
   circle_color.style.backgroundColor = color;
 };
