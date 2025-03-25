@@ -184,7 +184,7 @@ function checkGuess() {
     } else if (guess_number_arr.r2 < hex_number_arr.r2) {
       red_text = "Too little red";
     } else {
-      red_text = "Red is wrong";
+      red_text = "Red is Correct";
     }
   } else if (guess_number_arr.r1 > hex_number_arr.r1) {
     red_text = "Too much red";
@@ -201,7 +201,7 @@ function checkGuess() {
     } else if (guess_number_arr.g2 < hex_number_arr.g2) {
       green_text = "Too little green";
     } else {
-      green_text = "Green is wrong";
+      green_text = "Green is Correct";
     }
   } else if (guess_number_arr.g1 > hex_number_arr.g1) {
     green_text = "Too much green";
@@ -218,7 +218,7 @@ function checkGuess() {
     } else if (guess_number_arr.b2 < hex_number_arr.b2) {
       blue_text = "Too little blue";
     } else {
-      blue_text = "Blue is wrong";
+      blue_text = "Blue is Correct";
     }
   } else if (guess_number_arr.b1 > hex_number_arr.b1) {
     blue_text = "Too much blue";

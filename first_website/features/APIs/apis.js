@@ -52,3 +52,25 @@ async function fetchisEven() {
     console.log(error);
   }
 }
+
+//-----------------DOG API
+//https://www.youtube.com/watch?v=NcUGT_-uoqE
+
+function getDogImg() {
+  let url = "https://dog.ceo/api/breeds/image/random";
+
+  fetch(url)
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      display_dog(data.message);
+    })
+    .catch((error) => {
+      console.log("Error: " + error);
+    });
+}
+
+const display_dog = (img_url) => {
+  document.getElementById("dog_img").src = img_url;
+};
