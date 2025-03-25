@@ -85,17 +85,54 @@
 
     <div class="centering">
       <img id="dog_img" class="coin-img" />
-      <br><br>
+      <br /><br />
       <button class="dice-btn" onclick="getDogImg()">Dog!</button>
     </div>
 
     <!--line divider-->
     <hr class="solid valentine-pink" />
-    <!--random dog api-->
-    <h2 class="header2">Dog!</h2>
+    <!--number api-->
+    <h2 class="header2">Numbers!</h2>
 
     <div class="centering">
+      <label class="pinkText" for="number_input">Number</label>
+      <input
+        type="number"
+        name="number_input"
+        id="number_input"
+        max="5000"
+        min="0"
+        value="0"
+        required
+      />
+      <br /><br />
+      <form id="number_pick">
+        <label for="my_num">Your Number: </label>
+        <input type="radio" name="number_pick" id="my_num" value="my_num" />
+        <label for="random_num">Random Number: </label>
+        <input type="radio" name="number_pick" id="random_num" value="random" />
+      </form>
+      <br /><br />
+      <form id="type_pick">
+        <label for="trivia">Trivia</label>
+        <input type="radio" name="trivia" id="trivia" value="trivia" />
+        <label for="math">Math</label>
+        <input type="radio" name="trivia" id="math" value="math" />
+        <label for="date">Date</label>
+        <input type="radio" name="trivia" id="date" value="date" />
+        <label for="year">Year</label>
+        <input type="radio" name="trivia" id="year" value="year" />
+      </form>
 
+      <br /><br /><br />
+      <button class="dice-btn" onclick="getNumberTriv()">
+        Get Number Fact!
+      </button>
+      <br /><br />
+      <button class="reset-btn" onclick="refreshPage()">Re-fresh page</button>
+
+      <p id="number_display"></p>
+    </div>
 
     <footer class="pinkText">
       <!--line divider-->

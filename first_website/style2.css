@@ -29,7 +29,8 @@ h3 {
 }
 
 .pinkText,
-p {
+p,
+label {
   color: darkmagenta;
   font-family: fantasy;
   padding: 5px;

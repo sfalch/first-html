@@ -74,3 +74,56 @@ function getDogImg() {
 const display_dog = (img_url) => {
   document.getElementById("dog_img").src = img_url;
 };
+
+//-------------------NUBMERS
+//http://numbersapi.com/number/type
+
+function getNumberTriv() {
+  //ids for form:
+  //id for the whether number or random
+  const number_id = document.querySelector('input[name="number_pick"]:checked');
+  //id for the input if a number
+  const my_num = document.getElementById("number_input");
+  //id for type, trivia, math, date or year
+  const type_pick = document.querySelector('input[name="trivia"]:checked');
+  //id for text to be updated
+  let trivia_id = document.getElementById("number_display");
+
+  //initialise global number type
+  let number_type = "";
+
+  //number type:
+  if (number_id.value === "my_num") {
+    if (my_num.value >= 0) {
+      number_type = my_num.value;
+    } else {
+      number_type = "random";
+    }
+  } else if (number_id.value === "random") {
+    number_type = "random";
+  } else {
+    number_type = "0";
+  }
+
+  let trivia_type = type_pick.value;
+
+  //fetch api
+  let url = `http://numbersapi.com/${number_type}/${trivia_type}?json`;
+
+  fetch(url)
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      displayNumber(data.text);
+    })
+    .catch((error) => {
+      console.log("Error: " + error);
+    });
+}
+
+function displayNumber(text) {
+  let trivia_id = document.getElementById("number_display");
+
+  trivia_id.textContent = text;
+}
