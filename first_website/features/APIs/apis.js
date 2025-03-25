@@ -120,6 +120,8 @@ function getNumberTriv() {
     .catch((error) => {
       console.log("Error: " + error);
     });
+
+  my_num.value = "0";
 }
 
 function displayNumber(text) {
