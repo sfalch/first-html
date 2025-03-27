@@ -13,3 +13,63 @@
   font-family: fantasy;
   font-size: 16px;
 }
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  display: inline-block;
+}
+
+.popcorn_img1,
+.popcorn_img1:hover {
+  width: 50px;
+  height: 50px;
+  /* filter: grayscale(100%); */
+  cursor: pointer;
+}
+
+.popcorn_img2,
+.popcorn_img2:hover {
+  width: 60px;
+  height: 60px;
+  /* filter: grayscale(100%); */
+  cursor: pointer;
+}
+
+.popcorn_img3,
+.popcorn_img3:hover {
+  width: 70px;
+  height: 70px;
+  /* filter: grayscale(100%); */
+  cursor: pointer;
+}
+
+.popcorn_img4,
+.popcorn_img4:hover {
+  width: 80px;
+  height: 80px;
+  /* filter: grayscale(100%); */
+  cursor: pointer;
+}
+
+.popcorn_img5,
+.popcorn_img5:hover {
+  width: 90px;
+  height: 90px;
+  /* filter: grayscale(100%); */
+  cursor: pointer;
+}
+
+.popcorn_img1:checked,
+.popcorn_img2:checked,
+.popcorn_img3:checked,
+.popcorn_img4:checked,
+.popcorn_img5:checked {
+  filter: grayscale(0);
+  transform: scale(0.9);
+  box-shadow: -1 10px 20px #fec756;
+  z-index: -1;
+  cursor: pointer;
+}
