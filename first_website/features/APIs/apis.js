@@ -129,3 +129,22 @@ function displayNumber(text) {
 
   trivia_id.textContent = text;
 }
+
+//cat img api
+const cat_img_id = document.getElementById("cat_img");
+
+const getCatImg = () => {
+  const url = "https://api.thecatapi.com/v1/images/search";
+  const array = { id: "", url: "", width: "", breeds: "", favourite: "" };
+
+  fetch(url)
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      cat_img_id.src = data[0].url;
+    })
+    .catch((error) => {
+      console.log("Error: " + error);
+    });
+};
