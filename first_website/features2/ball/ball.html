@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ball!</title>
+    <link rel="icon" type="image/x-icon" href="../../img/favicon.ico" />
+    <link rel="stylesheet" href="../../style1.css" />
+    <link rel="stylesheet" href="../../style2.css" />
+    <link rel="stylesheet" href="ball.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="right-div">
+        <!-- git-hub link -->
+        <a href="https://github.com/sfalch/first-html" target="_blank">
+          <button class="pink-button">girlie-hub</button>
+        </a>
+      </div>
+    </header>
+
+    <h1 class="header1">Ball!</h1>
+    <p class="pinkText">Learning animation with functions ⚽</p>
+    <nav>
+      <a href="../../index.html"> <button class="dice-btn">Home</button></a>
+      <button class="reset-btn right-div" onclick="scrollToBottom()">
+        Bottom of page
+      </button>
+    </nav>
+
+    <hr class="solid valentine-pink" />
+
+    <section class="centering">
+      <p>Animation using function</p>
+      <br />
+      <canvas class="ball-box"></canvas>
+      <br /><br />
+      <canvas class="ball" id="ball"></canvas>
+      <br /><br />
+      <button class="dice-btn" onclick="playBall()">Play</button>
+      <button class="dice-btn" onclick="stopBall()">Stop</button>
+      <button class="dice-btn" onclick="resetBall()">Reset</button>
+    </section>
+
+    <footer class="pinkText">
+      <!--line divider-->
+      <hr class="solid valentine-pink" />
+      ©sfalch
+      <button class="reset-btn right-div" onclick="scrollToTop()">
+        Top of page
+      </button>
+    </footer>
+  </body>
+  <script src="ball.js"></script>
+  <script src="../../main.js"></script>
+</html>

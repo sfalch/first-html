@@ -304,3 +304,88 @@
   margin: 10px;
   border: none;
 }
+
+/* -------------------GRADIENT CANVAS */
+.gradient {
+  width: 500px;
+  height: 300px;
+  background: radial-gradient(rgb(139, 44, 139), darkmagenta, rgb(85, 0, 85));
+  border-radius: 4px;
+  z-index: -1;
+  position: relative;
+}
+
+.animating-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background: radial-gradient(white, grey);
+  position: relative;
+  animation-name: ball;
+  animation-duration: 10s;
+  animation-iteration-count: 5;
+  z-index: 1;
+  left: 0px;
+  top: -197px;
+  margin: 0;
+  /* 197 is 322 minus (150 -25) 
+  (which is half of square minus half of ball to get the center coordinates */
+}
+
+@keyframes ball {
+  0% {
+    background: radial-gradient(red, rgb(150, 0, 0));
+    left: -225px;
+    top: -322px;
+  }
+  10% {
+    background: radial-gradient(orange, rgb(150, 97, 0));
+    left: 225px;
+    top: -322px;
+  }
+  20% {
+    background: radial-gradient(yellow, rgb(150, 150, 0));
+    left: 225px;
+    top: -75px;
+  }
+  30% {
+    background: radial-gradient(green, rgb(0, 75, 0));
+    left: -225px;
+    top: -75px;
+  }
+  40% {
+    background: radial-gradient(teal, rgb(0, 75, 75));
+    left: -225px;
+    top: -322px;
+  }
+  50% {
+    background: radial-gradient(blue, rgb(0, 0, 150));
+    left: 0px;
+    top: -322px;
+  }
+  60% {
+    background: radial-gradient(red, rgb(150, 0, 0));
+    left: 225px;
+    top: -197px;
+  }
+  70% {
+    background: radial-gradient(orange, rgb(150, 97, 0));
+    left: 0px;
+    top: -75px;
+  }
+  80% {
+    background: radial-gradient(yellow, rgb(150, 150, 0));
+    left: -225px;
+    top: -197px;
+  }
+  90% {
+    background: radial-gradient(green, rgb(0, 75, 0));
+    left: 0px;
+    top: -322px;
+  }
+  100% {
+    background: radial-gradient(blue, rgb(0, 0, 150));
+    left: 0px;
+    top: -197px;
+  }
+}
