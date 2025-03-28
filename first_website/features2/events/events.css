@@ -1,0 +1,58 @@
+.circle {
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  justify-content: center;
+  margin: auto;
+  display: block;
+  border-radius: 100%;
+  background-color: white;
+}
+
+.red-box {
+  width: 100px;
+  height: 60px;
+  border-radius: 4px;
+  background-color: red;
+  display: inline;
+}
+
+.orange-box {
+  width: 100px;
+  height: 60px;
+  border-radius: 4px;
+  background: orange;
+  display: inline;
+}
+
+.yellow-box {
+  width: 100px;
+  height: 60px;
+  border-radius: 4px;
+  background: yellow;
+  display: inline;
+}
+
+.green-box {
+  width: 100px;
+  height: 60px;
+  border-radius: 4px;
+  background: green;
+  display: inline;
+}
+
+.blue-box {
+  width: 100px;
+  height: 60px;
+  border-radius: 4px;
+  background: blue;
+  display: inline;
+}
+
+.purple-box {
+  width: 100px;
+  height: 60px;
+  border-radius: 4px;
+  background: purple;
+  display: inline;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events!</title>
+    <link rel="icon" type="image/x-icon" href="../../img/favicon.ico" />
+    <link rel="stylesheet" href="../../style1.css" />
+    <link rel="stylesheet" href="../../style2.css" />
+    <link rel="stylesheet" href="events.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="right-div">
+        <!-- git-hub link -->
+        <a href="https://github.com/sfalch/first-html" target="_blank">
+          <button class="pink-button">girlie-hub</button>
+        </a>
+      </div>
+    </header>
+
+    <h1 class="header1">Events!</h1>
+    <p class="pinkText">Learning Document Object Model: Event handlers</p>
+    <nav>
+      <a href="../../index.html"> <button class="dice-btn">Home</button></a>
+    </nav>
+
+    <!--line divider-->
+    <hr class="solid valentine-pink" />
+    <!--on change -->
+    <h2 class="header2">On change!</h2>
+    <section class="centering">
+      <input type="color" id="color_form" />
+      <br /><br />
+      <div class="circle" id="circle_color"></div>
+      <p id="color_text"></p>
+      <!-- other on change  -->
+      <input type="color" id="color_form2" onchange="changeCircle()" />
+      <br /><br />
+      <div class="circle" id="circle_color2"></div>
+      <p id="color_text2"></p>
+    </section>
+
+    <!--line divider-->
+    <hr class="solid valentine-pink" />
+    <!--mouseover -->
+    <h2 class="header2">Mouseover!</h2>
+    <section class="centering">
+      <canvas
+        class="red-box"
+        id="red"
+        title="Red Canvas"
+        onmousemouseover="changeColor(this)"
+      ></canvas>
+      <canvas class="orange-box" id="orange" title="Orange Canvas"></canvas>
+      <canvas class="yellow-box" id="yellow" title="Yellow Canvas"></canvas>
+      <canvas class="green-box" id="green" title="Green Canvas"></canvas>
+      <canvas class="blue-box" id="blue" title="Blue Canvas"></canvas>
+      <canvas class="purple-box" id="purple" title="Purple Canvas"></canvas>
+
+      <p id="rainbow_text">Color</p>
+    </section>
+
+    <!--line divider-->
+    <hr class="solid valentine-pink" />
+    <!--mouseover -->
+    <h2 class="header2">Mouseover!</h2>
+    <section class="centering"></section>
+
+    <footer class="pinkText">
+      <!--line divider-->
+      <hr class="solid valentine-pink" />
+      ©sfalch
+    </footer>
+  </body>
+  <script src="events.js"></script>
+  <script src="../../main.js"></script>
+</html>
