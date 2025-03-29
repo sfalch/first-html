@@ -1,0 +1,27 @@
+.weather-box {
+  height: 500px;
+  width: 300px;
+  background: linear-gradient(lightblue, rgb(83, 83, 255));
+  border: solid 2px darkblue;
+  border-radius: 4px;
+  position: block;
+  display: block;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.max-temp-text {
+  font-size: 30px;
+  color: darkblue;
+}
+
+.weather_emoji {
+  font-size: 100px;
+  margin: 0;
+}
+
+.sun-text {
+  font-size: 20px;
+  color: darkblue;
+}

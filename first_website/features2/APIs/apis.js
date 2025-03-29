@@ -135,7 +135,6 @@ const cat_img_id = document.getElementById("cat_img");
 
 const getCatImg = () => {
   const url = "https://api.thecatapi.com/v1/images/search";
-  const array = { id: "", url: "", width: "", breeds: "", favourite: "" };
 
   fetch(url)
     .then((response) => {
@@ -148,3 +147,56 @@ const getCatImg = () => {
       console.log("Error: " + error);
     });
 };
+
+//featch weather api
+//open meteo
+//https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&daily=weather_code,sunrise,sunset,daylight_duration,precipitation_sum,temperature_2m_max,temperature_2m_min&timezone=Europe%2FBerlin&models=dmi_seamless
+
+const weather_url =
+  "https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&daily=sunrise,sunset,temperature_2m_max,temperature_2m_min&timezone=Europe%2FBerlin&models=dmi_seamless";
+
+//information to get:
+let temperature_max = "";
+let temperature_min = "";
+let sunrise_time = "";
+let sunset_time = "";
+
+//ids for text elements
+const temp_max = document.getElementById("degrees_max");
+const temp_min = document.getElementById("degrees_min");
+const sunrise_text = document.getElementById("sunrise_text");
+const sunset_text = document.getElementById("sunset_text");
+
+//get and update data
+fetch(weather_url)
+  .then((response) => {
+    return response.json();
+  })
+  .then((data) => {
+    console.log(data);
+
+    //max temp
+    temperature_max = data.daily.temperature_2m_max[0];
+    temp_max.textContent = temperature_max + " C°";
+
+    //min temp
+    temperature_min = data.daily.temperature_2m_min[0];
+    temp_min.textContent = temperature_min + " C°";
+
+    //sunrise time
+    sunrise_time = data.daily.sunrise[0];
+    let sunrise_arr = sunrise_time.split("T");
+    sunrise_text.textContent = sunrise_arr[1];
+
+    //sunset time
+    sunset_time = data.daily.sunset[0];
+    let sunset_arr = sunset_time.split("T");
+    sunset_text.textContent = sunset_arr[1];
+  })
+  .catch((error) => {
+    console.log("Error: " + error);
+  });
+
+console.log(temperature_max);
+
+temp_max.textContent = temperature_max + "C&deg;";
