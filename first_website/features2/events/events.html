@@ -63,9 +63,21 @@
 
     <!--line divider-->
     <hr class="solid valentine-pink" />
-    <!--mouseover -->
-    <h2 class="header2">Mouseover!</h2>
-    <section class="centering"></section>
+    <!--mousedown -->
+    <h2 class="header2">Mousedown!</h2>
+    <section class="centering">
+      <p>Mousedown to scare the mouse!</p>
+      <canvas
+        class="mouse-box"
+        id="mouse-box"
+        onmousedown="moveMouse()"
+        onmouseup="stopMouse()"
+      >
+      </canvas>
+      <figure class="mouse-figure" id="mouse"></figure>
+      <button class="dice-btn" onclick="moveMouse()">Mouse!</button>
+      <button class="reset-btn" onclick="stopMouse()">Stop</button>
+    </section>
 
     <footer class="pinkText">
       <!--line divider-->

@@ -54,3 +54,94 @@ document.getElementById("purple").onmouseover = () => {
   text_id.textContent = "Purple";
   text_id.style.color = "Purple";
 };
+
+//----------------MOUSE DOWN
+
+//on mouse down, make the mouse run
+const mouse_box = document.getElementById("mouse-box");
+
+mouse_box.addEventListener("mousedown", moveMouse);
+
+mouse_box.addEventListener("mouseup", stopMouse);
+
+//first, make the mouse run around in the box
+//  mouse movement from "ball" folder
+const mouse = document.getElementById("mouse");
+
+let left_text = "";
+let top_text = "";
+
+let interval_id = null;
+
+//direction of increase
+let top_inc = 4;
+let left_inc = 4;
+//positive top moves it down
+//positive left moves it right
+
+//figure startign position height from inside the box: 6px
+
+//left border: (500px-30px / 2 ) - 500= -235
+//rigth border: 500px-30px / 2 = 235
+//upper border: -300 - 6 = -306
+//lower border: -30 - 6 = -36
+//middle: 0, -165
+
+function moveMouse() {
+  clearInterval(interval_id);
+  let left = 0;
+  let top = -165;
+
+  interval_id = setInterval(movement, 1);
+
+  function movement() {
+    //if hit the right side, go left
+    if (left >= 235) {
+      //set the left movement to negative, so it goes backwards
+      left_inc = -4;
+      //vertical movement gets random factor between 1 and 4, positive or negative
+      top_inc = (Math.round(Math.random()) * 2 - 1) * 4;
+    }
+
+    //if hit the left side, go right
+    if (left <= -235) {
+      //set the left movement to positive, so it goes forward
+      left_inc = 4;
+      //vertical movement gets random factor between 1 and 4, positive or negative
+      top_inc = (Math.round(Math.random()) * 2 - 1) * 4;
+    }
+
+    //if hit the top, go down
+    if (top <= -306) {
+      //set the top movement to positive, so it goes down
+      top_inc = 4;
+      //horizontal movement gets random factor between 1 and 4, positive or negative
+      left_inc = (Math.round(Math.random()) * 2 - 1) * 4;
+    }
+
+    //if hit the bottom, go up
+    if (top >= -36) {
+      //set the top movement to negative, so it goes up
+      top_inc = -4;
+      //horizontal movement gets random factor between 1 and 4, positive or negative
+      left_inc = (Math.round(Math.random()) * 2 - 1) * 4;
+    }
+
+    //increase pixel position:
+    top += top_inc;
+    left += left_inc;
+
+    top_text = top + "px";
+    left_text = left + "px";
+
+    //add new values to position
+    mouse.style.top = top_text;
+    mouse.style.left = left_text;
+  }
+}
+
+//stop mousemovement;
+function stopMouse() {
+  clearInterval(interval_id);
+  console.log("stop");
+}

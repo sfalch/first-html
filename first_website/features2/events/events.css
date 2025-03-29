@@ -56,3 +56,27 @@
   background: purple;
   display: inline;
 }
+
+.mouse-box {
+  width: 500px;
+  height: 300px;
+  border: solid 2px darkmagenta;
+  border-radius: 4px;
+  z-index: -1;
+}
+
+.mouse-figure {
+  width: 30px;
+  height: 30px;
+  background: radial-gradient(grey, rgb(77, 77, 77));
+  border-radius: 50%;
+  position: relative;
+  margin: 0 auto;
+  z-index: 2;
+  display: block;
+  justify-content: center;
+  text-align: center;
+
+  top: -165px;
+  left: 0;
+}
